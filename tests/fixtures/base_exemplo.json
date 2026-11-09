@@ -1,0 +1,9 @@
+[
+  {"id": "DOC-01", "tema": "documentacao", "subtema": "segunda_via", "fase": "depois",
+   "palavras_chave": ["rg", "identidade"], "orientacao": "EXEMPLO FICTÍCIO: pedir segunda via do RG.",
+   "fonte": "Fonte de exemplo", "data_verificacao": "2026-11-10", "requer_confirmacao": true, "depende_de": ["DOC-02"]},
+  {"id": "DOC-02", "tema": "documentacao", "palavras_chave": ["boletim de ocorrência"],
+   "orientacao": "EXEMPLO FICTÍCIO: registrar B.O.", "fonte": "Fonte de exemplo",
+   "data_verificacao": "2026-11-10", "depende_de": ["XXX-99"]},
+  {"id": "SEG-01", "tema": "seguranca"}
+]
