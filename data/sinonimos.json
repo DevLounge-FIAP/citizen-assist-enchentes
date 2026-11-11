@@ -73,7 +73,8 @@
   "auxilio": [
     "ajuda financeira",
     "beneficio",
-    "ajuda do governo"
+    "ajuda do governo",
+    "auxilio reconstrucao"
   ],
   "imovel": [
     "casa",
@@ -140,5 +141,65 @@
     "diarreia",
     "febre",
     "sintomas"
+  ],
+  "habilitado": [
+    "habilitacao",
+    "municipio habilitado",
+    "minha cidade na lista",
+    "cidade habilitada",
+    "prazo do saque"
+  ],
+  "cadunico": [
+    "cadastro unico",
+    "bolsa familia",
+    "cras",
+    "assistencia social",
+    "cesta basica",
+    "aluguel social",
+    "baixa renda"
+  ],
+  "carteira de trabalho": [
+    "ctps",
+    "carteira de trabalho digital",
+    "carteira digital de trabalho",
+    "seguro desemprego"
+  ],
+  "titulo": [
+    "titulo de eleitor",
+    "e-titulo",
+    "eleitor",
+    "justificativa eleitoral",
+    "cartorio eleitoral"
+  ],
+  "cnh": [
+    "carteira de motorista",
+    "habilitacao",
+    "detran",
+    "carteira digital de transito",
+    "carteira de habilitacao"
+  ],
+  "escritura": [
+    "matricula",
+    "certidao de matricula",
+    "iptu",
+    "registro de imoveis",
+    "documentos do imovel",
+    "comprovante de residencia",
+    "cartorio de imoveis"
+  ],
+  "seguro": [
+    "seguradora",
+    "sinistro",
+    "apolice",
+    "indenizacao",
+    "seguro residencial"
+  ],
+  "danos": [
+    "prejuizo",
+    "fotos dos danos",
+    "inventario",
+    "lista de bens",
+    "nota fiscal",
+    "comprovar prejuizo"
   ]
 }

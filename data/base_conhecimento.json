@@ -109,7 +109,8 @@
     "data_verificacao": "2026-11-11",
     "requer_confirmacao": true,
     "depende_de": [
-      "DOC-03"
+      "DOC-03",
+      "BEN-03"
     ]
   },
   {
@@ -305,5 +306,234 @@
     "data_verificacao": "2026-11-11",
     "requer_confirmacao": false,
     "depende_de": []
+  },
+  {
+    "id": "BEN-02",
+    "tema": "beneficios",
+    "subtema": "auxilios_federais",
+    "fase": "depois",
+    "palavras_chave": [
+      "auxílio",
+      "auxilio",
+      "auxílio reconstrução",
+      "auxilio reconstrucao",
+      "ajuda do governo",
+      "ajuda financeira",
+      "benefício",
+      "beneficio",
+      "desabrigado",
+      "desalojado",
+      "perdi tudo",
+      "r$ 5.100",
+      "pagamento único"
+    ],
+    "orientacao": "Não existe um auxílio federal automático e igual para todo desastre: cada benefício depende de uma medida do governo para aquele evento. Como exemplo, o Auxílio Reconstrução, criado em 2024 para as enchentes no Rio Grande do Sul, pagou R$ 5.100 por família, em parcela única, a famílias desalojadas ou desabrigadas em municípios com situação de emergência ou calamidade reconhecida. A família não se inscrevia sozinha: a prefeitura cadastrava as famílias e o responsável só confirmava os dados. Esse auxílio não vale automaticamente para outras cidades ou outros desastres. Para saber se há algum auxílio aberto para o seu caso: confirme se o seu município teve a situação reconhecida (veja o registro sobre município habilitado), procure a prefeitura, a Defesa Civil municipal (199) e o CRAS, e acompanhe os canais oficiais do governo federal em gov.br. Desconfie de sites ou mensagens que cobrem taxa ou peçam senha para liberar auxílio.",
+    "fonte": "Governo Federal — gov.br (MIDR): serviço Cadastrar famílias para receberem o Auxílio Reconstrução (exemplo de 2024, RS); explicação do benefício: Serasa — Auxílio Reconstrução: tire suas dúvidas — https://www.serasa.com.br/blog/auxilio-reconstrucao/ (substituir por página oficial do gov.br antes da entrega)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "BEN-03",
+      "DOC-03"
+    ]
+  },
+  {
+    "id": "BEN-03",
+    "tema": "beneficios",
+    "subtema": "municipio_habilitado",
+    "fase": "depois",
+    "palavras_chave": [
+      "município habilitado",
+      "municipio habilitado",
+      "minha cidade",
+      "situação de emergência",
+      "situacao de emergencia",
+      "estado de calamidade",
+      "calamidade pública",
+      "calamidade publica",
+      "reconhecimento federal",
+      "habilitação",
+      "habilitacao",
+      "prazo do saque",
+      "prefeitura",
+      "decreto"
+    ],
+    "orientacao": "Para o saque-calamidade do FGTS, não basta a enchente ter causado estragos: o município precisa ter a situação de emergência ou o estado de calamidade pública reconhecido pelo governo federal (Defesa Civil Nacional, com portaria publicada no Diário Oficial da União) e ser habilitado pela Caixa. A sequência é: a prefeitura decreta a situação, o reconhecimento federal é publicado, a prefeitura entrega a documentação à Caixa e a Caixa habilita o município; só então os moradores podem pedir o saque. Para saber em que etapa sua cidade está, abra o aplicativo FGTS (Saques > Calamidade pública) e procure o seu município, ou consulte a lista de municípios habilitados no site da Caixa/FGTS, que mostra também o prazo de cada cidade. Se ela não aparecer, ligue para a Defesa Civil (199) ou procure a prefeitura para saber se o pedido já foi enviado. Atenção ao prazo: ele é diferente em cada município e, depois da data limite, o pedido não pode mais ser feito.",
+    "fonte": "Caixa Econômica Federal — Habilitação Saque Calamidade FGTS (etapas: prefeitura, habilitação do município, saque) — https://www.caixa.gov.br/poder-publico/habilitacao-saque-calamidade-fgts/Paginas/default.aspx; reconhecimento federal: Defesa Civil Nacional/MIDR (publicado no DOU; pedidos dos municípios pelo S2iD)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": []
+  },
+  {
+    "id": "BEN-04",
+    "tema": "beneficios",
+    "subtema": "cadunico_assistencia",
+    "fase": "depois",
+    "palavras_chave": [
+      "cadúnico",
+      "cadunico",
+      "cadastro único",
+      "cadastro unico",
+      "bolsa família",
+      "bolsa familia",
+      "cras",
+      "assistência social",
+      "assistencia social",
+      "cesta básica",
+      "cesta basica",
+      "aluguel social",
+      "auxílio aluguel",
+      "auxilio aluguel",
+      "baixa renda"
+    ],
+    "orientacao": "O Cadastro Único (CadÚnico) é a porta de entrada para programas como o Bolsa Família e é feito pela prefeitura, em geral no CRAS. Podem se inscrever famílias com renda de até meio salário mínimo por pessoa. Leve o CPF ou o título de eleitor do responsável pela família e um documento de identificação dos demais moradores; se você perdeu documentos, resolva antes os registros de CPF e identidade. Quem já está inscrito deve manter os dados atualizados: em municípios atingidos por calamidade ou emergência, o Ministério do Desenvolvimento e Assistência Social pode suspender ou prorrogar os prazos de atualização do cadastro. Procure também o CRAS ou a assistência social da prefeitura para saber de apoios locais, como cesta básica ou aluguel social, que variam de município para município e dependem de análise.",
+    "fonte": "Ministério do Desenvolvimento e Assistência Social (MDS) — Cadastro Único, Informe nº 88 (prazos em situações de calamidade) — https://www.gov.br/mds/pt-br/acoes-e-programas/cadastro-unico/informes/informe-cadastro-unico-88; documentos e atendimento: CRAS do seu município (confirmar na prefeitura)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "DOC-02",
+      "DOC-03"
+    ]
+  },
+  {
+    "id": "DOC-04",
+    "tema": "documentacao",
+    "subtema": "carteira_trabalho",
+    "fase": "depois",
+    "palavras_chave": [
+      "carteira de trabalho",
+      "ctps",
+      "carteira de trabalho digital",
+      "perdi carteira de trabalho",
+      "segunda via ctps",
+      "vínculo",
+      "vinculo",
+      "seguro-desemprego",
+      "seguro desemprego",
+      "emprego"
+    ],
+    "orientacao": "A Carteira de Trabalho Digital é gratuita e vale como a de papel. Se a sua carteira física se perdeu ou ficou destruída, você não precisa ir a nenhum posto: baixe o aplicativo Carteira de Trabalho Digital ou acesse pelo site do governo (gov.br), entre com sua conta gov.br (CPF e senha) e consulte seus contratos. Para ver todos os detalhes dos vínculos, a conta gov.br pode precisar de nível prata ou ouro. Contratos mais antigos podem demorar a aparecer completos; nesse caso, procure a empresa onde você trabalhou. Atenção: a carteira digital não serve como documento de identificação civil.",
+    "fonte": "Ministério do Trabalho e Emprego — Carteira de Trabalho Digital, perguntas frequentes — https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/proteja/arquivos/ctpsdigital-2.pdf; serviço: https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": [
+      "DOC-02"
+    ]
+  },
+  {
+    "id": "DOC-05",
+    "tema": "documentacao",
+    "subtema": "titulo_eleitor",
+    "fase": "depois",
+    "palavras_chave": [
+      "título de eleitor",
+      "titulo de eleitor",
+      "e-título",
+      "e-titulo",
+      "segunda via título",
+      "perdi título",
+      "justificativa eleitoral",
+      "quitação eleitoral",
+      "quitacao eleitoral",
+      "cartório eleitoral",
+      "cartorio eleitoral",
+      "tse"
+    ],
+    "orientacao": "A segunda via do título de eleitor é gratuita. Se você está em dia com a Justiça Eleitoral, emita pelo aplicativo e-Título ou pelo serviço Autoatendimento Eleitoral, no site do TSE. O e-Título vale como documento de identificação para votar quando tem a sua foto (biometria cadastrada). Se houver pendências, como multa por faltar às urnas sem justificar, regularize primeiro: o aplicativo também permite justificar ausências e gerar a guia de pagamento. Na dúvida, procure o cartório eleitoral da sua zona. Quem está com o título irregular pode ficar impedido de emitir documentos como passaporte e carteira de identidade, por isso vale resolver cedo.",
+    "fonte": "Tribunal Superior Eleitoral (TSE) — Não sei onde está o meu título eleitoral. Como faço para recuperá-lo? — https://www.tse.jus.br/comunicacao/noticias/2025/Fevereiro/nao-sei-onde-esta-o-meu-titulo-eleitoral-como-faco-para-recupera-lo",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": []
+  },
+  {
+    "id": "DOC-06",
+    "tema": "documentacao",
+    "subtema": "cnh_segunda_via",
+    "fase": "depois",
+    "palavras_chave": [
+      "cnh",
+      "carteira de motorista",
+      "habilitação",
+      "habilitacao",
+      "segunda via cnh",
+      "perdi cnh",
+      "detran",
+      "carteira digital de trânsito",
+      "carteira digital de transito",
+      "boletim de ocorrência",
+      "boletim de ocorrencia",
+      "motorista"
+    ],
+    "orientacao": "A segunda via da CNH é pedida no Detran do seu estado (em São Paulo, o Detran-SP), em geral pelo site ou aplicativo. Em caso de perda, furto ou roubo, registre antes um boletim de ocorrência (em muitos estados pode ser feito online): em furto e roubo ele costuma ser exigido e, em qualquer caso, protege você contra o uso indevido do documento. Tenha em mãos documento de identidade, CPF e comprovante de residência atualizado. A taxa varia por estado e, em alguns, há isenção para furto ou roubo com boletim de ocorrência; confirme no Detran. Se você já tinha a CNH Digital no aplicativo Carteira Digital de Trânsito, ela continua valendo para a fiscalização. O boletim de ocorrência sozinho não autoriza a dirigir.",
+    "fonte": "Detran do seu estado (em SP: Detran-SP — https://www.detran.sp.gov.br); Senatran — Carteira Digital de Trânsito (confirmar taxas e documentos no site do Detran antes da entrega)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "DOC-02",
+      "DOC-03"
+    ]
+  },
+  {
+    "id": "MOR-03",
+    "tema": "moradia",
+    "subtema": "documentos_imovel",
+    "fase": "depois",
+    "palavras_chave": [
+      "escritura",
+      "matrícula",
+      "matricula",
+      "certidão de matrícula",
+      "certidao de matricula",
+      "documentos do imóvel",
+      "documentos do imovel",
+      "documento da casa",
+      "iptu",
+      "comprovante de residência",
+      "comprovante de residencia",
+      "cartório de imóveis",
+      "cartorio de imoveis",
+      "registro de imóveis",
+      "registro de imoveis",
+      "ri digital",
+      "perdi escritura"
+    ],
+    "orientacao": "O principal documento do imóvel é a matrícula, registrada no Cartório de Registro de Imóveis. Se os papéis da casa se perderam ou molharam, peça a certidão de matrícula pela internet no RI Digital (registradores.onr.org.br), plataforma nacional dos cartórios de imóveis: faça o cadastro, escolha o estado, a cidade e o cartório, selecione o tipo de certidão (matrícula de inteiro teor) e informe o número da matrícula ou o endereço. Se você não sabe o número, a Pesquisa Nacional de Bens ajuda a localizar o imóvel pelo CPF do proprietário. A Matrícula Online é só uma consulta informativa e não substitui a certidão. A escritura costuma ser pedida de novo no cartório de notas onde foi feita, e a segunda via do IPTU e do comprovante de residência, na prefeitura. O comprovante de endereço é pedido, por exemplo, no saque-calamidade do FGTS.",
+    "fonte": "Operador Nacional do Registro Eletrônico de Imóveis (ONR) — RI Digital, manual da Certidão Digital — https://registradores.onr.org.br/Downloads/SAEC_CertidaoDigital.pdf; escritura e IPTU: cartório de notas e prefeitura do seu município (confirmar)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "DOC-02"
+    ]
+  },
+  {
+    "id": "MOR-04",
+    "tema": "moradia",
+    "subtema": "registrar_danos_seguro",
+    "fase": "depois",
+    "palavras_chave": [
+      "registrar danos",
+      "danos",
+      "prejuízo",
+      "prejuizo",
+      "fotos",
+      "inventário",
+      "inventario",
+      "lista de bens",
+      "nota fiscal",
+      "seguro",
+      "seguradora",
+      "sinistro",
+      "apólice",
+      "apolice",
+      "indenização",
+      "indenizacao",
+      "comprovar"
+    ],
+    "orientacao": "Antes de limpar e descartar, registre tudo: tire fotos e vídeos dos cômodos, do nível que a água atingiu e dos itens danificados, e faça uma lista dos bens perdidos (marca, modelo e valor estimado). Guarde notas fiscais, recibos e comprovantes de gastos emergenciais. Esse registro ajuda a pedir seguro, ressarcimento e programas de apoio. Se você tem seguro residencial, avise a seguradora o quanto antes, dentro do prazo da apólice, e pergunte como formalizar o aviso de sinistro; muitas apólices não cobrem enchente, então confira as coberturas contratadas. Pergunte à seguradora antes de descartar bens de valor. Se o pagamento for negado, procure o Procon ou registre reclamação no Consumidor.gov.br. Guarde também o laudo ou documento da Defesa Civil sobre a situação da sua rua ou bairro.",
+    "fonte": "Idec — Seguro residencial: saiba como proceder em caso de enchentes — https://idec.org.br/consultas/dicas-e-direitos/seguro-residencial-saiba-como-proceder-em-caso-de-enchentes; Procon-SP — Cartilha Seguro Residencial — https://www.procon.sp.gov.br/wp-content/uploads/2020/02/SeguroResidencial.pdf",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "MOR-01"
+    ]
   }
 ]
