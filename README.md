@@ -14,7 +14,7 @@
 
 ## Global Solution 2026.2 — CitizenTech
 
-## 👨‍🎓 Integrantes
+## 👨‍🎓 Integrantes DevLounge
 
 | Integrante | RM | Frente |
 | --- | --- | --- |
@@ -23,6 +23,7 @@
 | Victor | 570608 | Busca e grafo |
 | Michelly | 573625 | Monitoramento e cenário de cheia |
 | _(nome)_ | _(RM)_ | Respostas, prompts e avaliação |
+
 
 <!-- TODO: trocar os nomes pelos links de LinkedIn/GitHub, como no modelo:
 - <a href="LINK">Nome</a> -->
