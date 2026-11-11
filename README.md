@@ -18,11 +18,10 @@
 
 | Integrante | RM | Frente |
 | --- | --- | --- |
-| Aelton | 573694 | Arquitetura, integração e fluxo principal |
+| Aelton | 573694 | Arquitetura, integração, fluxo principal, respostas e prompts |
 | Bruno | 572073 | Base de conhecimento e curadoria das fontes |
-| Victor | 570608 | Busca e grafo |
+| Victor | 570608 | Busca, grafo e avaliação |
 | Michelly | 573625 | Monitoramento e cenário de cheia |
-| _(nome)_ | _(RM)_ | Respostas, prompts e avaliação |
 
 <!-- TODO: trocar os nomes pelos links de LinkedIn/GitHub, como no modelo:
 - <a href="LINK">Nome</a> -->
