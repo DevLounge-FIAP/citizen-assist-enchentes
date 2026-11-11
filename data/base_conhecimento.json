@@ -1,1 +1,309 @@
-[]
+[
+  {
+    "id": "SEG-01",
+    "tema": "seguranca",
+    "subtema": "alertas",
+    "fase": "antes",
+    "palavras_chave": [
+      "alerta",
+      "sms",
+      "40199",
+      "defesa civil",
+      "cadastro",
+      "cep",
+      "aviso de chuva",
+      "receber alertas"
+    ],
+    "orientacao": "Cadastre-se gratuitamente nos alertas da Defesa Civil, que avisam sobre risco de desastres e trazem recomendações para a população. Por SMS: envie uma mensagem para 40199 com o CEP da área de interesse (casa, trabalho ou familiares). Pelo WhatsApp: salve o número (61) 2034-4611, mande um \"olá\" para o robô de alertas e siga os passos para cadastrar as áreas. Pelo Telegram: procure o contato \"Defesa Civil Alertas\" e faça o mesmo. Quem tem TV por assinatura recebe os avisos automaticamente na programação. A Defesa Civil também atende pelo telefone 199.",
+    "fonte": "Governo Federal (gov.br) — Ministério da Integração e do Desenvolvimento Regional: Solicitar o recebimento de avisos e alertas de riscos de desastres, da Defesa Civil — https://www.gov.br/pt-br/servicos/solicitar-cadastro-para-recebimento-de-avisos-e-alertas-de-desastres",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": []
+  },
+  {
+    "id": "DOC-01",
+    "tema": "documentacao",
+    "subtema": "certidao_segunda_via",
+    "fase": "depois",
+    "palavras_chave": [
+      "certidão",
+      "certidao",
+      "nascimento",
+      "casamento",
+      "óbito",
+      "obito",
+      "segunda via",
+      "perdi certidão",
+      "cartório",
+      "cartorio",
+      "registro civil"
+    ],
+    "orientacao": "A segunda via das certidões de nascimento, casamento e óbito pode ser pedida pela internet, sem ir ao cartório, no Portal do Registro Civil (registrocivil.org.br). Acesse o site, escolha o tipo de certidão, entre com sua conta gov.br e informe nome completo, data de nascimento e nome dos pais; se você tiver livro, folha e termo (que aparecem na certidão antiga), o pedido é mais rápido. Escolha o formato (PDF ou impresso). A segunda via em geral é paga, com valor variável, e pessoas reconhecidamente pobres podem ter isenção. Use apenas o portal oficial para evitar golpes.",
+    "fonte": "Portal do Registro Civil — Centrais de Registro Civil — https://www.registrocivil.org.br",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": []
+  },
+  {
+    "id": "DOC-02",
+    "tema": "documentacao",
+    "subtema": "cpf",
+    "fase": "depois",
+    "palavras_chave": [
+      "cpf",
+      "comprovante de cpf",
+      "segunda via cpf",
+      "perdi cpf",
+      "situação cadastral",
+      "situacao cadastral",
+      "receita federal",
+      "regularizar cpf"
+    ],
+    "orientacao": "O CPF não tem mais cartão físico: a chamada segunda via é o comprovante de inscrição, que é gratuito. Consulte e emita o comprovante no site da Receita Federal (informando CPF e data de nascimento), no aplicativo da Receita Federal ou pelo gov.br. Se a situação aparecer como pendente, suspensa ou cancelada, é preciso regularizar, o que também é gratuito e pode ser feito pelo site da Receita. Se você não lembra o número, use a consulta pelo nome ou procure uma unidade da Receita. Qualquer site que cobre para emitir o CPF não é oficial.",
+    "fonte": "Receita Federal — Consultar Cadastro de Pessoa Física (CPF) — https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": []
+  },
+  {
+    "id": "DOC-03",
+    "tema": "documentacao",
+    "subtema": "identidade_cin",
+    "fase": "depois",
+    "palavras_chave": [
+      "rg",
+      "identidade",
+      "carteira de identidade",
+      "cin",
+      "perdi documento",
+      "perdi rg",
+      "segunda via rg",
+      "documento com foto"
+    ],
+    "orientacao": "Para refazer a identidade, solicite a segunda via da Carteira de Identidade Nacional (CIN) no órgão de identificação do seu estado; o agendamento começa em gov.br/identidade e a coleta de dados biométricos é presencial. Leve a certidão de nascimento (solteiros) ou de casamento (casados) e o CPF. Em caso de perda ou roubo, registre antes um boletim de ocorrência. A segunda via costuma ter taxa, e o valor varia por estado; em alguns estados é gratuita em caso de furto ou roubo com boletim de ocorrência. Depois de emitida, a versão digital fica disponível no aplicativo gov.br.",
+    "fonte": "Governo Federal — Carteira de Identidade Nacional — https://www.gov.br/identidade (taxas e regras: órgão de identificação do seu estado)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "DOC-01",
+      "DOC-02"
+    ]
+  },
+  {
+    "id": "BEN-01",
+    "tema": "beneficios",
+    "subtema": "fgts_calamidade",
+    "fase": "depois",
+    "palavras_chave": [
+      "fgts",
+      "saque calamidade",
+      "calamidade",
+      "sacar fgts",
+      "saque fgts enchente",
+      "caixa",
+      "dinheiro",
+      "ajuda financeira"
+    ],
+    "orientacao": "O saque-calamidade do FGTS permite retirar até R$ 6.220 por conta vinculada. Para ter direito: ter saldo no FGTS, morar em área afetada de um município com situação de emergência ou calamidade pública reconhecida pelo governo federal e habilitado pela Caixa, e não ter feito saque por calamidade nos 12 meses anteriores. Se o seu município decretou emergência mas ainda não aparece no aplicativo, é preciso aguardar a habilitação feita pela prefeitura. O pedido é feito de preferência no aplicativo FGTS (Saques > Calamidade pública): informe o município, o tipo de comprovante de endereço, o CEP e o número da residência, e envie foto do documento de identidade (frente e verso) e, conforme as regras do momento, os demais documentos pedidos. O valor pode ser creditado em conta da Caixa ou de outro banco. Cada município tem o seu prazo para pedir o saque.",
+    "fonte": "Caixa Econômica Federal — FGTS: Saque Calamidade Pública — https://www.caixa.gov.br/calamidadepublica/Paginas/default.aspx",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "DOC-03"
+    ]
+  },
+  {
+    "id": "SEG-02",
+    "tema": "seguranca",
+    "subtema": "contatos_emergencia",
+    "fase": "durante",
+    "palavras_chave": [
+      "emergência",
+      "emergencia",
+      "telefone",
+      "telefones",
+      "193",
+      "199",
+      "192",
+      "190",
+      "bombeiros",
+      "defesa civil",
+      "samu",
+      "polícia",
+      "policia",
+      "socorro",
+      "ajuda",
+      "ligar",
+      "perigo",
+      "para quem ligar"
+    ],
+    "orientacao": "Em caso de emergência, os telefones são: Defesa Civil — 199; Bombeiros — 193; SAMU — 192; Polícia Militar — 190. Ao ligar: fique calmo; diga seu nome e um telefone de contato; explique exatamente o que está acontecendo; informe se há vítimas e quantas; e passe o endereço correto, com referências, para a equipe chegar mais rápido. Este assistente não é um canal oficial e não substitui esses serviços: se você está em risco, ligue primeiro e só depois continue aqui.",
+    "fonte": "Defesa Civil de São Paulo (Prefeitura) — Telefones Úteis — https://prefeitura.sp.gov.br/web/defesa_civil/w/noticias/184619",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": []
+  },
+  {
+    "id": "SEG-03",
+    "tema": "seguranca",
+    "subtema": "durante_enchente",
+    "fase": "durante",
+    "palavras_chave": [
+      "durante a enchente",
+      "durante a inundação",
+      "durante a inundacao",
+      "o que fazer",
+      "água subindo",
+      "agua subindo",
+      "alagou",
+      "inundação",
+      "inundacao",
+      "sair de casa",
+      "área de risco",
+      "area de risco",
+      "atravessar rua alagada",
+      "carro",
+      "enxurrada",
+      "socorro"
+    ],
+    "orientacao": "Durante a inundação, antes de tudo, salve e proteja vidas. Evite o contato direto com a água da enchente, que é contaminada e pode causar doenças. Veja se sua casa não corre risco de desabar. Se estiver em local seguro, procure não se deslocar; não atravesse ruas alagadas, pois você pode ser arrastado pela água. Em local alagado, atenção a buracos e bueiros sem tampa ou cobertos pela água, e a queda de árvores, fios e postes. Use calçado, calça comprida e blusa; não deixe crianças brincando na enxurrada, por risco de hepatite e leptospirose. Quem mora em área de risco deve sair de casa durante as chuvas. Se o nível da água estiver subindo, vá com sua família para um lugar seguro. De carro, nunca atravesse áreas cobertas pela água e procure parar em local alto. Se precisar retirar algo de casa, peça ajuda à Defesa Civil (199) ou aos Bombeiros (193).",
+    "fonte": "Defesa Civil de São Paulo (Prefeitura) — Chuvas excessivas: saiba como agir — https://prefeitura.sp.gov.br/web/defesa_civil/w/cuidados_importantes/179951",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": [
+      "SEG-02"
+    ]
+  },
+  {
+    "id": "SEG-04",
+    "tema": "seguranca",
+    "subtema": "kit_emergencia",
+    "fase": "antes",
+    "palavras_chave": [
+      "kit",
+      "kit de emergência",
+      "kit de emergencia",
+      "mochila",
+      "mochila de emergência",
+      "preparar",
+      "preparação",
+      "preparacao",
+      "itens essenciais",
+      "o que levar",
+      "lista de itens"
+    ],
+    "orientacao": "Monte com antecedência um kit de emergência pessoal para o caso de saídas emergenciais. A Defesa Civil sugere: água (2 litros por pessoa, por dia); comida não perecível; cópia de documentos; kit de primeiros socorros; remédios (com cópia das prescrições dos controlados); dinheiro; baterias extras; fósforos em invólucro à prova d'água; itens de higiene (escova, creme dental, sabonete); rádio a pilhas e lanterna; apito para pedir ajuda; abridor de lata; mapas locais; saco de dormir ou cobertor; suprimentos para animais de estimação e para bebês; e um par extra de óculos de grau.",
+    "fonte": "Defesa Civil do Paraná — Kit de Emergência pessoal (referência estadual; não foi encontrada página equivalente da Defesa Civil de SP) — https://www.defesacivil.pr.gov.br/Pagina/Kit-de-Emergencia-pessoal",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": []
+  },
+  {
+    "id": "SEG-05",
+    "tema": "seguranca",
+    "subtema": "local_seguro",
+    "fase": "antes",
+    "palavras_chave": [
+      "abrigo",
+      "abrigos",
+      "onde ficar",
+      "local seguro",
+      "onde me abrigar",
+      "desabrigado",
+      "para onde ir",
+      "alojar",
+      "família",
+      "animais de estimação"
+    ],
+    "orientacao": "Antes da chuva forte, estabeleça um local seguro onde você, sua família e os animais de estimação possam se alojar, e combine isso com todos. Mantenha-se informado sobre as condições meteorológicas. Em caso de dúvida ou perigo, ligue para a Defesa Civil (199) ou para os Bombeiros (193).",
+    "fonte": "Defesa Civil de São Paulo (Prefeitura) — Chuvas excessivas: saiba como agir — https://prefeitura.sp.gov.br/web/defesa_civil/w/cuidados_importantes/179951 (página sobre abrigos públicos do seu município: pendente)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": [
+      "SEG-04"
+    ]
+  },
+  {
+    "id": "MOR-01",
+    "tema": "moradia",
+    "subtema": "vistoria",
+    "fase": "depois",
+    "palavras_chave": [
+      "vistoria",
+      "laudo",
+      "interdição",
+      "interdicao",
+      "interditado",
+      "rachadura",
+      "estrutura",
+      "casa segura",
+      "desinterdição",
+      "desinterdicao",
+      "engenheiro",
+      "defesa civil vistoria"
+    ],
+    "orientacao": "Antes de voltar para casa, confirme com a Defesa Civil se o imóvel foi interditado ou liberado. Para pedir uma vistoria técnica, ligue para a Defesa Civil do seu município (199) ou procure a prefeitura, principalmente se houver rachaduras, infiltração ou outros sinais de dano. Se o imóvel for interditado, não volte até a liberação: a desinterdição depende de nova vistoria e, em alguns municípios, de laudo de engenheiro ou arquiteto. Guarde o laudo ou documento da vistoria, pois ele pode ser pedido em programas de apoio da prefeitura, do estado ou do governo federal.",
+    "fonte": "Defesa Civil do município; orientações reunidas pelo Idec — https://idec.org.br/node/27491 (substituir pela página da Defesa Civil de Santo André/SP antes da entrega)",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": true,
+    "depende_de": []
+  },
+  {
+    "id": "MOR-02",
+    "tema": "moradia",
+    "subtema": "limpeza_pos_enchente",
+    "fase": "depois",
+    "palavras_chave": [
+      "depois da enchente",
+      "depois da inundação",
+      "depois da inundacao",
+      "limpeza",
+      "limpar a casa",
+      "água da torneira",
+      "agua da torneira",
+      "água potável",
+      "agua potavel",
+      "desinfetar",
+      "água sanitária",
+      "agua sanitaria",
+      "alimentos",
+      "equipamentos elétricos",
+      "choque",
+      "leptospirose",
+      "voltar para casa"
+    ],
+    "orientacao": "Depois da inundação: beba apenas água filtrada ou fervida; não use alimentos que tiveram contato com a água da enchente; não use equipamentos elétricos que ficaram molhados ou em locais inundados, pelo risco de choque e curto-circuito; lave e desinfete os objetos atingidos com uma mistura de um copo de água sanitária para cada balde de 20 litros de água limpa, usando luvas e botas. O Ministério da Saúde recomenda que casas, escolas e outros estabelecimentos só sejam ocupados depois da lavagem e desinfecção. Fique atento a sintomas como febre, vômito, dor de cabeça ou no corpo (principalmente na batata da perna) e diarreia, e procure um serviço de saúde. Cuidado com animais peçonhentos, que aparecem em locais de enchente e entre destroços, e com sinais de deslizamento.",
+    "fonte": "Defesa Civil de São Paulo (Prefeitura) — Chuvas excessivas: saiba como agir — https://prefeitura.sp.gov.br/web/defesa_civil/w/cuidados_importantes/179951; Ministério da Saúde — Enchentes: publicações — https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/enchentes",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": [
+      "MOR-01"
+    ]
+  },
+  {
+    "id": "SEG-06",
+    "tema": "seguranca",
+    "subtema": "preparar_casa_chuva",
+    "fase": "antes",
+    "palavras_chave": [
+      "antes da enchente",
+      "preparar a casa",
+      "primeiro sinal de chuva",
+      "chuva forte",
+      "proteger documentos",
+      "desligar tomadas",
+      "móveis",
+      "moveis",
+      "calhas",
+      "telhado",
+      "avisar vizinhos",
+      "áreas de risco",
+      "areas de risco"
+    ],
+    "orientacao": "Ao primeiro sinal de chuva forte: coloque móveis, eletrodomésticos e objetos em lugares altos; desconecte os aparelhos eletrônicos das tomadas; feche portas e janelas; coloque documentos e objetos de valor em sacos plásticos bem fechados e em local protegido; e leve o lixo para áreas que não alagam. No dia a dia, limpe telhado, calhas e canaletas para evitar entupimentos e não jogue lixo ou entulho em córregos. Evite construir em cima ou embaixo de barrancos que possam deslizar. Se você mora perto de áreas de risco de deslizamento, avise seus vizinhos e, imediatamente, os Bombeiros (193) e a Defesa Civil (199).",
+    "fonte": "Defesa Civil de São Paulo (Prefeitura) — Chuvas excessivas: saiba como agir — https://prefeitura.sp.gov.br/web/defesa_civil/w/cuidados_importantes/179951",
+    "data_verificacao": "2026-11-11",
+    "requer_confirmacao": false,
+    "depende_de": []
+  }
+]

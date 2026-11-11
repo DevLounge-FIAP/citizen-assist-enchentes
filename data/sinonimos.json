@@ -1,0 +1,144 @@
+{
+  "rg": [
+    "identidade",
+    "carteira de identidade",
+    "cin",
+    "documento com foto",
+    "registro geral"
+  ],
+  "cpf": [
+    "cadastro de pessoa fisica",
+    "comprovante de cpf",
+    "numero do cpf"
+  ],
+  "certidao": [
+    "certidao de nascimento",
+    "certidao de casamento",
+    "certidao de obito",
+    "registro civil",
+    "cartorio"
+  ],
+  "segunda via": [
+    "2 via",
+    "2a via",
+    "nova via",
+    "refazer",
+    "reemitir",
+    "tirar de novo"
+  ],
+  "perdi": [
+    "perdeu",
+    "extraviei",
+    "sumiu",
+    "roubaram",
+    "furtaram",
+    "molhou",
+    "estragou",
+    "destruiu",
+    "levou a agua"
+  ],
+  "fgts": [
+    "fundo de garantia",
+    "saque calamidade",
+    "saque fgts",
+    "sacar fgts"
+  ],
+  "calamidade": [
+    "enchente",
+    "inundacao",
+    "alagamento",
+    "desastre",
+    "emergencia"
+  ],
+  "alerta": [
+    "aviso",
+    "alarme",
+    "sms",
+    "40199",
+    "notificacao"
+  ],
+  "defesa civil": [
+    "199",
+    "protecao civil"
+  ],
+  "bombeiros": [
+    "193",
+    "resgate"
+  ],
+  "abrigo": [
+    "abrigo temporario",
+    "local seguro",
+    "ponto de apoio"
+  ],
+  "auxilio": [
+    "ajuda financeira",
+    "beneficio",
+    "ajuda do governo"
+  ],
+  "imovel": [
+    "casa",
+    "moradia",
+    "residencia",
+    "apartamento"
+  ],
+  "vistoria": [
+    "laudo",
+    "inspecao",
+    "avaliacao da casa",
+    "interdicao"
+  ],
+  "kit": [
+    "mochila de emergencia",
+    "kit de emergencia",
+    "mochila",
+    "itens essenciais",
+    "o que levar"
+  ],
+  "voltar para casa": [
+    "retornar",
+    "entrar em casa",
+    "limpar a casa",
+    "limpeza",
+    "depois da agua baixar"
+  ],
+  "enchente": [
+    "inundacao",
+    "alagamento",
+    "agua subindo",
+    "alagou",
+    "cheia",
+    "transbordou"
+  ],
+  "sair de casa": [
+    "evacuar",
+    "area de risco",
+    "estou ilhado",
+    "para onde ir"
+  ],
+  "samu": [
+    "192",
+    "ambulancia",
+    "emergencia medica"
+  ],
+  "policia": [
+    "190",
+    "pm",
+    "policia militar"
+  ],
+  "agua": [
+    "agua potavel",
+    "agua da torneira",
+    "agua filtrada",
+    "agua fervida",
+    "agua sanitaria",
+    "desinfetar",
+    "desinfeccao"
+  ],
+  "doenca": [
+    "leptospirose",
+    "hepatite",
+    "diarreia",
+    "febre",
+    "sintomas"
+  ]
+}
