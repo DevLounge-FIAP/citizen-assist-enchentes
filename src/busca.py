@@ -29,6 +29,13 @@ def normalizar(texto: str) -> str:
     texto = " ".join(texto.split())
     return texto
 
+STOPWORDS = {normalizar(p) for p in ["como", "a", "o", "do", "meu", "de", "você"]}
+
+def tokenizar(texto: str) -> set[str]:
+    """Normalize o texto, remova as STOPWORDS e divida por palavras."""
+    palavras = normalizar(texto).split()
+    return {p for p in palavras if p not in STOPWORDS}
+
 
 def buscar (pergunta: str, base: list[dict], sinonimos: dict) -> dict:
     """Esqueleto: ainda não busca nada, sempre responde 'sem_base'."""
