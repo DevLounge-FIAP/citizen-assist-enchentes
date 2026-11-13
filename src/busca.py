@@ -36,7 +36,14 @@ def tokenizar(texto: str) -> set[str]:
     palavras = normalizar(texto).split()
     return {p for p in palavras if p not in STOPWORDS}
 
+def jaccard(a: set[str], b: set[str]) -> float:
+    """Similaridade de Jaccard: tamanho da interseção dividido pelo da união (de 0 a 1)."""
+    uniao = a | b
+    if not uniao:
+        return 0.0
+    return len(a & b) / len(uniao)
 
+   
 def buscar (pergunta: str, base: list[dict], sinonimos: dict) -> dict:
     """Esqueleto: ainda não busca nada, sempre responde 'sem_base'."""
 
