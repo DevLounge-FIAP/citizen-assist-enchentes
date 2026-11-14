@@ -92,5 +92,12 @@ assert buscar("perdi meu RG na enchente", BASE, {})["status"] == "ok"
 SIN_REAL = carregar_sinonimos("data/sinonimos.json")
 assert buscar("perdi meus documentos", BASE, SIN_REAL)["status"] == "sem_base"
 
+# regressão: "água" genérica não pode puxar a limpeza pós-enchente
+r = buscar("a água está subindo, o que eu faço?", BASE, SIN_REAL)
+assert r["resultados"][0][0]["id"] == "SEG-03"
+
+r = buscar("posso beber a água da torneira depois da enchente?", BASE, SIN_REAL)
+assert r["resultados"][0][0]["id"] == "MOR-02"
+
 print("tudo certo")
 
