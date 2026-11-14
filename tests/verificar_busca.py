@@ -99,5 +99,13 @@ assert r["resultados"][0][0]["id"] == "SEG-03"
 r = buscar("posso beber a água da torneira depois da enchente?", BASE, SIN_REAL)
 assert r["resultados"][0][0]["id"] == "MOR-02"
 
+# ---- Bloco 7: casos vagos reais (conferência de 14/11) ----
+assert buscar("meu documento sumiu", BASE, SIN_REAL)["status"] == "sem_base"
+assert buscar("preciso de ajuda", BASE, SIN_REAL)["status"] == "sem_base"
+
+r = buscar("acabou de ocorrer uma inchente aqui, preciso de um abrigo", BASE, SIN_REAL)
+assert r["status"] == "ok"
+assert r["resultados"][0][0]["id"] == "SEG-05"
+
 print("tudo certo")
 

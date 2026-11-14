@@ -1,7 +1,7 @@
 import unicodedata
 import json
 
-LIMIAR = 0.10   # nota mínima do 1º colocado; abaixo disso, não há base confiável
+LIMIAR = 0.11   # nota mínima do 1º colocado; abaixo disso, não há base confiável
 MARGEM = 0.85   # se nota do 2º / nota do 1º >= MARGEM, os dois estão "colados" -> ambígua
 
 """
