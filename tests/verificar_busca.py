@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, "src")
-from busca import normalizar, tokenizar, jaccard, buscar, expandir
+from busca import normalizar, tokenizar, jaccard, buscar, expandir, carregar_sinonimos
 
 """Assert serve para verificar se uma suposição é verdadeira, caso seja falsa ele encerra o programa com um erro. No caso abaixo ele verifica se a normalização está funcionando."""
 
@@ -82,6 +82,15 @@ assert {"rg", "cin"} <= expandir("perdi minha carteira de identidade", SIN)
 assert "carteira" in expandir("perdi meu RG!", SIN)
 # palavra dentro de outra palavra NÃO dispara
 assert "cin" not in expandir("argentina", SIN)
+
+r = buscar("segunda via", BASE, {})
+assert r["status"] == "ambigua"
+assert len(r["resultados"]) >= 2
+
+assert buscar("perdi meu RG na enchente", BASE, {})["status"] == "ok"
+
+SIN_REAL = carregar_sinonimos("data/sinonimos.json")
+assert buscar("perdi meus documentos", BASE, SIN_REAL)["status"] == "sem_base"
 
 print("tudo certo")
 
