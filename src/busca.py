@@ -1,4 +1,5 @@
 import unicodedata
+import json
 
 """
 Busca: normalização, sinônimos e pontuação por sobreposição de termos.
@@ -43,10 +44,48 @@ def jaccard(a: set[str], b: set[str]) -> float:
         return 0.0
     return len(a & b) / len(uniao)
 
-   
-def buscar (pergunta: str, base: list[dict], sinonimos: dict) -> dict:
-    """Esqueleto: ainda não busca nada, sempre responde 'sem_base'."""
 
-    return {"status": "sem_base", "resultados": []}
+def tokens_do_registro(registro: dict) -> set[str]:
+    """Junta todas as palavras_chave do registro em um único conjunto de tokens."""
+    tokens = set()
+    for frase in registro.get("palavras_chave", []):
+        tokens |= tokenizar(frase)
+    return tokens
+
+
+def carregar_sinonimos(caminho: str) -> dict:
+    """Lê o data/sinonimos.json e devolve o dicionário {termo: [sinônimos]}."""
+    with open(caminho, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def expandir(pergunta: str, sinonimos: dict) -> set[str]:
+    """Tokeniza a pergunta e acrescenta os tokens dos sinônimos que ela menciona."""
+    texto = f" {normalizar(pergunta)} "
+    tokens = tokenizar(pergunta)
+
+    for termo, lista in sinonimos.items():
+        grupo = [normalizar(termo)] + [normalizar(s) for s in lista]
+        if any(frase and f" {frase} " in texto for frase in grupo):
+            for frase in grupo:
+                tokens |= tokenizar(frase)
+
+    return tokens
+
+def buscar(pergunta: str, base: list[dict], sinonimos: dict) -> dict:
+    """Compara a pergunta com cada registro da base e devolve os melhores."""
+    tokens_pergunta = expandir(pergunta, sinonimos)
+
+    pontuados = []
+    for registro in base:
+        nota = jaccard(tokens_pergunta, tokens_do_registro(registro))
+        if nota > 0:
+            pontuados.append((registro, nota))
+
+    if not pontuados:
+        return {"status": "sem_base", "resultados": []}
+
+    pontuados.sort(key=lambda par: par[1], reverse=True)
+    return {"status": "ok", "resultados": pontuados[:3]}
     
 

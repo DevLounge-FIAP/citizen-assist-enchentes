@@ -1,6 +1,6 @@
 import sys
 sys.path.insert(0, "src")
-from busca import normalizar, tokenizar, jaccard
+from busca import normalizar, tokenizar, jaccard, buscar, expandir
 
 """Assert serve para verificar se uma suposição é verdadeira, caso seja falsa ele encerra o programa com um erro. No caso abaixo ele verifica se a normalização está funcionando."""
 
@@ -38,6 +38,50 @@ assert jaccard(set(), {"a"}) == 0.0
 assert round (jaccard({"fgts", "saque"}, {"fgts", "saque", "calamidade"}), 2) == 0.67   
 assert isinstance(jaccard(A, B), float)
 
+
+import json
+
+with open("data/base_conhecimento.json", encoding="utf-8") as f:
+    BASE = json.load(f)
+
+r = buscar("perdi meu RG na enchente", BASE, {})
+assert r["status"] == "ok"
+assert r["resultados"][0][0]["id"] == "DOC-03"
+
+r = buscar("como tirar segunda via do CPF?", BASE, {})
+assert r["resultados"][0][0]["id"] == "DOC-02"
+
+r = buscar("quero sacar o FGTS", BASE, {})
+assert r["resultados"][0][0]["id"] == "BEN-01"
+
+# no máximo 3 resultados, em ordem decrescente de nota
+r = buscar("segunda via", BASE, {})
+notas = [nota for _, nota in r["resultados"]]
+assert len(notas) <= 3
+assert notas == sorted(notas, reverse=True)
+
+# nada em comum com a base, ou pergunta vazia
+assert buscar("pizza de calabresa", BASE, {}) == {"status": "sem_base", "resultados": []}
+assert buscar("", BASE, {}) == {"status": "sem_base", "resultados": []}
+
+SIN = {
+    "grana": ["dinheiro", "ajuda financeira"],
+    "rg": ["carteira de identidade", "cin"],
+}
+
+# sem o dicionário, "grana" não existe na base
+assert buscar("preciso de grana", BASE, {})["status"] == "sem_base"
+# com o dicionário, chega ao FGTS
+r = buscar("preciso de grana", BASE, SIN)
+assert r["status"] == "ok"
+assert r["resultados"][0][0]["id"] == "BEN-01"
+
+# via expressão com várias palavras
+assert {"rg", "cin"} <= expandir("perdi minha carteira de identidade", SIN)
+# o caminho inverso também funciona
+assert "carteira" in expandir("perdi meu RG!", SIN)
+# palavra dentro de outra palavra NÃO dispara
+assert "cin" not in expandir("argentina", SIN)
 
 print("tudo certo")
 
