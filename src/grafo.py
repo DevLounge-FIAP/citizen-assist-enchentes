@@ -43,6 +43,26 @@ def pre_requisitos(id_registro: str, base: list[dict]) -> list[str]:
     ordem.pop()
     return ordem
 
-def relacionados(id_registro: str, base: list[dict]) -> list [str]:
-    """Esqueleto: devolve lista vazia (sem recomendação)."""
-    return[]
+LIMITE_RELACIONADOS = 3
+
+
+def relacionados(id_registro: str, base: list[dict]) -> list[str]:
+    """Ids para continuar a navegação: quem depende deste, depois o mesmo tema e fase."""
+    atual = next((r for r in base if r["id"] == id_registro), None)
+    if atual is None:
+        raise ValueError(f"id inexistente na base: {id_registro}")
+
+    ja_vistos = set(pre_requisitos(id_registro, base)) | {id_registro}
+
+    dependentes = [r["id"] for r in base if id_registro in (r.get("depende_de") or [])]
+
+    mesma_fase = []
+    tema, fase = atual.get("tema"), atual.get("fase")
+    if tema and fase:
+        mesma_fase = [r["id"] for r in base if r.get("tema") == tema and r.get("fase") == fase]
+
+    resultado = []
+    for candidato in dependentes + mesma_fase:
+        if candidato not in ja_vistos and candidato not in resultado:
+            resultado.append(candidato)
+    return resultado[:LIMITE_RELACIONADOS]
