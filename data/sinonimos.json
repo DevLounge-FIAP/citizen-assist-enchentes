@@ -44,9 +44,6 @@
     "sacar fgts"
   ],
   "calamidade": [
-    "enchente",
-    "inundacao",
-    "alagamento",
     "desastre",
     "emergencia"
   ],
@@ -77,7 +74,6 @@
     "auxilio reconstrucao"
   ],
   "imovel": [
-    "casa",
     "moradia",
     "residencia",
     "apartamento"
@@ -105,8 +101,6 @@
   "enchente": [
     "inundacao",
     "alagamento",
-    "agua subindo",
-    "alagou",
     "cheia",
     "transbordou"
   ],

@@ -1,6 +1,7 @@
 [
   {
     "id": "SEG-01",
+    "titulo": "Cadastro nos alertas da Defesa Civil",
     "tema": "seguranca",
     "subtema": "alertas",
     "fase": "antes",
@@ -22,6 +23,7 @@
   },
   {
     "id": "DOC-01",
+    "titulo": "Certidões de nascimento, casamento e óbito (segunda via)",
     "tema": "documentacao",
     "subtema": "certidao_segunda_via",
     "fase": "depois",
@@ -46,6 +48,7 @@
   },
   {
     "id": "DOC-02",
+    "titulo": "CPF (comprovante e regularização)",
     "tema": "documentacao",
     "subtema": "cpf",
     "fase": "depois",
@@ -67,6 +70,7 @@
   },
   {
     "id": "DOC-03",
+    "titulo": "Identidade (RG/CIN): segunda via",
     "tema": "documentacao",
     "subtema": "identidade_cin",
     "fase": "depois",
@@ -91,6 +95,7 @@
   },
   {
     "id": "BEN-01",
+    "titulo": "Saque-calamidade do FGTS",
     "tema": "beneficios",
     "subtema": "fgts_calamidade",
     "fase": "depois",
@@ -115,6 +120,7 @@
   },
   {
     "id": "SEG-02",
+    "titulo": "Telefones de emergência",
     "tema": "seguranca",
     "subtema": "contatos_emergencia",
     "fase": "durante",
@@ -146,6 +152,7 @@
   },
   {
     "id": "SEG-03",
+    "titulo": "O que fazer durante a inundação",
     "tema": "seguranca",
     "subtema": "durante_enchente",
     "fase": "durante",
@@ -177,6 +184,7 @@
   },
   {
     "id": "SEG-04",
+    "titulo": "Kit de emergência",
     "tema": "seguranca",
     "subtema": "kit_emergencia",
     "fase": "antes",
@@ -201,6 +209,7 @@
   },
   {
     "id": "SEG-05",
+    "titulo": "Local seguro e abrigo",
     "tema": "seguranca",
     "subtema": "local_seguro",
     "fase": "antes",
@@ -226,6 +235,7 @@
   },
   {
     "id": "MOR-01",
+    "titulo": "Vistoria e interdição do imóvel",
     "tema": "moradia",
     "subtema": "vistoria",
     "fase": "depois",
@@ -241,7 +251,11 @@
       "desinterdição",
       "desinterdicao",
       "engenheiro",
-      "defesa civil vistoria"
+      "defesa civil vistoria",
+      "rachada",
+      "rachou",
+      "trincou",
+      "trinca"
     ],
     "orientacao": "Antes de voltar para casa, confirme com a Defesa Civil se o imóvel foi interditado ou liberado. Para pedir uma vistoria técnica, ligue para a Defesa Civil do seu município (199; em Santo André, o atendimento é 24 horas pelo 199) ou procure a prefeitura, principalmente se houver rachaduras, infiltração ou outros sinais de dano. Se o imóvel for interditado, não volte até a liberação: a desinterdição depende de nova vistoria e, em alguns municípios, de laudo de engenheiro ou arquiteto. Guarde o laudo ou documento da vistoria, pois ele pode ser pedido em programas de apoio da prefeitura, do estado ou do governo federal. Em Santo André, as famílias retiradas de imóveis interditados são encaminhadas ao atendimento da rede municipal de assistência social.",
     "fonte": "Defesa Civil de Santo André (Departamento de Proteção e Defesa Civil) — atendimento 24h pelo 199, vistorias e interdições — https://abcdoabc.com.br/defesa-civil-alerta-deslizamentos-santo-andre e https://abcdoabc.com.br/defesa-civil-interdita-25-jardim-santo-andre; orientações gerais: Idec — https://idec.org.br/node/27491 (confirmar na página da Prefeitura de Santo André: santoandre.sp.gov.br)",
@@ -251,6 +265,7 @@
   },
   {
     "id": "MOR-02",
+    "titulo": "Limpeza e cuidados depois da enchente",
     "tema": "moradia",
     "subtema": "limpeza_pos_enchente",
     "fase": "depois",
@@ -283,6 +298,7 @@
   },
   {
     "id": "SEG-06",
+    "titulo": "Preparar a casa antes da chuva",
     "tema": "seguranca",
     "subtema": "preparar_casa_chuva",
     "fase": "antes",
@@ -309,6 +325,7 @@
   },
   {
     "id": "BEN-02",
+    "titulo": "Auxílios federais (Auxílio Reconstrução)",
     "tema": "beneficios",
     "subtema": "auxilios_federais",
     "fase": "depois",
@@ -338,6 +355,7 @@
   },
   {
     "id": "BEN-03",
+    "titulo": "Município habilitado e prazos",
     "tema": "beneficios",
     "subtema": "municipio_habilitado",
     "fase": "depois",
@@ -365,6 +383,7 @@
   },
   {
     "id": "BEN-04",
+    "titulo": "Cadastro Único e assistência social",
     "tema": "beneficios",
     "subtema": "cadunico_assistencia",
     "fase": "depois",
@@ -396,6 +415,7 @@
   },
   {
     "id": "DOC-04",
+    "titulo": "Carteira de Trabalho (digital)",
     "tema": "documentacao",
     "subtema": "carteira_trabalho",
     "fase": "depois",
@@ -421,6 +441,7 @@
   },
   {
     "id": "DOC-05",
+    "titulo": "Título de eleitor (segunda via)",
     "tema": "documentacao",
     "subtema": "titulo_eleitor",
     "fase": "depois",
@@ -446,6 +467,7 @@
   },
   {
     "id": "DOC-06",
+    "titulo": "CNH (segunda via)",
     "tema": "documentacao",
     "subtema": "cnh_segunda_via",
     "fase": "depois",
@@ -474,6 +496,7 @@
   },
   {
     "id": "MOR-03",
+    "titulo": "Documentos do imóvel",
     "tema": "moradia",
     "subtema": "documentos_imovel",
     "fase": "depois",
@@ -506,6 +529,7 @@
   },
   {
     "id": "MOR-04",
+    "titulo": "Registrar danos e acionar o seguro",
     "tema": "moradia",
     "subtema": "registrar_danos_seguro",
     "fase": "depois",
@@ -535,5 +559,29 @@
     "depende_de": [
       "MOR-01"
     ]
+  },
+  {
+    "id": "DOC-07",
+    "titulo": "Documentos necessários num processo de calamidade",
+    "tema": "documentacao",
+    "subtema": "visao_geral",
+    "fase": "depois",
+    "palavras_chave": [
+      "documentos",
+      "documento",
+      "quais documentos",
+      "documentos necessarios",
+      "documentos necessários",
+      "papelada",
+      "que documento levar",
+      "documento sumiu",
+      "perdi documentos",
+      "lista de documentos"
+    ],
+    "orientacao": "Visão geral dos documentos que costumam ser pedidos depois de uma calamidade. Para o saque-calamidade do FGTS, pelo aplicativo FGTS, a Caixa pede: documento de identidade com foto (RG ou CIN, CNH ou passaporte, frente e verso); uma selfie segurando o mesmo documento (se o documento for digital, a foto dele não precisa aparecer na selfie); e comprovante de residência em nome do trabalhador, emitido até 120 dias antes da decretação da calamidade, como conta de água, luz ou telefone. Se o comprovante estiver no nome do cônjuge ou companheiro(a), anexe a certidão de casamento ou o documento de união estável. Sem comprovante, é possível pedir uma declaração à prefeitura ou declarar o próprio endereço, que a Caixa confere. Outros pedidos, como Cadastro Único, auxílios municipais e vistoria, costumam pedir identidade, CPF e comprovante de residência; confirme com o órgão. Se algo se perdeu, a ordem mais prática para refazer é: certidão de nascimento ou casamento, CPF e identidade (CIN); depois CNH, título de eleitor, carteira de trabalho e documentos do imóvel. Muitos serviços aceitam a versão digital (gov.br, e-Título, Carteira Digital de Trânsito, Carteira de Trabalho Digital). Cada documento tem um registro próprio nesta base com o passo a passo. Use só os canais oficiais e desconfie de quem cobra para emitir ou liberar documentos.",
+    "fonte": "Caixa Econômica Federal — Guia Rápido Saque Calamidade, App FGTS (documentos do trabalhador) — https://agencia.portovelho.ro.gov.br/uploads/arquivos/Guia_Rapido_Saque_Calamidade_APP_FGTS_%28Sistema%20Android%29.pdf; Caixa — apresentação FGTS: pagamento em caso de desastre ou calamidade (documentação do trabalhador) — https://humaita.rs.gov.br/wp-content/uploads/2023/09/Apresentacao-19L.pdf; página oficial: https://www.caixa.gov.br/calamidadepublica/Paginas/default.aspx",
+    "data_verificacao": "2026-11-15",
+    "requer_confirmacao": true,
+    "depende_de": []
   }
 ]

@@ -65,10 +65,117 @@ alertas, moradia.
 
 ### Organização da base de conhecimento, estruturas e estratégia de busca
 
-_(a preencher — Bruno: campos dos registros, origem e verificação das fontes.
-Victor: normalização, sinônimos, pontuação, limiar, ambiguidade e grafo de
-pré-requisitos. O formato dos registros está em
-[`docs/contratos.md`](docs/contratos.md).)_
+#### Base de conhecimento: estrutura, origem das informações e verificação
+
+A base fica em `data/base_conhecimento.json` e tem **21 registros** nos quatro
+temas do projeto e nas três fases do desastre. O formato completo está em
+[`docs/contratos.md`](docs/contratos.md).
+
+| Tema | Registros | Conteúdo |
+| --- | --- | --- |
+| Segurança e alertas | 6 | Alertas da Defesa Civil, telefones de emergência, o que fazer durante a inundação, kit de emergência, local seguro, preparação da casa |
+| Documentação | 7 | Certidões, CPF, identidade (CIN), carteira de trabalho, título de eleitor, CNH e uma visão geral dos documentos necessários (`DOC-07`) |
+| Benefícios e financeiro | 4 | Saque-calamidade do FGTS, município habilitado, auxílios federais, Cadastro Único e assistência social |
+| Moradia | 4 | Vistoria e interdição, limpeza depois da enchente, documentos do imóvel, registro de danos e seguro |
+
+Por fase: **4** registros de *antes*, **2** de *durante* e **15** de *depois*.
+A maior parte está na recuperação porque é nela que as etapas dependem umas das
+outras.
+
+**Campos de cada registro**
+
+| Campo | Função |
+| --- | --- |
+| `id` | Identificador único (ex.: `DOC-03`), usado pelo grafo |
+| `titulo` (opcional) | Nome legível para o menu e as respostas (ex.: "CPF (comprovante e regularização)") |
+| `tema`, `subtema` | Organização por assunto |
+| `fase` | `antes`, `durante` ou `depois` |
+| `palavras_chave` | Termos usados pela busca, com e sem acento |
+| `orientacao` | Texto da orientação ao cidadão |
+| `fonte` | Órgão e link de onde a informação foi tirada |
+| `data_verificacao` | Dia em que a informação foi conferida |
+| `requer_confirmacao` | `true` quando valores, prazos ou regras variam e o usuário deve confirmar no órgão |
+| `depende_de` | `id` dos registros que devem ser feitos antes; forma o grafo |
+
+O `src/base.py` valida os campos obrigatórios, ignora registros inválidos com
+aviso e remove referências de `depende_de` a ids inexistentes.
+
+**Origem das informações**
+
+As orientações foram redigidas a partir de fontes públicas, priorizando páginas
+oficiais, e reescritas em linguagem simples (sem copiar o texto):
+
+- **Governo Federal (gov.br):** alertas da Defesa Civil, CPF (Receita Federal),
+  Carteira de Identidade Nacional, Carteira de Trabalho Digital (Ministério do
+  Trabalho e Emprego), Cadastro Único (Ministério do Desenvolvimento e
+  Assistência Social) e Auxílio Reconstrução (Ministério da Integração e do
+  Desenvolvimento Regional, via Agência Gov).
+- **Caixa Econômica Federal:** saque-calamidade do FGTS, habilitação dos
+  municípios e documentos do trabalhador. Em `DOC-07`, parte da lista foi
+  conferida em materiais da Caixa publicados por prefeituras.
+- **Tribunal Superior Eleitoral:** segunda via do título de eleitor.
+- **Defesa Civil:** orientações da Defesa Civil de São Paulo e do Paraná (kit de
+  emergência) e atendimento da Defesa Civil de Santo André.
+- **Registro Civil e de imóveis:** Portal do Registro Civil e RI Digital (ONR).
+- **Ministério da Saúde:** cuidados de saúde depois da enchente.
+- **Fontes de apoio:** Idec e Procon-SP (seguro residencial), Detran e Senatran
+  (CNH) e reportagens locais sobre a Defesa Civil de Santo André. Quando não foi
+  possível abrir a página oficial, isso aparece no campo `fonte` do registro.
+
+**Processo de verificação**
+
+1. Cada registro foi escrito a partir da página do órgão responsável.
+2. Todo registro traz órgão, link e `data_verificacao` (11/11/2026; o `DOC-07`
+   é de 15/11/2026).
+3. **13 dos 21 registros** têm `requer_confirmacao: true` (`BEN-01` a `BEN-04`,
+   `DOC-01`, `DOC-03`, `DOC-06`, `DOC-07`, `MOR-01`, `MOR-03`, `MOR-04`,
+   `SEG-04` e `SEG-05`): valor, prazo ou procedimento varia por estado,
+   município ou momento, e o assistente avisa o usuário para confirmar no órgão.
+4. A pesquisa e o rascunho dos registros tiveram apoio de IA; o que foi feito e
+   o que foi conferido pela equipe está em [`docs/uso_ia.md`](docs/uso_ia.md).
+5. Depois da bateria de testes da busca, a base foi ajustada: criação do
+   `DOC-07` (perguntas genéricas sobre documentos não achavam nada), novas
+   palavras-chave no `MOR-01` (rachadura, trinca) e retirada de sinônimos que
+   puxavam o registro errado.
+
+**Grafo de pré-requisitos (`depende_de`)**
+
+**11** dos 21 registros dependem de outros, em **16 ligações**. O grafo é
+dirigido e não tem ciclos. Exemplos:
+
+- **FGTS** (`BEN-01`): depende da identidade (`DOC-03`) e do município habilitado
+  (`BEN-03`). A identidade depende da certidão (`DOC-01`) e do CPF (`DOC-02`).
+  Ordem: `DOC-01 → DOC-02 → DOC-03 → BEN-03 → BEN-01`.
+- **Limpeza da casa** (`MOR-02`): depende da vistoria (`MOR-01`).
+- **Durante a inundação** (`SEG-03`): depende dos contatos de emergência
+  (`SEG-02`).
+
+O `DOC-07` é uma visão geral e não depende de nenhum registro.
+
+**Dicionário de sinônimos**
+
+O arquivo `data/sinonimos.json` tem **30 grupos** e **137 sinônimos**, em
+minúsculas e sem acentos, cobrindo a linguagem de quem está em situação de
+estresse (*perdi*, *roubaram*, *levou a água*), os números de emergência
+(*199*, *193*, *192*, *190*) e os termos de cada órgão (*CIN*, *CadÚnico*,
+*CNH*, *matrícula*). Termos amplos demais foram retirados quando faziam a busca
+errar (por exemplo, *casa* puxava os documentos do imóvel).
+
+**Limitações da base**
+
+- Valores, prazos e taxas mudam e variam por estado e município (taxa da segunda
+  via de identidade e CNH, prazo do saque-calamidade).
+- O Auxílio Reconstrução (`BEN-02`) foi um benefício de 2024 exclusivo do Rio
+  Grande do Sul e está na base como exemplo.
+- Não há lista de abrigos: os locais são definidos pela Defesa Civil de cada
+  município durante o desastre (`SEG-05`).
+- Algumas informações de Santo André vêm de reportagens sobre a Defesa Civil
+  municipal, por não ter sido possível abrir a página oficial da prefeitura.
+- A base não substitui os canais oficiais: em risco, ligue para a Defesa Civil
+  (**199**) ou os Bombeiros (**193**).
+
+_(a preencher — Victor: normalização, sinônimos, pontuação, limiar, ambiguidade
+e grafo de pré-requisitos.)_
 
 ### Regras de resposta, prompts e tratamento das limitações
 
