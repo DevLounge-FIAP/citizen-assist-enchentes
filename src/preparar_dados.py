@@ -7,7 +7,6 @@ Uso: python src/preparar_dados.py (lê os XMLs de data/ana/ e gera data/monitora
 import os
 from datetime import datetime, timedelta
 
-PASTA_DADOS = "data/"
 PASTA_ENTRADA = "data/ana/"
 PASTA_PROCESSADOS = "data/ana/processados/"
 CAMINHO_MONITORAMENTO = "data/monitoramento.csv"
@@ -79,7 +78,7 @@ def processar_xml(caminho_xml):
     leituras_completas.append(nivel_por_hora[-1])
 
     ano = leituras_completas[0][0].split("-")[0]
-    nome_csv = PASTA_DADOS + municipio + " - " + ano + ".csv"
+    nome_csv = PASTA_ENTRADA + municipio + " - " + ano + ".csv"
     saida = open(nome_csv, "w", encoding="utf-8")
     saida.write(CABECALHO)
 
@@ -113,12 +112,12 @@ def juntar_csvs():
         monitoramento = open(CAMINHO_MONITORAMENTO, "w", encoding="utf-8")
         monitoramento.write(CABECALHO)
 
-    arquivos = os.listdir(PASTA_DADOS)
+    arquivos = os.listdir(PASTA_ENTRADA)
 
     for nome_arquivo in arquivos:
         extensao = nome_arquivo.split(".")[-1]
-        if extensao == "csv" and nome_arquivo != "monitoramento.csv":
-            arquivo = open(PASTA_DADOS + nome_arquivo, "r", encoding="utf-8")
+        if extensao == "csv":
+            arquivo = open(PASTA_ENTRADA + nome_arquivo, "r", encoding="utf-8")
             linhas = arquivo.readlines()
             arquivo.close()
 
