@@ -34,7 +34,7 @@ padrão do Python e dos módulos do próprio projeto.
 
 | Integrante | Ferramenta | Uso | Validação |
 | --- | --- | --- | --- |
-| Aelton | Claude Code (Anthropic) | Organização do plano e do cronograma; README a partir do modelo da coordenação; `src/base.py`; `src/sistema.py`; `docs/contratos.md`; `src/respostas.py` | Ver seção 3 |
+| Aelton | Claude Code (Anthropic) | Organização do plano e do cronograma; README a partir do modelo da coordenação; `src/base.py`; `src/sistema.py`; `docs/contratos.md`; `src/respostas.py`; testes do fluxo e comparação dos modelos; seções do README | Ver seção 3 |
 | Bruno | _a preencher_ | _a preencher_ | _a preencher_ |
 | Victor | _a preencher_ | _a preencher_ | _a preencher_ |
 | Michelly | _a preencher_ | _a preencher_ | _a preencher_ |
@@ -50,7 +50,9 @@ padrão do Python e dos módulos do próprio projeto.
 
 **Como a IA foi usada.** O Claude Code trabalhou no repositório a partir de
 pedidos específicos: ler o enunciado e o plano, propor a divisão das tarefas,
-escrever o carregamento da base, o menu e os dois modelos de resposta. As
+escrever o carregamento da base, o menu, os dois modelos de resposta, a
+integração com a busca e o grafo, os scripts de verificação do fluxo e de
+comparação dos modelos, e as seções do README dessa frente. As
 decisões de escopo (divisão do grupo, redistribuição das tarefas da quinta
 pessoa entre Aelton e Victor, prazos) foram tomadas pela equipe; a IA
 registrou essas decisões no plano.
@@ -74,18 +76,40 @@ registrou essas decisões no plano.
   com a seção 2 do plano. A IA propôs um parâmetro extra (`base`) para
   mostrar os pré-requisitos pelo nome; a mudança foi mantida por ser
   opcional e foi registrada em `docs/contratos.md` para o grupo.
-- **Limites assumidos.** Enquanto `grafo.py` não está pronto, o Modelo B
-  mostra só as dependências diretas de cada registro. Isso está documentado
-  no código e no contrato, em vez de ser escondido.
+- **Contra a execução, na integração (15/11).** Rodar o menu com a busca
+  real do Victor mostrou que a opção "Fazer pergunta" quebrava (`TypeError`),
+  porque o fluxo ainda chamava a busca no formato antigo; corrigido e coberto
+  por `tests/verificar_sistema.py`, que simula o usuário em 20 situações
+  (entradas inválidas, pergunta ambígua, fora do tema, as três fases e
+  monitoramento ausente). Na mesma rodada:
+  1. uma renomeação de função feita pela IA no `respostas.py` criou uma
+     variável com o mesmo nome da função, o que quebraria o Modelo B;
+     percebido na revisão do código e corrigido antes de rodar;
+  2. a primeira versão de `tests/comparar_modelos.py` mostrava 0% de aviso
+     de confirmação nos dois modelos. A conferência manual das respostas
+     mostrou que o aviso estava lá: o erro era do script, que procurava o
+     texto sem considerar a quebra de linha. O número foi corrigido antes de
+     ir para o README;
+  3. o aviso "monitoramento indisponível" se repetia a cada resposta;
+     passou a aparecer uma vez por sessão.
+- **Limites assumidos.** O `monitor.py` ainda não existe; o fluxo foi
+  verificado com um monitor simulado no teste, e o README não afirma nada
+  sobre o monitoramento real.
 
 **O que não foi delegado à IA:** o conteúdo da base de conhecimento (as
 orientações, fontes e datas de verificação são responsabilidade do Bruno,
 que descreve o seu processo de verificação na subseção dele) e a escolha
-final entre os modelos A e
-B, que será feita com os números da bateria de testes do Victor.
+final entre os modelos A e B: o Modelo B foi adotado como padrão com base
+na comparação objetiva, e a decisão será confirmada com a bateria de testes
+e o teste de usabilidade do Victor.
 
 ## 4. Comparação dos modelos de resposta
 
-_A preencher em 18/11 com os resultados da bateria de testes: taxa de
-acerto, clareza percebida no teste de usabilidade e justificativa do modelo
-escolhido._
+A comparação objetiva (regras cumpridas, tamanho e tempo de cada resposta)
+está no README, seção "Regras de resposta, prompts e tratamento das
+limitações", e pode ser refeita com `python tests/comparar_modelos.py`.
+Nenhuma ferramenta de IA participa das respostas comparadas: as duas são
+geradas pelo código a partir da mesma base.
+
+_A completar em 18/11 com a bateria de testes e o teste de usabilidade
+(clareza percebida por quem é de fora da equipe)._

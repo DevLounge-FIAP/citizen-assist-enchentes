@@ -65,23 +65,260 @@ alertas, moradia.
 
 ### Organização da base de conhecimento, estruturas e estratégia de busca
 
-_(a preencher: campos dos registros, origem e verificação das fontes,
-normalização/sinônimos/pontuação, limiar, tratamento de ambiguidade, grafo de
-pré-requisitos.)_
+#### Base de conhecimento: estrutura, origem das informações e verificação
+
+A base fica em `data/base_conhecimento.json` e tem **21 registros** nos quatro
+temas do projeto e nas três fases do desastre. O formato completo está em
+[`docs/contratos.md`](docs/contratos.md).
+
+| Tema | Registros | Conteúdo |
+| --- | --- | --- |
+| Segurança e alertas | 6 | Alertas da Defesa Civil, telefones de emergência, o que fazer durante a inundação, kit de emergência, local seguro, preparação da casa |
+| Documentação | 7 | Certidões, CPF, identidade (CIN), carteira de trabalho, título de eleitor, CNH e uma visão geral dos documentos necessários (`DOC-07`) |
+| Benefícios e financeiro | 4 | Saque-calamidade do FGTS, município habilitado, auxílios federais, Cadastro Único e assistência social |
+| Moradia | 4 | Vistoria e interdição, limpeza depois da enchente, documentos do imóvel, registro de danos e seguro |
+
+Por fase: **4** registros de *antes*, **2** de *durante* e **15** de *depois*.
+A maior parte está na recuperação porque é nela que as etapas dependem umas das
+outras.
+
+**Campos de cada registro**
+
+| Campo | Função |
+| --- | --- |
+| `id` | Identificador único (ex.: `DOC-03`), usado pelo grafo |
+| `titulo` (opcional) | Nome legível para o menu e as respostas (ex.: "CPF (comprovante e regularização)") |
+| `tema`, `subtema` | Organização por assunto |
+| `fase` | `antes`, `durante` ou `depois` |
+| `palavras_chave` | Termos usados pela busca, com e sem acento |
+| `orientacao` | Texto da orientação ao cidadão |
+| `fonte` | Órgão e link de onde a informação foi tirada |
+| `data_verificacao` | Dia em que a informação foi conferida |
+| `requer_confirmacao` | `true` quando valores, prazos ou regras variam e o usuário deve confirmar no órgão |
+| `depende_de` | `id` dos registros que devem ser feitos antes; forma o grafo |
+
+O `src/base.py` valida os campos obrigatórios, ignora registros inválidos com
+aviso e remove referências de `depende_de` a ids inexistentes.
+
+**Origem das informações**
+
+As orientações foram redigidas a partir de fontes públicas, priorizando páginas
+oficiais, e reescritas em linguagem simples (sem copiar o texto):
+
+- **Governo Federal (gov.br):** alertas da Defesa Civil, CPF (Receita Federal),
+  Carteira de Identidade Nacional, Carteira de Trabalho Digital (Ministério do
+  Trabalho e Emprego), Cadastro Único (Ministério do Desenvolvimento e
+  Assistência Social) e Auxílio Reconstrução (Ministério da Integração e do
+  Desenvolvimento Regional, via Agência Gov).
+- **Caixa Econômica Federal:** saque-calamidade do FGTS, habilitação dos
+  municípios e documentos do trabalhador. Em `DOC-07`, parte da lista foi
+  conferida em materiais da Caixa publicados por prefeituras.
+- **Tribunal Superior Eleitoral:** segunda via do título de eleitor.
+- **Defesa Civil:** orientações da Defesa Civil de São Paulo e do Paraná (kit de
+  emergência) e atendimento da Defesa Civil de Santo André.
+- **Registro Civil e de imóveis:** Portal do Registro Civil e RI Digital (ONR).
+- **Ministério da Saúde:** cuidados de saúde depois da enchente.
+- **Fontes de apoio:** Idec e Procon-SP (seguro residencial), Detran e Senatran
+  (CNH) e reportagens locais sobre a Defesa Civil de Santo André. Quando não foi
+  possível abrir a página oficial, isso aparece no campo `fonte` do registro.
+
+**Processo de verificação**
+
+1. Cada registro foi escrito a partir da página do órgão responsável.
+2. Todo registro traz órgão, link e `data_verificacao` (11/11/2026; o `DOC-07`
+   é de 15/11/2026).
+3. **13 dos 21 registros** têm `requer_confirmacao: true` (`BEN-01` a `BEN-04`,
+   `DOC-01`, `DOC-03`, `DOC-06`, `DOC-07`, `MOR-01`, `MOR-03`, `MOR-04`,
+   `SEG-04` e `SEG-05`): valor, prazo ou procedimento varia por estado,
+   município ou momento, e o assistente avisa o usuário para confirmar no órgão.
+4. A pesquisa e o rascunho dos registros tiveram apoio de IA; o que foi feito e
+   o que foi conferido pela equipe está em [`docs/uso_ia.md`](docs/uso_ia.md).
+5. Depois da bateria de testes da busca, a base foi ajustada: criação do
+   `DOC-07` (perguntas genéricas sobre documentos não achavam nada), novas
+   palavras-chave no `MOR-01` (rachadura, trinca) e retirada de sinônimos que
+   puxavam o registro errado.
+
+**Grafo de pré-requisitos (`depende_de`)**
+
+**11** dos 21 registros dependem de outros, em **16 ligações**. O grafo é
+dirigido e não tem ciclos. Exemplos:
+
+- **FGTS** (`BEN-01`): depende da identidade (`DOC-03`) e do município habilitado
+  (`BEN-03`). A identidade depende da certidão (`DOC-01`) e do CPF (`DOC-02`).
+  Ordem: `DOC-01 → DOC-02 → DOC-03 → BEN-03 → BEN-01`.
+- **Limpeza da casa** (`MOR-02`): depende da vistoria (`MOR-01`).
+- **Durante a inundação** (`SEG-03`): depende dos contatos de emergência
+  (`SEG-02`).
+
+O `DOC-07` é uma visão geral e não depende de nenhum registro.
+
+**Dicionário de sinônimos**
+
+O arquivo `data/sinonimos.json` tem **30 grupos** e **137 sinônimos**, em
+minúsculas e sem acentos, cobrindo a linguagem de quem está em situação de
+estresse (*perdi*, *roubaram*, *levou a água*), os números de emergência
+(*199*, *193*, *192*, *190*) e os termos de cada órgão (*CIN*, *CadÚnico*,
+*CNH*, *matrícula*). Termos amplos demais foram retirados quando faziam a busca
+errar (por exemplo, *casa* puxava os documentos do imóvel).
+
+**Limitações da base**
+
+- Valores, prazos e taxas mudam e variam por estado e município (taxa da segunda
+  via de identidade e CNH, prazo do saque-calamidade).
+- O Auxílio Reconstrução (`BEN-02`) foi um benefício de 2024 exclusivo do Rio
+  Grande do Sul e está na base como exemplo.
+- Não há lista de abrigos: os locais são definidos pela Defesa Civil de cada
+  município durante o desastre (`SEG-05`).
+- Algumas informações de Santo André vêm de reportagens sobre a Defesa Civil
+  municipal, por não ter sido possível abrir a página oficial da prefeitura.
+- A base não substitui os canais oficiais: em risco, ligue para a Defesa Civil
+  (**199**) ou os Bombeiros (**193**).
+
+_(a preencher — Victor: normalização, sinônimos, pontuação, limiar, ambiguidade
+e grafo de pré-requisitos.)_
 
 ### Regras de resposta, prompts e tratamento das limitações
 
-_(a preencher: Modelo A e Modelo B, comparação e justificativa, avisos de
-limitação.)_
+O assistente não gera texto livre: toda resposta é montada a partir de um
+registro verificado da base, seguindo uma de duas **instruções de resposta**
+(os "modelos de prompt" do projeto), definidas em `src/respostas.py`
+(`INSTRUCAO_MODELO_A` e `INSTRUCAO_MODELO_B`). As duas têm as mesmas regras e
+diferem no formato:
+
+| | Modelo A — direto | Modelo B — estruturado |
+| --- | --- | --- |
+| **Papel** | Assistente de orientação ao cidadão sobre enchentes; não é canal oficial | Igual |
+| **Formato** | A orientação em um parágrafo, como está na base | Blocos: situação do município, pré-requisitos em ordem (grafo), passo a passo numerado (uma frase por passo) |
+| **Fonte** | Obrigatória: órgão, link e data de verificação | Igual |
+| **Avisos** | Confirmação quando `requer_confirmacao`; aviso do monitoramento; "não é canal oficial" | Igual |
+
+**Comparação.** O script `tests/comparar_modelos.py` formata os 20 registros
+nos dois modelos em três situações (sem município, fase "durante" e fase
+"depois") e confere se cada regra foi cumprida:
+
+| Critério | Modelo A | Modelo B |
+| --- | --- | --- |
+| Cita a fonte e a data de verificação | 60/60 (100%) | 60/60 (100%) |
+| Aviso de confirmação quando o registro exige | 36/36 (100%) | 36/36 (100%) |
+| Aviso do monitoramento quando há município | 40/40 (100%) | 40/40 (100%) |
+| Situação do município quando há município | 0/40 (0%) | 40/40 (100%) |
+| Pré-requisitos quando o registro tem dependências | 0/33 (0%) | 33/33 (100%) |
+| Aviso de que não é canal oficial | 60/60 (100%) | 60/60 (100%) |
+| Linhas por resposta (média) | 19,1 | 26,4 |
+| Tempo de formatação (média) | 0,12 ms | 0,17 ms |
+
+**Escolha: Modelo B como padrão.** Os dois cumprem igualmente as regras de
+confiabilidade (fonte e avisos em 100% das respostas), mas só o Modelo B
+entrega os dois diferenciais do projeto: a ordem dos pré-requisitos (33
+respostas em que o cidadão precisaria descobrir sozinho que deve tirar outro
+documento antes) e a situação do município. O custo é uma resposta cerca de
+38% mais longa, compensado pela divisão em passos numerados, que são mais
+fáceis de seguir do que um parágrafo corrido. O Modelo A continua disponível
+na opção 5 do menu para quem prefere a resposta curta. _(A escolha será
+confirmada com o teste de usabilidade e a bateria de perguntas, na seção de
+resultados.)_
+
+**Tratamento das limitações:**
+
+- **Sem orientação confiável** (pontuação abaixo do limiar ou pergunta fora
+  do tema): o assistente diz que não encontrou base, **não inventa
+  instruções**, sugere palavras que existem na base e o menu de temas, e
+  repete os contatos de emergência.
+- **Pergunta ambígua:** mostra os candidatos e pergunta qual o usuário quer.
+- **Entrada vazia ou opção inexistente:** mensagem explicando o que digitar,
+  sem sair do menu.
+- **Fase "durante":** o bloco "segurança em primeiro lugar" (199/193) aparece
+  antes de qualquer resposta, inclusive quando não há resposta.
+- **Monitoramento indisponível ou município sem leituras:** o assistente
+  avisa uma vez e continua respondendo sem a situação do município.
+- **Nunca se apresenta como canal oficial:** o aviso aparece na abertura, em
+  cada resposta e na saída.
 
 ### Plano de testes, indicadores e resultados
 
-_(a preencher: perguntas de teste, taxa de acerto, tempo médio, teste de
-usabilidade, interpretação, melhorias e limitações da avaliação.)_
+_(a preencher — Victor, após a bateria de 17/11: perguntas de teste, taxa de
+acerto, tempo médio, teste de usabilidade, interpretação, melhorias e
+limitações da avaliação.)_
 
 ### Exemplos de perguntas, respostas com fontes e entradas inválidas
 
-_(a preencher.)_
+Saídas reais do `python src/sistema.py` com a base atual.
+
+**Pergunta direta** — "cpf", no Modelo A:
+
+```text
+[DOC-02] Cpf
+O CPF não tem mais cartão físico: a chamada segunda via é o comprovante de
+inscrição, que é gratuito. Consulte e emita o comprovante no site da Receita
+Federal (informando CPF e data de nascimento), no aplicativo da Receita
+Federal ou pelo gov.br. [...] Qualquer site que cobre para emitir o CPF não
+é oficial.
+
+Fonte: Receita Federal — Consultar Cadastro de Pessoa Física (CPF) —
+https://www.gov.br/pt-br/servicos/consultar-cadastro-de-pessoas-fisicas
+(verificado em 2026-11-11)
+Orientação de um protótipo educacional, não de um canal oficial.
+```
+
+**Pergunta ambígua** — "segunda via":
+
+```text
+Sua pergunta combina com mais de um assunto. Qual deles você quer?
+  1. DOC-01 - Certidao segunda via
+  2. DOC-02 - Cpf
+  3. DOC-03 - Identidade cin
+  0. Voltar
+```
+
+**Pré-requisitos (grafo)** — escolhendo a identidade (DOC-03), no Modelo B:
+
+```text
+=== [DOC-03] Identidade cin ===
+Antes, você precisa ter feito (nesta ordem):
+  1. DOC-01 - Certidao segunda via
+  2. DOC-02 - Cpf
+
+Passo a passo:
+  1. Para refazer a identidade, solicite a segunda via da Carteira de
+     Identidade Nacional (CIN) no órgão de identificação do seu estado; [...]
+  2. Leve a certidão de nascimento (solteiros) ou de casamento (casados) e o
+     CPF.
+  3. Em caso de perda ou roubo, registre antes um boletim de ocorrência.
+  [...]
+Fonte: Governo Federal — Carteira de Identidade Nacional —
+https://www.gov.br/identidade (...) (verificado em 2026-11-11)
+Atenção: requisitos e prazos podem mudar; confirme no órgão responsável antes
+de ir.
+Orientação de um protótipo educacional, não de um canal oficial.
+
+Assuntos relacionados:
+  1. BEN-01 - Fgts calamidade
+  2. BEN-02 - Auxilios federais
+  3. BEN-04 - Cadunico assistencia
+  0. Voltar ao menu
+```
+
+**Pergunta fora do tema** — "receita de bolo":
+
+```text
+Não encontrei na base uma orientação confiável para essa pergunta.
+Não vou inventar instruções. Você pode tentar outras palavras, por exemplo:
+  - "fgts" (tema beneficios)
+  - "certidão" (tema documentacao)
+  - "vistoria" (tema moradia)
+  - "alerta" (tema seguranca)
+Ou use a opção 1 do menu para navegar pelos temas.
+Em risco imediato: Bombeiros 193 | Defesa Civil 199.
+```
+
+**Entradas inválidas:**
+
+```text
+Digite sua pergunta: (Enter)
+Pergunta vazia. Escreva sua dúvida ou use o menu de temas.
+Opção: 9
+Opção inexistente: '9'. Escolha entre 0 e 5.
+```
 
 ### Cuidados: clareza, acessibilidade, privacidade e informação não oficial
 
@@ -101,13 +338,16 @@ _(a preencher.)_
 
 ## 📁 Estrutura de pastas
 
-- **`data/`** Base de conhecimento (`base_conhecimento.json`) e leituras do
-  monitoramento (`monitoramento.csv`).
+- **`data/`** Base de conhecimento (`base_conhecimento.json`), dicionário de
+  sinônimos (`sinonimos.json`) e leituras do monitoramento
+  (`monitoramento.csv`).
 - **`docs/`** Documentação: contratos entre módulos, uso de IA (`uso_ia.md`) e
   requisitos.
 - **`src/`** Código-fonte Python: `sistema.py` (menu e fluxo), `base.py`,
   `busca.py`, `grafo.py`, `monitor.py` e `respostas.py`.
-- **`tests/`** Perguntas de teste e arquivos de apoio.
+- **`tests/`** Perguntas de teste e scripts de verificação: busca, grafo,
+  fluxo do menu (`verificar_sistema.py`) e comparação dos modelos de resposta
+  (`comparar_modelos.py`).
 - **`assets/`** Logo da FIAP.
 - **`README.md`** Este arquivo.
 
@@ -120,8 +360,23 @@ _(a preencher.)_
 
 ### 🧠 Decisões Técnicas
 
-> _(a preencher: JSON como formato da base, grafo de pré-requisitos com
-> ordenação topológica, busca por sobreposição de termos, sem APIs externas.)_
+- **Sem APIs nem modelos externos.** Só a biblioteca padrão do Python. As
+  respostas vêm sempre da base verificada, o que impede o assistente de
+  inventar orientação e torna os testes reproduzíveis.
+- **Base em JSON.** Legível e editável por quem cuida do conteúdo, sem banco
+  de dados. `src/base.py` valida os campos obrigatórios e descarta registros
+  problemáticos com aviso, em vez de parar o programa.
+- **Grafo de pré-requisitos.** O campo `depende_de` liga as orientações; a
+  ordenação topológica (`src/grafo.py`) diz o que fazer primeiro, e a
+  detecção de ciclos evita laço infinito com dado errado.
+- **Busca por sobreposição de termos** (Jaccard com sinônimos, em
+  `src/busca.py`), com limiar mínimo e detecção de empate.
+- **Contratos fixos entre módulos** ([`docs/contratos.md`](docs/contratos.md)),
+  para que cada integrante trabalhasse em paralelo e a integração não
+  exigisse retrabalho.
+- **Módulos opcionais no fluxo.** `src/sistema.py` segue funcionando se a
+  busca, o grafo ou o monitoramento faltarem ou falharem: o recurso afetado
+  avisa e o restante continua.
 
 ### 📢 Observações Gerais
 
@@ -137,6 +392,26 @@ Pré-requisito: Python 3.10 ou superior. Não há dependências externas.
 git clone https://github.com/DevLounge-FIAP/citizen-assist-enchentes.git
 cd citizen-assist-enchentes
 python src/sistema.py
+```
+
+Menu principal:
+
+| Opção | O que faz |
+| --- | --- |
+| 1 | Navegar pelos temas e escolher uma orientação |
+| 2 | Fazer uma pergunta em texto livre |
+| 3 | Informar o município (único dado pedido) para ativar o monitoramento |
+| 4 | Ver as orientações prioritárias da fase atual do município |
+| 5 | Trocar o modelo de resposta (A direto ou B estruturado) |
+| 0 | Sair |
+
+Verificações (na raiz do repositório):
+
+```bash
+python tests/verificar_sistema.py   # fluxo do menu, entradas inválidas e fases
+python tests/verificar_busca.py
+python tests/verificar_grafo.py
+python tests/comparar_modelos.py    # tabela de comparação dos modelos A e B
 ```
 
 ---

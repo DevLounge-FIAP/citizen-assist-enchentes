@@ -176,16 +176,22 @@ Execução: `python src/sistema.py`
   campos faltando
 - [x] `src/sistema.py`: menu de temas, pergunta livre, pedido do município
 - [x] Tratar entrada vazia e opção inexistente com mensagens compreensíveis
-- [ ] Integrar os módulos e conduzir as revisões
-- [ ] Consolidar o README a partir das seções de cada frente
-- [ ] `src/respostas.py` — Modelo A: template direto (orientação + fonte)
-- [ ] `src/respostas.py` — Modelo B: estruturado (passos, pré-requisitos do
+- [ ] Integrar os módulos e conduzir as revisões — busca e grafo integrados
+  em 15/11 (`tests/verificar_sistema.py`); falta ligar o `monitor.py` real
+  (o fluxo já chama `monitor.estado` e foi testado com um monitor simulado)
+- [ ] Consolidar o README a partir das seções de cada frente — seções de
+  respostas, exemplos, decisões técnicas e execução preenchidas; faltam as
+  de base/busca, resultados, monitoramento, conclusões e links
+- [x] `src/respostas.py` — Modelo A: template direto (orientação + fonte)
+- [x] `src/respostas.py` — Modelo B: estruturado (passos, pré-requisitos do
   grafo, fonte e aviso)
-- [ ] Documentar os dois modelos: papel do assistente, formato e obrigação de
+- [x] Documentar os dois modelos: papel do assistente, formato e obrigação de
   citar a fonte
-- [ ] Comparar os modelos A e B e justificar a escolha (com os resultados da
-  bateria de testes da Pessoa 3)
-- [ ] `docs/uso_ia.md`
+- [ ] Comparar os modelos A e B e justificar a escolha — comparação objetiva
+  feita (`tests/comparar_modelos.py`, Modelo B como padrão); falta confirmar
+  com a bateria e o teste de usabilidade da Pessoa 3
+- [ ] `docs/uso_ia.md` — rascunho feito; faltam as linhas de Bruno, Victor e
+  Michelly e a seção 4
 
 ### Pessoa 2 — Base de conhecimento e curadoria das fontes
 

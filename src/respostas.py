@@ -68,7 +68,7 @@ def _passos(orientacao):
     return [frase.strip() for frase in _FIM_DE_FRASE.split(orientacao) if frase.strip()]
 
 
-def _titulo(registro):
+def titulo(registro):
     """Rótulo curto do registro.
 
     Ordem: campo opcional `titulo`; senão o `subtema` legível; senão a
@@ -96,7 +96,7 @@ def _rodape(registro, contexto):
     return linhas
 
 
-def _situacao(contexto):
+def situacao(contexto):
     """Linha com a fase e o nível do rio; None se não houver monitoramento."""
     if not contexto or not contexto.get("fase"):
         return None
@@ -131,7 +131,7 @@ def _pre_requisitos(registro, base):
 def modelo_a(registro, contexto=None):
     """Modelo A: resposta direta (orientação + fonte)."""
     linhas = [
-        f"[{registro['id']}] {_titulo(registro)}",
+        f"[{registro['id']}] {titulo(registro)}",
         _quebrar(registro["orientacao"]),
         "",
     ]
@@ -141,18 +141,18 @@ def modelo_a(registro, contexto=None):
 
 def modelo_b(registro, contexto=None, base=None):
     """Modelo B: resposta estruturada (situação, pré-requisitos, passos, fonte)."""
-    linhas = [f"=== [{registro['id']}] {_titulo(registro)} ==="]
+    linhas = [f"=== [{registro['id']}] {titulo(registro)} ==="]
 
-    situacao = _situacao(contexto)
-    if situacao:
-        linhas.extend([_quebrar(situacao), ""])
+    linha_situacao = situacao(contexto)
+    if linha_situacao:
+        linhas.extend([_quebrar(linha_situacao), ""])
 
     pre = _pre_requisitos(registro, base)
     if pre:
         por_id = {r["id"]: r for r in base} if base else {}
         linhas.append("Antes, você precisa ter feito (nesta ordem):")
         for i, id_pre in enumerate(pre, start=1):
-            nome = _titulo(por_id[id_pre]) if id_pre in por_id else ""
+            nome = titulo(por_id[id_pre]) if id_pre in por_id else ""
             linhas.append(f"  {i}. {id_pre}" + (f" - {nome}" if nome else ""))
         linhas.append("")
 
