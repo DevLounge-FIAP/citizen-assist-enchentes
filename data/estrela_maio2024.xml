@@ -1,0 +1,2952 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataTable xmlns="http://MRCS/">
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="DadosHidrometereologicos" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="DadosHidrometereologicos">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CodEstacao" type="xs:string" minOccurs="0" />
+                <xs:element name="DataHora" type="xs:string" minOccurs="0" />
+                <xs:element name="Vazao" type="xs:string" minOccurs="0" />
+                <xs:element name="Nivel" type="xs:string" minOccurs="0" />
+                <xs:element name="Chuva" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <DocumentElement xmlns="">
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos1" msdata:rowOrder="0">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 23:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1375.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos2" msdata:rowOrder="1">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 20:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1352.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos3" msdata:rowOrder="2">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 18:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1343.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos4" msdata:rowOrder="3">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 17:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1318.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos5" msdata:rowOrder="4">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 13:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1302.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos6" msdata:rowOrder="5">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 11:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1290.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos7" msdata:rowOrder="6">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 10:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1285.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos8" msdata:rowOrder="7">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-10 08:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1268.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos9" msdata:rowOrder="8">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-09 17:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1300.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos10" msdata:rowOrder="9">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-09 09:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1320.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos11" msdata:rowOrder="10">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-08 13:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1340.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos12" msdata:rowOrder="11">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-08 10:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1370.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos13" msdata:rowOrder="12">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-07 18:00:00 </DataHora>
+        <Vazao>2694.82</Vazao>
+        <Nivel>1483.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos14" msdata:rowOrder="13">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-07 17:45:00 </DataHora>
+        <Vazao>2816.32</Vazao>
+        <Nivel>1502.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos15" msdata:rowOrder="14">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-07 17:00:00 </DataHora>
+        <Vazao>2835.68</Vazao>
+        <Nivel>1505.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos16" msdata:rowOrder="15">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-07 16:30:00 </DataHora>
+        <Vazao>2887.53</Vazao>
+        <Nivel>1513.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos17" msdata:rowOrder="16">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-07 12:45:00 </DataHora>
+        <Vazao>3118.19</Vazao>
+        <Nivel>1548.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos18" msdata:rowOrder="17">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-06 14:30:00 </DataHora>
+        <Vazao>6140.32</Vazao>
+        <Nivel>1949.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos19" msdata:rowOrder="18">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-06 12:00:00 </DataHora>
+        <Vazao>6859.83</Vazao>
+        <Nivel>2038.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos20" msdata:rowOrder="19">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-06 09:00:00 </DataHora>
+        <Vazao>7563.69</Vazao>
+        <Nivel>2120.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos21" msdata:rowOrder="20">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-06 07:00:00 </DataHora>
+        <Vazao>8270.21</Vazao>
+        <Nivel>2198.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos22" msdata:rowOrder="21">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-06 06:00:00 </DataHora>
+        <Vazao>8570.60</Vazao>
+        <Nivel>2230.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos23" msdata:rowOrder="22">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 20:00:00 </DataHora>
+        <Vazao>10334.28</Vazao>
+        <Nivel>2406.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos24" msdata:rowOrder="23">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 19:00:00 </DataHora>
+        <Vazao>10355.42</Vazao>
+        <Nivel>2408.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos25" msdata:rowOrder="24">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 18:00:00 </DataHora>
+        <Vazao>10376.58</Vazao>
+        <Nivel>2410.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos26" msdata:rowOrder="25">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 17:00:00 </DataHora>
+        <Vazao>10397.77</Vazao>
+        <Nivel>2412.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos27" msdata:rowOrder="26">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 16:00:00 </DataHora>
+        <Vazao>10397.77</Vazao>
+        <Nivel>2412.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos28" msdata:rowOrder="27">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 15:00:00 </DataHora>
+        <Vazao>10355.42</Vazao>
+        <Nivel>2408.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos29" msdata:rowOrder="28">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 13:00:00 </DataHora>
+        <Vazao>10313.16</Vazao>
+        <Nivel>2404.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos30" msdata:rowOrder="29">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 12:00:00 </DataHora>
+        <Vazao>10249.97</Vazao>
+        <Nivel>2398.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos31" msdata:rowOrder="30">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 11:00:00 </DataHora>
+        <Vazao>10103.40</Vazao>
+        <Nivel>2384.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos32" msdata:rowOrder="31">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 10:00:00 </DataHora>
+        <Vazao>10020.19</Vazao>
+        <Nivel>2376.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos33" msdata:rowOrder="32">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 09:00:00 </DataHora>
+        <Vazao>9854.95</Vazao>
+        <Nivel>2360.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos34" msdata:rowOrder="33">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 08:00:00 </DataHora>
+        <Vazao>9670.94</Vazao>
+        <Nivel>2342.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos35" msdata:rowOrder="34">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 07:00:00 </DataHora>
+        <Vazao>9448.76</Vazao>
+        <Nivel>2320.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos36" msdata:rowOrder="35">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 06:00:00 </DataHora>
+        <Vazao>9249.35</Vazao>
+        <Nivel>2300.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos37" msdata:rowOrder="36">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-05 05:00:00 </DataHora>
+        <Vazao>9052.38</Vazao>
+        <Nivel>2280.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos38" msdata:rowOrder="37">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 21:30:00 </DataHora>
+        <Vazao>8048.95</Vazao>
+        <Nivel>2174.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos39" msdata:rowOrder="38">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 21:00:00 </DataHora>
+        <Vazao>8048.95</Vazao>
+        <Nivel>2174.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos40" msdata:rowOrder="39">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 15:00:00 </DataHora>
+        <Vazao />
+        <Nivel />
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos41" msdata:rowOrder="40">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 14:30:00 </DataHora>
+        <Vazao>8288.80</Vazao>
+        <Nivel>2200.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos42" msdata:rowOrder="41">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 10:30:00 </DataHora>
+        <Vazao>9042.59</Vazao>
+        <Nivel>2279.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos43" msdata:rowOrder="42">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 10:00:00 </DataHora>
+        <Vazao>9121.04</Vazao>
+        <Nivel>2287.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos44" msdata:rowOrder="43">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 09:30:00 </DataHora>
+        <Vazao>9190.00</Vazao>
+        <Nivel>2294.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos45" msdata:rowOrder="44">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 09:00:00 </DataHora>
+        <Vazao>9368.70</Vazao>
+        <Nivel>2312.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos46" msdata:rowOrder="45">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 08:30:00 </DataHora>
+        <Vazao>9539.29</Vazao>
+        <Nivel>2329.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos47" msdata:rowOrder="46">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 08:00:00 </DataHora>
+        <Vazao>9660.78</Vazao>
+        <Nivel>2341.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos48" msdata:rowOrder="47">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 07:30:00 </DataHora>
+        <Vazao>9772.92</Vazao>
+        <Nivel>2352.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos49" msdata:rowOrder="48">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 07:00:00 </DataHora>
+        <Vazao>9999.44</Vazao>
+        <Nivel>2374.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos50" msdata:rowOrder="49">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 06:30:00 </DataHora>
+        <Vazao>10292.08</Vazao>
+        <Nivel>2402.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos51" msdata:rowOrder="50">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 06:00:00 </DataHora>
+        <Vazao>10740.16</Vazao>
+        <Nivel>2444.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos52" msdata:rowOrder="51">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 05:30:00 </DataHora>
+        <Vazao>11155.07</Vazao>
+        <Nivel>2482.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos53" msdata:rowOrder="52">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 05:00:00 </DataHora>
+        <Vazao>11343.63</Vazao>
+        <Nivel>2499.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos54" msdata:rowOrder="53">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 04:30:00 </DataHora>
+        <Vazao>11522.76</Vazao>
+        <Nivel>2515.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos55" msdata:rowOrder="54">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 04:00:00 </DataHora>
+        <Vazao>11669.49</Vazao>
+        <Nivel>2528.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos56" msdata:rowOrder="55">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 03:30:00 </DataHora>
+        <Vazao>11805.89</Vazao>
+        <Nivel>2540.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos57" msdata:rowOrder="56">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 03:00:00 </DataHora>
+        <Vazao>11954.68</Vazao>
+        <Nivel>2553.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos58" msdata:rowOrder="57">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 02:30:00 </DataHora>
+        <Vazao>12104.54</Vazao>
+        <Nivel>2566.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos59" msdata:rowOrder="58">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 02:00:00 </DataHora>
+        <Vazao>12255.49</Vazao>
+        <Nivel>2579.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos60" msdata:rowOrder="59">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 01:30:00 </DataHora>
+        <Vazao>12395.77</Vazao>
+        <Nivel>2591.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos61" msdata:rowOrder="60">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 01:00:00 </DataHora>
+        <Vazao>12548.79</Vazao>
+        <Nivel>2604.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos62" msdata:rowOrder="61">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 00:30:00 </DataHora>
+        <Vazao>12702.89</Vazao>
+        <Nivel>2617.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos63" msdata:rowOrder="62">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-04 00:00:00 </DataHora>
+        <Vazao>12870.05</Vazao>
+        <Nivel>2631.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos64" msdata:rowOrder="63">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 23:30:00 </DataHora>
+        <Vazao>13038.48</Vazao>
+        <Nivel>2645.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos65" msdata:rowOrder="64">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 23:00:00 </DataHora>
+        <Vazao>13135.29</Vazao>
+        <Nivel>2653.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos66" msdata:rowOrder="65">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 22:30:00 </DataHora>
+        <Vazao>13232.51</Vazao>
+        <Nivel>2661.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos67" msdata:rowOrder="66">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 22:00:00 </DataHora>
+        <Vazao>13502.00</Vazao>
+        <Nivel>2683.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos68" msdata:rowOrder="67">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 21:30:00 </DataHora>
+        <Vazao>13774.62</Vazao>
+        <Nivel>2705.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos69" msdata:rowOrder="68">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 21:00:00 </DataHora>
+        <Vazao>13887.05</Vazao>
+        <Nivel>2714.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos70" msdata:rowOrder="69">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 20:30:00 </DataHora>
+        <Vazao>14000.01</Vazao>
+        <Nivel>2723.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos71" msdata:rowOrder="70">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 20:00:00 </DataHora>
+        <Vazao>14113.50</Vazao>
+        <Nivel>2732.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos72" msdata:rowOrder="71">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 19:30:00 </DataHora>
+        <Vazao>14227.51</Vazao>
+        <Nivel>2741.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos73" msdata:rowOrder="72">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 19:00:00 </DataHora>
+        <Vazao>14482.77</Vazao>
+        <Nivel>2761.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos74" msdata:rowOrder="73">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 18:30:00 </DataHora>
+        <Vazao>14740.64</Vazao>
+        <Nivel>2781.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos75" msdata:rowOrder="74">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 18:00:00 </DataHora>
+        <Vazao>15001.14</Vazao>
+        <Nivel>2801.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos76" msdata:rowOrder="75">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 17:30:00 </DataHora>
+        <Vazao>15264.27</Vazao>
+        <Nivel>2821.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos77" msdata:rowOrder="76">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 17:00:00 </DataHora>
+        <Vazao>15530.03</Vazao>
+        <Nivel>2841.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos78" msdata:rowOrder="77">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 16:30:00 </DataHora>
+        <Vazao>15798.44</Vazao>
+        <Nivel>2861.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos79" msdata:rowOrder="78">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 16:00:00 </DataHora>
+        <Vazao>16110.39</Vazao>
+        <Nivel>2884.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos80" msdata:rowOrder="79">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 15:30:00 </DataHora>
+        <Vazao>16412.07</Vazao>
+        <Nivel>2906.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos81" msdata:rowOrder="80">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 15:00:00 </DataHora>
+        <Vazao>16591.85</Vazao>
+        <Nivel>2919.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos82" msdata:rowOrder="81">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 14:30:00 </DataHora>
+        <Vazao>16758.80</Vazao>
+        <Nivel>2931.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos83" msdata:rowOrder="82">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 14:00:00 </DataHora>
+        <Vazao>16898.67</Vazao>
+        <Nivel>2941.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos84" msdata:rowOrder="83">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 13:30:00 </DataHora>
+        <Vazao>17039.20</Vazao>
+        <Nivel>2951.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos85" msdata:rowOrder="84">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 13:00:00 </DataHora>
+        <Vazao>17180.40</Vazao>
+        <Nivel>2961.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos86" msdata:rowOrder="85">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 12:30:00 </DataHora>
+        <Vazao>17322.28</Vazao>
+        <Nivel>2971.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos87" msdata:rowOrder="86">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 12:00:00 </DataHora>
+        <Vazao>17464.82</Vazao>
+        <Nivel>2981.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos88" msdata:rowOrder="87">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 11:30:00 </DataHora>
+        <Vazao>17608.04</Vazao>
+        <Nivel>2991.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos89" msdata:rowOrder="88">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 11:00:00 </DataHora>
+        <Vazao>17867.54</Vazao>
+        <Nivel>3009.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos90" msdata:rowOrder="89">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 10:30:00 </DataHora>
+        <Vazao>18114.62</Vazao>
+        <Nivel>3026.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos91" msdata:rowOrder="90">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 10:00:00 </DataHora>
+        <Vazao>18334.27</Vazao>
+        <Nivel>3041.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos92" msdata:rowOrder="91">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 09:30:00 </DataHora>
+        <Vazao>18540.64</Vazao>
+        <Nivel>3055.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos93" msdata:rowOrder="92">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 09:00:00 </DataHora>
+        <Vazao>18703.73</Vazao>
+        <Nivel>3066.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos94" msdata:rowOrder="93">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 08:30:00 </DataHora>
+        <Vazao>18852.70</Vazao>
+        <Nivel>3076.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos95" msdata:rowOrder="94">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 08:00:00 </DataHora>
+        <Vazao>18972.37</Vazao>
+        <Nivel>3084.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos96" msdata:rowOrder="95">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 07:30:00 </DataHora>
+        <Vazao>19077.44</Vazao>
+        <Nivel>3091.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos97" msdata:rowOrder="96">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 07:00:00 </DataHora>
+        <Vazao>19228.11</Vazao>
+        <Nivel>3101.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos98" msdata:rowOrder="97">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 06:30:00 </DataHora>
+        <Vazao>19379.47</Vazao>
+        <Nivel>3111.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos99" msdata:rowOrder="98">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 06:00:00 </DataHora>
+        <Vazao>19531.52</Vazao>
+        <Nivel>3121.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos100" msdata:rowOrder="99">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 05:30:00 </DataHora>
+        <Vazao>19684.25</Vazao>
+        <Nivel>3131.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos101" msdata:rowOrder="100">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 05:00:00 </DataHora>
+        <Vazao>19976.32</Vazao>
+        <Nivel>3150.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos102" msdata:rowOrder="101">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 04:30:00 </DataHora>
+        <Vazao>20255.31</Vazao>
+        <Nivel>3168.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos103" msdata:rowOrder="102">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 04:00:00 </DataHora>
+        <Vazao>20426.90</Vazao>
+        <Nivel>3179.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos104" msdata:rowOrder="103">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 03:30:00 </DataHora>
+        <Vazao>20583.61</Vazao>
+        <Nivel>3189.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos105" msdata:rowOrder="104">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 03:00:00 </DataHora>
+        <Vazao>20804.17</Vazao>
+        <Nivel>3203.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos106" msdata:rowOrder="105">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 02:30:00 </DataHora>
+        <Vazao>21010.19</Vazao>
+        <Nivel>3216.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos107" msdata:rowOrder="106">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 02:00:00 </DataHora>
+        <Vazao>21089.74</Vazao>
+        <Nivel>3221.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos108" msdata:rowOrder="107">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 01:30:00 </DataHora>
+        <Vazao>21169.46</Vazao>
+        <Nivel>3226.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos109" msdata:rowOrder="108">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 01:00:00 </DataHora>
+        <Vazao>21297.37</Vazao>
+        <Nivel>3234.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos110" msdata:rowOrder="109">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 00:30:00 </DataHora>
+        <Vazao>21409.67</Vazao>
+        <Nivel>3241.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos111" msdata:rowOrder="110">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-03 00:00:00 </DataHora>
+        <Vazao>21570.67</Vazao>
+        <Nivel>3251.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos112" msdata:rowOrder="111">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 23:30:00 </DataHora>
+        <Vazao>21732.37</Vazao>
+        <Nivel>3261.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos113" msdata:rowOrder="112">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 23:00:00 </DataHora>
+        <Vazao>21813.48</Vazao>
+        <Nivel>3266.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos114" msdata:rowOrder="113">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 22:30:00 </DataHora>
+        <Vazao>21894.77</Vazao>
+        <Nivel>3271.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos115" msdata:rowOrder="114">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 22:00:00 </DataHora>
+        <Vazao>21943.62</Vazao>
+        <Nivel>3274.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos116" msdata:rowOrder="115">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 21:30:00 </DataHora>
+        <Vazao>21976.22</Vazao>
+        <Nivel>3276.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos117" msdata:rowOrder="116">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 21:00:00 </DataHora>
+        <Vazao>22123.29</Vazao>
+        <Nivel>3285.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos118" msdata:rowOrder="117">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 20:30:00 </DataHora>
+        <Vazao>22254.49</Vazao>
+        <Nivel>3293.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos119" msdata:rowOrder="118">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 20:00:00 </DataHora>
+        <Vazao>22353.18</Vazao>
+        <Nivel>3299.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos120" msdata:rowOrder="119">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 19:30:00 </DataHora>
+        <Vazao>22452.12</Vazao>
+        <Nivel>3305.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos121" msdata:rowOrder="120">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 19:00:00 </DataHora>
+        <Vazao>22584.44</Vazao>
+        <Nivel>3313.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos122" msdata:rowOrder="121">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 18:30:00 </DataHora>
+        <Vazao>22717.20</Vazao>
+        <Nivel>3321.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos123" msdata:rowOrder="122">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 18:00:00 </DataHora>
+        <Vazao>22817.07</Vazao>
+        <Nivel>3327.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos124" msdata:rowOrder="123">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 17:30:00 </DataHora>
+        <Vazao>22967.35</Vazao>
+        <Nivel>3336.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos125" msdata:rowOrder="124">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 17:00:00 </DataHora>
+        <Vazao>23067.84</Vazao>
+        <Nivel>3342.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos126" msdata:rowOrder="125">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 16:30:00 </DataHora>
+        <Vazao>23084.62</Vazao>
+        <Nivel>3343.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos127" msdata:rowOrder="126">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 16:00:00 </DataHora>
+        <Vazao>23252.75</Vazao>
+        <Nivel>3353.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos128" msdata:rowOrder="127">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 15:30:00 </DataHora>
+        <Vazao>23320.20</Vazao>
+        <Nivel>3357.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos129" msdata:rowOrder="128">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 15:00:00 </DataHora>
+        <Vazao>23438.50</Vazao>
+        <Nivel>3364.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos130" msdata:rowOrder="129">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 14:30:00 </DataHora>
+        <Vazao>23421.58</Vazao>
+        <Nivel>3363.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos131" msdata:rowOrder="130">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 14:00:00 </DataHora>
+        <Vazao>23472.37</Vazao>
+        <Nivel>3366.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos132" msdata:rowOrder="131">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 13:30:00 </DataHora>
+        <Vazao>23472.37</Vazao>
+        <Nivel>3366.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos133" msdata:rowOrder="132">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 13:00:00 </DataHora>
+        <Vazao>23438.50</Vazao>
+        <Nivel>3364.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos134" msdata:rowOrder="133">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 12:30:00 </DataHora>
+        <Vazao>23387.76</Vazao>
+        <Nivel>3361.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos135" msdata:rowOrder="134">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 12:00:00 </DataHora>
+        <Vazao>23269.60</Vazao>
+        <Nivel>3354.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos136" msdata:rowOrder="135">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 11:30:00 </DataHora>
+        <Vazao>23134.98</Vazao>
+        <Nivel>3346.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos137" msdata:rowOrder="136">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 11:00:00 </DataHora>
+        <Vazao>22933.90</Vazao>
+        <Nivel>3334.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos138" msdata:rowOrder="137">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 10:30:00 </DataHora>
+        <Vazao>22717.20</Vazao>
+        <Nivel>3321.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos139" msdata:rowOrder="138">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 10:00:00 </DataHora>
+        <Vazao>22468.64</Vazao>
+        <Nivel>3306.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos140" msdata:rowOrder="139">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 09:30:00 </DataHora>
+        <Vazao>22221.65</Vazao>
+        <Nivel>3291.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos141" msdata:rowOrder="140">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 09:00:00 </DataHora>
+        <Vazao>22025.18</Vazao>
+        <Nivel>3279.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos142" msdata:rowOrder="141">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 08:30:00 </DataHora>
+        <Vazao>21813.48</Vazao>
+        <Nivel>3266.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos143" msdata:rowOrder="142">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 08:00:00 </DataHora>
+        <Vazao>21619.11</Vazao>
+        <Nivel>3254.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos144" msdata:rowOrder="143">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 07:30:00 </DataHora>
+        <Vazao>21409.67</Vazao>
+        <Nivel>3241.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos145" msdata:rowOrder="144">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 07:00:00 </DataHora>
+        <Vazao>21249.35</Vazao>
+        <Nivel>3231.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos146" msdata:rowOrder="145">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 06:30:00 </DataHora>
+        <Vazao>21089.74</Vazao>
+        <Nivel>3221.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos147" msdata:rowOrder="146">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 06:00:00 </DataHora>
+        <Vazao>20930.81</Vazao>
+        <Nivel>3211.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos148" msdata:rowOrder="147">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 05:30:00 </DataHora>
+        <Vazao>20772.58</Vazao>
+        <Nivel>3201.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos149" msdata:rowOrder="148">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 05:00:00 </DataHora>
+        <Vazao>20693.72</Vazao>
+        <Nivel>3196.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos150" msdata:rowOrder="149">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 04:30:00 </DataHora>
+        <Vazao>20615.04</Vazao>
+        <Nivel>3191.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos151" msdata:rowOrder="150">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 04:00:00 </DataHora>
+        <Vazao>20536.52</Vazao>
+        <Nivel>3186.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos152" msdata:rowOrder="151">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 03:30:00 </DataHora>
+        <Vazao>20458.18</Vazao>
+        <Nivel>3181.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos153" msdata:rowOrder="152">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 03:00:00 </DataHora>
+        <Vazao>20348.80</Vazao>
+        <Nivel>3174.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos154" msdata:rowOrder="153">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 02:30:00 </DataHora>
+        <Vazao>20224.20</Vazao>
+        <Nivel>3166.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos155" msdata:rowOrder="154">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 02:00:00 </DataHora>
+        <Vazao>20115.53</Vazao>
+        <Nivel>3159.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos156" msdata:rowOrder="155">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 01:30:00 </DataHora>
+        <Vazao>19991.76</Vazao>
+        <Nivel>3151.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos157" msdata:rowOrder="156">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 01:00:00 </DataHora>
+        <Vazao>19883.82</Vazao>
+        <Nivel>3144.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos158" msdata:rowOrder="157">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-02 00:30:00 </DataHora>
+        <Vazao>19760.87</Vazao>
+        <Nivel>3136.00</Nivel>
+        <Chuva />
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos159" msdata:rowOrder="158">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 16:45:00 </DataHora>
+        <Vazao>14418.71</Vazao>
+        <Nivel>2756.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos160" msdata:rowOrder="159">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 16:30:00 </DataHora>
+        <Vazao>14316.55</Vazao>
+        <Nivel>2748.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos161" msdata:rowOrder="160">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 16:15:00 </DataHora>
+        <Vazao>14202.13</Vazao>
+        <Nivel>2739.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos162" msdata:rowOrder="161">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 16:00:00 </DataHora>
+        <Vazao>14113.50</Vazao>
+        <Nivel>2732.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos163" msdata:rowOrder="162">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 15:45:00 </DataHora>
+        <Vazao>14000.01</Vazao>
+        <Nivel>2723.00</Nivel>
+        <Chuva>1.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos164" msdata:rowOrder="163">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 15:30:00 </DataHora>
+        <Vazao>13899.58</Vazao>
+        <Nivel>2715.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos165" msdata:rowOrder="164">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 15:15:00 </DataHora>
+        <Vazao>13824.52</Vazao>
+        <Nivel>2709.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos166" msdata:rowOrder="165">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 15:00:00 </DataHora>
+        <Vazao>13749.70</Vazao>
+        <Nivel>2703.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos167" msdata:rowOrder="166">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 14:45:00 </DataHora>
+        <Vazao>13662.71</Vazao>
+        <Nivel>2696.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos168" msdata:rowOrder="167">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 14:30:00 </DataHora>
+        <Vazao>13613.14</Vazao>
+        <Nivel>2692.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos169" msdata:rowOrder="168">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 14:15:00 </DataHora>
+        <Vazao>13538.99</Vazao>
+        <Nivel>2686.00</Nivel>
+        <Chuva>1.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos170" msdata:rowOrder="169">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 14:00:00 </DataHora>
+        <Vazao>13452.77</Vazao>
+        <Nivel>2679.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos171" msdata:rowOrder="170">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 13:45:00 </DataHora>
+        <Vazao>13403.64</Vazao>
+        <Nivel>2675.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos172" msdata:rowOrder="171">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 13:30:00 </DataHora>
+        <Vazao>13366.86</Vazao>
+        <Nivel>2672.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos173" msdata:rowOrder="172">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 13:15:00 </DataHora>
+        <Vazao>13354.61</Vazao>
+        <Nivel>2671.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos174" msdata:rowOrder="173">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 13:00:00 </DataHora>
+        <Vazao>13269.07</Vazao>
+        <Nivel>2664.00</Nivel>
+        <Chuva>1.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos175" msdata:rowOrder="174">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 12:45:00 </DataHora>
+        <Vazao>13232.51</Vazao>
+        <Nivel>2661.00</Nivel>
+        <Chuva>2.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos176" msdata:rowOrder="175">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 12:30:00 </DataHora>
+        <Vazao>13183.84</Vazao>
+        <Nivel>2657.00</Nivel>
+        <Chuva>1.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos177" msdata:rowOrder="176">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 12:15:00 </DataHora>
+        <Vazao>13159.55</Vazao>
+        <Nivel>2655.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos178" msdata:rowOrder="177">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 12:00:00 </DataHora>
+        <Vazao>13111.04</Vazao>
+        <Nivel>2651.00</Nivel>
+        <Chuva>2.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos179" msdata:rowOrder="178">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 11:45:00 </DataHora>
+        <Vazao>13111.04</Vazao>
+        <Nivel>2651.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos180" msdata:rowOrder="179">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 11:30:00 </DataHora>
+        <Vazao>13074.73</Vazao>
+        <Nivel>2648.00</Nivel>
+        <Chuva>2.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos181" msdata:rowOrder="180">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 11:15:00 </DataHora>
+        <Vazao>13026.40</Vazao>
+        <Nivel>2644.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos182" msdata:rowOrder="181">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 11:00:00 </DataHora>
+        <Vazao>13038.48</Vazao>
+        <Nivel>2645.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos183" msdata:rowOrder="182">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 10:45:00 </DataHora>
+        <Vazao>13014.34</Vazao>
+        <Nivel>2643.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos184" msdata:rowOrder="183">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 10:30:00 </DataHora>
+        <Vazao>12990.23</Vazao>
+        <Nivel>2641.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos185" msdata:rowOrder="184">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 10:15:00 </DataHora>
+        <Vazao>12990.23</Vazao>
+        <Nivel>2641.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos186" msdata:rowOrder="185">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 10:00:00 </DataHora>
+        <Vazao>13026.40</Vazao>
+        <Nivel>2644.00</Nivel>
+        <Chuva>3.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos187" msdata:rowOrder="186">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 09:45:00 </DataHora>
+        <Vazao>13050.56</Vazao>
+        <Nivel>2646.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos188" msdata:rowOrder="187">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 09:30:00 </DataHora>
+        <Vazao>13014.34</Vazao>
+        <Nivel>2643.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos189" msdata:rowOrder="188">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 09:15:00 </DataHora>
+        <Vazao>13050.56</Vazao>
+        <Nivel>2646.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos190" msdata:rowOrder="189">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 09:00:00 </DataHora>
+        <Vazao>13050.56</Vazao>
+        <Nivel>2646.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos191" msdata:rowOrder="190">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 08:45:00 </DataHora>
+        <Vazao>13098.93</Vazao>
+        <Nivel>2650.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos192" msdata:rowOrder="191">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 08:30:00 </DataHora>
+        <Vazao>13086.83</Vazao>
+        <Nivel>2649.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos193" msdata:rowOrder="192">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 08:15:00 </DataHora>
+        <Vazao>13123.16</Vazao>
+        <Nivel>2652.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos194" msdata:rowOrder="193">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 08:00:00 </DataHora>
+        <Vazao>13147.42</Vazao>
+        <Nivel>2654.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos195" msdata:rowOrder="194">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 07:45:00 </DataHora>
+        <Vazao>13159.55</Vazao>
+        <Nivel>2655.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos196" msdata:rowOrder="195">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 07:30:00 </DataHora>
+        <Vazao>13208.16</Vazao>
+        <Nivel>2659.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos197" msdata:rowOrder="196">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 07:15:00 </DataHora>
+        <Vazao>13232.51</Vazao>
+        <Nivel>2661.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos198" msdata:rowOrder="197">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 07:00:00 </DataHora>
+        <Vazao>13269.07</Vazao>
+        <Nivel>2664.00</Nivel>
+        <Chuva>2.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos199" msdata:rowOrder="198">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 06:45:00 </DataHora>
+        <Vazao>13317.91</Vazao>
+        <Nivel>2668.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos200" msdata:rowOrder="199">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 06:30:00 </DataHora>
+        <Vazao>13305.69</Vazao>
+        <Nivel>2667.00</Nivel>
+        <Chuva>3.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos201" msdata:rowOrder="200">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 06:15:00 </DataHora>
+        <Vazao>13366.86</Vazao>
+        <Nivel>2672.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos202" msdata:rowOrder="201">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 06:00:00 </DataHora>
+        <Vazao>13415.91</Vazao>
+        <Nivel>2676.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos203" msdata:rowOrder="202">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 05:45:00 </DataHora>
+        <Vazao>13428.19</Vazao>
+        <Nivel>2677.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos204" msdata:rowOrder="203">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 05:30:00 </DataHora>
+        <Vazao>13477.37</Vazao>
+        <Nivel>2681.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos205" msdata:rowOrder="204">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 05:15:00 </DataHora>
+        <Vazao>13489.68</Vazao>
+        <Nivel>2682.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos206" msdata:rowOrder="205">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 05:00:00 </DataHora>
+        <Vazao>13526.65</Vazao>
+        <Nivel>2685.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos207" msdata:rowOrder="206">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 04:45:00 </DataHora>
+        <Vazao>13563.68</Vazao>
+        <Nivel>2688.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos208" msdata:rowOrder="207">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 04:30:00 </DataHora>
+        <Vazao>13588.40</Vazao>
+        <Nivel>2690.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos209" msdata:rowOrder="208">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 04:15:00 </DataHora>
+        <Vazao>13650.31</Vazao>
+        <Nivel>2695.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos210" msdata:rowOrder="209">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 04:00:00 </DataHora>
+        <Vazao>13675.12</Vazao>
+        <Nivel>2697.00</Nivel>
+        <Chuva>8.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos211" msdata:rowOrder="210">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 03:45:00 </DataHora>
+        <Vazao>13699.96</Vazao>
+        <Nivel>2699.00</Nivel>
+        <Chuva>8.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos212" msdata:rowOrder="211">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 03:30:00 </DataHora>
+        <Vazao>13699.96</Vazao>
+        <Nivel>2699.00</Nivel>
+        <Chuva>7.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos213" msdata:rowOrder="212">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 03:15:00 </DataHora>
+        <Vazao>13699.96</Vazao>
+        <Nivel>2699.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos214" msdata:rowOrder="213">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 03:00:00 </DataHora>
+        <Vazao>13737.26</Vazao>
+        <Nivel>2702.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos215" msdata:rowOrder="214">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 02:45:00 </DataHora>
+        <Vazao>13737.26</Vazao>
+        <Nivel>2702.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos216" msdata:rowOrder="215">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 02:30:00 </DataHora>
+        <Vazao>13762.16</Vazao>
+        <Nivel>2704.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos217" msdata:rowOrder="216">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 02:15:00 </DataHora>
+        <Vazao>13799.56</Vazao>
+        <Nivel>2707.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos218" msdata:rowOrder="217">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 02:00:00 </DataHora>
+        <Vazao>13774.62</Vazao>
+        <Nivel>2705.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos219" msdata:rowOrder="218">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 01:45:00 </DataHora>
+        <Vazao>13787.08</Vazao>
+        <Nivel>2706.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos220" msdata:rowOrder="219">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 01:30:00 </DataHora>
+        <Vazao>13749.70</Vazao>
+        <Nivel>2703.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos221" msdata:rowOrder="220">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 01:15:00 </DataHora>
+        <Vazao>13774.62</Vazao>
+        <Nivel>2705.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos222" msdata:rowOrder="221">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 01:00:00 </DataHora>
+        <Vazao>13737.26</Vazao>
+        <Nivel>2702.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos223" msdata:rowOrder="222">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 00:45:00 </DataHora>
+        <Vazao>13712.38</Vazao>
+        <Nivel>2700.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos224" msdata:rowOrder="223">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 00:30:00 </DataHora>
+        <Vazao>13687.53</Vazao>
+        <Nivel>2698.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos225" msdata:rowOrder="224">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 00:15:00 </DataHora>
+        <Vazao>13662.71</Vazao>
+        <Nivel>2696.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos226" msdata:rowOrder="225">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-05-01 00:00:00 </DataHora>
+        <Vazao>13625.53</Vazao>
+        <Nivel>2693.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos227" msdata:rowOrder="226">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 23:45:00 </DataHora>
+        <Vazao>13576.00</Vazao>
+        <Nivel>2689.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos228" msdata:rowOrder="227">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 23:30:00 </DataHora>
+        <Vazao>13539.00</Vazao>
+        <Nivel>2686.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos229" msdata:rowOrder="228">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 23:15:00 </DataHora>
+        <Vazao>13526.70</Vazao>
+        <Nivel>2685.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos230" msdata:rowOrder="229">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 23:00:00 </DataHora>
+        <Vazao>13452.80</Vazao>
+        <Nivel>2679.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos231" msdata:rowOrder="230">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 22:45:00 </DataHora>
+        <Vazao>13366.90</Vazao>
+        <Nivel>2672.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos232" msdata:rowOrder="231">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 22:30:00 </DataHora>
+        <Vazao>13317.90</Vazao>
+        <Nivel>2668.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos233" msdata:rowOrder="232">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 22:15:00 </DataHora>
+        <Vazao>13256.90</Vazao>
+        <Nivel>2663.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos234" msdata:rowOrder="233">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 22:00:00 </DataHora>
+        <Vazao>13196.00</Vazao>
+        <Nivel>2658.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos235" msdata:rowOrder="234">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 21:45:00 </DataHora>
+        <Vazao>12978.20</Vazao>
+        <Nivel>2640.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos236" msdata:rowOrder="235">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 21:30:00 </DataHora>
+        <Vazao>12906.00</Vazao>
+        <Nivel>2634.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos237" msdata:rowOrder="236">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 21:15:00 </DataHora>
+        <Vazao>12810.20</Vazao>
+        <Nivel>2626.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos238" msdata:rowOrder="237">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 21:00:00 </DataHora>
+        <Vazao>12726.70</Vazao>
+        <Nivel>2619.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos239" msdata:rowOrder="238">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 20:45:00 </DataHora>
+        <Vazao>12726.70</Vazao>
+        <Nivel>2619.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos240" msdata:rowOrder="239">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 20:30:00 </DataHora>
+        <Vazao>12607.90</Vazao>
+        <Nivel>2609.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos241" msdata:rowOrder="240">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 20:15:00 </DataHora>
+        <Vazao>12548.80</Vazao>
+        <Nivel>2604.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos242" msdata:rowOrder="241">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 20:00:00 </DataHora>
+        <Vazao>12407.50</Vazao>
+        <Nivel>2592.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos243" msdata:rowOrder="242">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 19:45:00 </DataHora>
+        <Vazao>12302.20</Vazao>
+        <Nivel>2583.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos244" msdata:rowOrder="243">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 19:30:00 </DataHora>
+        <Vazao>12150.90</Vazao>
+        <Nivel>2570.00</Nivel>
+        <Chuva>6.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos245" msdata:rowOrder="244">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 19:15:00 </DataHora>
+        <Vazao>12069.90</Vazao>
+        <Nivel>2563.00</Nivel>
+        <Chuva>4.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos246" msdata:rowOrder="245">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 19:00:00 </DataHora>
+        <Vazao>11908.80</Vazao>
+        <Nivel>2549.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos247" msdata:rowOrder="246">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 18:45:00 </DataHora>
+        <Vazao>11805.90</Vazao>
+        <Nivel>2540.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos248" msdata:rowOrder="247">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 18:30:00 </DataHora>
+        <Vazao>11669.50</Vazao>
+        <Nivel>2528.00</Nivel>
+        <Chuva>11.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos249" msdata:rowOrder="248">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 18:15:00 </DataHora>
+        <Vazao>11500.30</Vazao>
+        <Nivel>2513.00</Nivel>
+        <Chuva>9.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos250" msdata:rowOrder="249">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 18:00:00 </DataHora>
+        <Vazao>11388.30</Vazao>
+        <Nivel>2503.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos251" msdata:rowOrder="250">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 17:45:00 </DataHora>
+        <Vazao>11210.30</Vazao>
+        <Nivel>2487.00</Nivel>
+        <Chuva>1.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos252" msdata:rowOrder="251">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 17:30:00 </DataHora>
+        <Vazao>11078.00</Vazao>
+        <Nivel>2475.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos253" msdata:rowOrder="252">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 17:15:00 </DataHora>
+        <Vazao>10957.40</Vazao>
+        <Nivel>2464.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos254" msdata:rowOrder="253">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 17:00:00 </DataHora>
+        <Vazao>10837.60</Vazao>
+        <Nivel>2453.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos255" msdata:rowOrder="254">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 16:45:00 </DataHora>
+        <Vazao>10707.80</Vazao>
+        <Nivel>2441.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos256" msdata:rowOrder="255">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 16:30:00 </DataHora>
+        <Vazao>10589.60</Vazao>
+        <Nivel>2430.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos257" msdata:rowOrder="256">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 16:15:00 </DataHora>
+        <Vazao>10440.20</Vazao>
+        <Nivel>2416.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos258" msdata:rowOrder="257">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 16:00:00 </DataHora>
+        <Vazao>10313.20</Vazao>
+        <Nivel>2404.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos259" msdata:rowOrder="258">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 15:45:00 </DataHora>
+        <Vazao>10176.50</Vazao>
+        <Nivel>2391.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos260" msdata:rowOrder="259">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 15:30:00 </DataHora>
+        <Vazao>10041.00</Vazao>
+        <Nivel>2378.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos261" msdata:rowOrder="260">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 15:15:00 </DataHora>
+        <Vazao>9916.70</Vazao>
+        <Nivel>2366.00</Nivel>
+        <Chuva>1.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos262" msdata:rowOrder="261">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 15:00:00 </DataHora>
+        <Vazao>9762.70</Vazao>
+        <Nivel>2351.00</Nivel>
+        <Chuva>1.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos263" msdata:rowOrder="262">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 14:45:00 </DataHora>
+        <Vazao>9640.50</Vazao>
+        <Nivel>2339.00</Nivel>
+        <Chuva>3.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos264" msdata:rowOrder="263">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 14:30:00 </DataHora>
+        <Vazao>9499.00</Vazao>
+        <Nivel>2325.00</Nivel>
+        <Chuva>2.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos265" msdata:rowOrder="264">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 14:15:00 </DataHora>
+        <Vazao>9358.70</Vazao>
+        <Nivel>2311.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos266" msdata:rowOrder="265">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 14:00:00 </DataHora>
+        <Vazao>9209.80</Vazao>
+        <Nivel>2296.00</Nivel>
+        <Chuva>3.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos267" msdata:rowOrder="266">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 13:45:00 </DataHora>
+        <Vazao>9081.80</Vazao>
+        <Nivel>2283.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos268" msdata:rowOrder="267">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 13:30:00 </DataHora>
+        <Vazao>8925.70</Vazao>
+        <Nivel>2267.00</Nivel>
+        <Chuva>4.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos269" msdata:rowOrder="268">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 13:15:00 </DataHora>
+        <Vazao>8771.10</Vazao>
+        <Nivel>2251.00</Nivel>
+        <Chuva>3.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos270" msdata:rowOrder="269">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 13:00:00 </DataHora>
+        <Vazao>8618.10</Vazao>
+        <Nivel>2235.00</Nivel>
+        <Chuva>4.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos271" msdata:rowOrder="270">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 12:45:00 </DataHora>
+        <Vazao>8466.70</Vazao>
+        <Nivel>2219.00</Nivel>
+        <Chuva>2.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos272" msdata:rowOrder="271">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 12:30:00 </DataHora>
+        <Vazao>8316.70</Vazao>
+        <Nivel>2203.00</Nivel>
+        <Chuva>3.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos273" msdata:rowOrder="272">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 12:15:00 </DataHora>
+        <Vazao>8159.10</Vazao>
+        <Nivel>2186.00</Nivel>
+        <Chuva>4.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos274" msdata:rowOrder="273">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 12:00:00 </DataHora>
+        <Vazao>8003.30</Vazao>
+        <Nivel>2169.00</Nivel>
+        <Chuva>5.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos275" msdata:rowOrder="274">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 11:45:00 </DataHora>
+        <Vazao>7831.10</Vazao>
+        <Nivel>2150.00</Nivel>
+        <Chuva>9.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos276" msdata:rowOrder="275">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 11:30:00 </DataHora>
+        <Vazao>7670.00</Vazao>
+        <Nivel>2132.00</Nivel>
+        <Chuva>4.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos277" msdata:rowOrder="276">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 11:15:00 </DataHora>
+        <Vazao>7502.10</Vazao>
+        <Nivel>2113.00</Nivel>
+        <Chuva>3.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos278" msdata:rowOrder="277">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 11:00:00 </DataHora>
+        <Vazao>7336.20</Vazao>
+        <Nivel>2094.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos279" msdata:rowOrder="278">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 10:45:00 </DataHora>
+        <Vazao>7189.70</Vazao>
+        <Nivel>2077.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos280" msdata:rowOrder="279">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 10:30:00 </DataHora>
+        <Vazao>7019.40</Vazao>
+        <Nivel>2057.00</Nivel>
+        <Chuva>2.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos281" msdata:rowOrder="280">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 10:15:00 </DataHora>
+        <Vazao>6868.20</Vazao>
+        <Nivel>2039.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos282" msdata:rowOrder="281">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 10:00:00 </DataHora>
+        <Vazao>6710.60</Vazao>
+        <Nivel>2020.00</Nivel>
+        <Chuva>10.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos283" msdata:rowOrder="282">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 09:45:00 </DataHora>
+        <Vazao>6547.00</Vazao>
+        <Nivel>2000.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos284" msdata:rowOrder="283">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 09:30:00 </DataHora>
+        <Vazao>6393.70</Vazao>
+        <Nivel>1981.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos285" msdata:rowOrder="284">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 09:15:00 </DataHora>
+        <Vazao>6258.40</Vazao>
+        <Nivel>1964.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos286" msdata:rowOrder="285">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 09:00:00 </DataHora>
+        <Vazao>6116.90</Vazao>
+        <Nivel>1946.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos287" msdata:rowOrder="286">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 08:45:00 </DataHora>
+        <Vazao>5992.60</Vazao>
+        <Nivel>1930.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos288" msdata:rowOrder="287">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 08:30:00 </DataHora>
+        <Vazao>5869.90</Vazao>
+        <Nivel>1914.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos289" msdata:rowOrder="288">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 08:15:00 </DataHora>
+        <Vazao>5759.90</Vazao>
+        <Nivel>1900.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos290" msdata:rowOrder="289">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 08:00:00 </DataHora>
+        <Vazao>5644.40</Vazao>
+        <Nivel>1886.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos291" msdata:rowOrder="290">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 07:45:00 </DataHora>
+        <Vazao>5529.70</Vazao>
+        <Nivel>1872.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos292" msdata:rowOrder="291">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 07:30:00 </DataHora>
+        <Vazao>5415.80</Vazao>
+        <Nivel>1858.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos293" msdata:rowOrder="292">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 07:15:00 </DataHora>
+        <Vazao>5334.90</Vazao>
+        <Nivel>1848.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos294" msdata:rowOrder="293">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 07:00:00 </DataHora>
+        <Vazao>5246.50</Vazao>
+        <Nivel>1837.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos295" msdata:rowOrder="294">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 06:45:00 </DataHora>
+        <Vazao>5150.60</Vazao>
+        <Nivel>1825.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos296" msdata:rowOrder="295">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 06:30:00 </DataHora>
+        <Vazao>5055.40</Vazao>
+        <Nivel>1813.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos297" msdata:rowOrder="296">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 06:15:00 </DataHora>
+        <Vazao>5000.10</Vazao>
+        <Nivel>1806.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos298" msdata:rowOrder="297">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 06:00:00 </DataHora>
+        <Vazao>4913.70</Vazao>
+        <Nivel>1795.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos299" msdata:rowOrder="298">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 05:45:00 </DataHora>
+        <Vazao>4851.10</Vazao>
+        <Nivel>1787.00</Nivel>
+        <Chuva>3.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos300" msdata:rowOrder="299">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 05:30:00 </DataHora>
+        <Vazao>4773.40</Vazao>
+        <Nivel>1777.00</Nivel>
+        <Chuva>5.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos301" msdata:rowOrder="300">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 05:15:00 </DataHora>
+        <Vazao>4711.50</Vazao>
+        <Nivel>1769.00</Nivel>
+        <Chuva>2.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos302" msdata:rowOrder="301">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 05:00:00 </DataHora>
+        <Vazao>4657.60</Vazao>
+        <Nivel>1762.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos303" msdata:rowOrder="302">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 04:45:00 </DataHora>
+        <Vazao>4588.50</Vazao>
+        <Nivel>1753.00</Nivel>
+        <Chuva>3.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos304" msdata:rowOrder="303">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 04:30:00 </DataHora>
+        <Vazao>4550.40</Vazao>
+        <Nivel>1748.00</Nivel>
+        <Chuva>2.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos305" msdata:rowOrder="304">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 04:15:00 </DataHora>
+        <Vazao>4489.50</Vazao>
+        <Nivel>1740.00</Nivel>
+        <Chuva>1.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos306" msdata:rowOrder="305">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 04:00:00 </DataHora>
+        <Vazao>4428.90</Vazao>
+        <Nivel>1732.00</Nivel>
+        <Chuva>2.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos307" msdata:rowOrder="306">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 03:45:00 </DataHora>
+        <Vazao>4361.10</Vazao>
+        <Nivel>1723.00</Nivel>
+        <Chuva>7.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos308" msdata:rowOrder="307">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 03:30:00 </DataHora>
+        <Vazao>4323.60</Vazao>
+        <Nivel>1718.00</Nivel>
+        <Chuva>10.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos309" msdata:rowOrder="308">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 03:15:00 </DataHora>
+        <Vazao>4249.00</Vazao>
+        <Nivel>1708.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos310" msdata:rowOrder="309">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 03:00:00 </DataHora>
+        <Vazao>4204.40</Vazao>
+        <Nivel>1702.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos311" msdata:rowOrder="310">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 02:45:00 </DataHora>
+        <Vazao>4152.60</Vazao>
+        <Nivel>1695.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos312" msdata:rowOrder="311">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 02:30:00 </DataHora>
+        <Vazao>4108.40</Vazao>
+        <Nivel>1689.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos313" msdata:rowOrder="312">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 02:15:00 </DataHora>
+        <Vazao>4049.60</Vazao>
+        <Nivel>1681.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos314" msdata:rowOrder="313">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 02:00:00 </DataHora>
+        <Vazao>3984.00</Vazao>
+        <Nivel>1672.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos315" msdata:rowOrder="314">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 01:45:00 </DataHora>
+        <Vazao>3925.90</Vazao>
+        <Nivel>1664.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos316" msdata:rowOrder="315">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 01:30:00 </DataHora>
+        <Vazao>3875.30</Vazao>
+        <Nivel>1657.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos317" msdata:rowOrder="316">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 01:15:00 </DataHora>
+        <Vazao>3825.00</Vazao>
+        <Nivel>1650.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos318" msdata:rowOrder="317">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 01:00:00 </DataHora>
+        <Vazao>3803.50</Vazao>
+        <Nivel>1647.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos319" msdata:rowOrder="318">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 00:45:00 </DataHora>
+        <Vazao>3753.50</Vazao>
+        <Nivel>1640.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos320" msdata:rowOrder="319">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 00:30:00 </DataHora>
+        <Vazao>3682.40</Vazao>
+        <Nivel>1630.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos321" msdata:rowOrder="320">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 00:15:00 </DataHora>
+        <Vazao>3618.90</Vazao>
+        <Nivel>1621.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos322" msdata:rowOrder="321">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-30 00:00:00 </DataHora>
+        <Vazao>3555.80</Vazao>
+        <Nivel>1612.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos323" msdata:rowOrder="322">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 23:45:00 </DataHora>
+        <Vazao>3500.00</Vazao>
+        <Nivel>1604.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos324" msdata:rowOrder="323">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 23:30:00 </DataHora>
+        <Vazao>3437.60</Vazao>
+        <Nivel>1595.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos325" msdata:rowOrder="324">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 23:15:00 </DataHora>
+        <Vazao>3382.40</Vazao>
+        <Nivel>1587.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos326" msdata:rowOrder="325">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 23:00:00 </DataHora>
+        <Vazao>3320.80</Vazao>
+        <Nivel>1578.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos327" msdata:rowOrder="326">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 22:45:00 </DataHora>
+        <Vazao>3279.90</Vazao>
+        <Nivel>1572.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos328" msdata:rowOrder="327">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 22:30:00 </DataHora>
+        <Vazao>3205.40</Vazao>
+        <Nivel>1561.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos329" msdata:rowOrder="328">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 22:15:00 </DataHora>
+        <Vazao>3138.20</Vazao>
+        <Nivel>1551.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos330" msdata:rowOrder="329">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 22:00:00 </DataHora>
+        <Vazao>3058.30</Vazao>
+        <Nivel>1539.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos331" msdata:rowOrder="330">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 21:45:00 </DataHora>
+        <Vazao>2946.20</Vazao>
+        <Nivel>1522.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos332" msdata:rowOrder="331">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 21:30:00 </DataHora>
+        <Vazao>2874.50</Vazao>
+        <Nivel>1511.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos333" msdata:rowOrder="332">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 21:15:00 </DataHora>
+        <Vazao>2797.00</Vazao>
+        <Nivel>1499.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos334" msdata:rowOrder="333">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 21:00:00 </DataHora>
+        <Vazao>2733.00</Vazao>
+        <Nivel>1489.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos335" msdata:rowOrder="334">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 20:45:00 </DataHora>
+        <Vazao>2733.00</Vazao>
+        <Nivel>1489.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos336" msdata:rowOrder="335">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 20:30:00 </DataHora>
+        <Vazao>2682.10</Vazao>
+        <Nivel>1481.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos337" msdata:rowOrder="336">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 20:15:00 </DataHora>
+        <Vazao>2600.20</Vazao>
+        <Nivel>1468.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos338" msdata:rowOrder="337">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 20:00:00 </DataHora>
+        <Vazao>2531.60</Vazao>
+        <Nivel>1457.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos339" msdata:rowOrder="338">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 19:45:00 </DataHora>
+        <Vazao>2463.70</Vazao>
+        <Nivel>1446.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos340" msdata:rowOrder="339">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 19:30:00 </DataHora>
+        <Vazao>2396.30</Vazao>
+        <Nivel>1435.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos341" msdata:rowOrder="340">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 19:15:00 </DataHora>
+        <Vazao>2335.70</Vazao>
+        <Nivel>1425.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos342" msdata:rowOrder="341">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 19:00:00 </DataHora>
+        <Vazao>2311.60</Vazao>
+        <Nivel>1421.00</Nivel>
+        <Chuva>0.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos343" msdata:rowOrder="342">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 18:45:00 </DataHora>
+        <Vazao>2251.80</Vazao>
+        <Nivel>1411.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos344" msdata:rowOrder="343">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 18:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1399.00</Nivel>
+        <Chuva>0.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos345" msdata:rowOrder="344">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 18:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1389.00</Nivel>
+        <Chuva>1.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos346" msdata:rowOrder="345">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 18:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1384.00</Nivel>
+        <Chuva>5.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos347" msdata:rowOrder="346">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 17:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1373.00</Nivel>
+        <Chuva>6.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos348" msdata:rowOrder="347">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 17:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1362.00</Nivel>
+        <Chuva>3.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos349" msdata:rowOrder="348">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 17:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1353.00</Nivel>
+        <Chuva>7.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos350" msdata:rowOrder="349">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 17:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1345.00</Nivel>
+        <Chuva>19.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos351" msdata:rowOrder="350">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 16:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1337.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos352" msdata:rowOrder="351">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 16:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1332.00</Nivel>
+        <Chuva>0.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos353" msdata:rowOrder="352">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 16:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1327.00</Nivel>
+        <Chuva>1.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos354" msdata:rowOrder="353">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 16:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1322.00</Nivel>
+        <Chuva>1.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos355" msdata:rowOrder="354">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 15:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1319.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos356" msdata:rowOrder="355">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 15:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1316.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos357" msdata:rowOrder="356">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 15:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1314.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos358" msdata:rowOrder="357">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 15:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1311.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos359" msdata:rowOrder="358">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 14:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1309.00</Nivel>
+        <Chuva>1.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos360" msdata:rowOrder="359">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 14:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1307.00</Nivel>
+        <Chuva>3.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos361" msdata:rowOrder="360">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 14:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1305.00</Nivel>
+        <Chuva>3.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos362" msdata:rowOrder="361">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 14:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1303.00</Nivel>
+        <Chuva>3.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos363" msdata:rowOrder="362">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 13:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1302.00</Nivel>
+        <Chuva>4.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos364" msdata:rowOrder="363">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 13:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1300.00</Nivel>
+        <Chuva>2.40</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos365" msdata:rowOrder="364">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 13:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1300.00</Nivel>
+        <Chuva>7.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos366" msdata:rowOrder="365">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 13:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1298.00</Nivel>
+        <Chuva>1.20</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos367" msdata:rowOrder="366">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 12:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1295.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos368" msdata:rowOrder="367">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 12:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1296.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos369" msdata:rowOrder="368">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 12:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1297.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos370" msdata:rowOrder="369">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 12:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1298.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos371" msdata:rowOrder="370">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 11:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1299.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos372" msdata:rowOrder="371">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 11:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1301.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos373" msdata:rowOrder="372">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 11:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1302.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos374" msdata:rowOrder="373">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 11:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1303.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos375" msdata:rowOrder="374">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 10:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1306.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos376" msdata:rowOrder="375">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 10:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1307.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos377" msdata:rowOrder="376">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 10:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1308.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos378" msdata:rowOrder="377">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 10:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1311.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos379" msdata:rowOrder="378">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 09:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1312.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos380" msdata:rowOrder="379">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 09:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1314.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos381" msdata:rowOrder="380">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 09:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1316.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos382" msdata:rowOrder="381">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 09:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1317.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos383" msdata:rowOrder="382">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 08:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1320.00</Nivel>
+        <Chuva>0.80</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos384" msdata:rowOrder="383">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 08:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1321.00</Nivel>
+        <Chuva>2.60</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos385" msdata:rowOrder="384">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 08:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1323.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos386" msdata:rowOrder="385">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 08:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1325.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos387" msdata:rowOrder="386">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 07:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1328.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos388" msdata:rowOrder="387">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 07:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1330.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos389" msdata:rowOrder="388">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 07:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1329.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos390" msdata:rowOrder="389">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 07:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1328.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos391" msdata:rowOrder="390">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 06:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1331.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos392" msdata:rowOrder="391">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 06:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1328.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos393" msdata:rowOrder="392">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 06:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1324.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos394" msdata:rowOrder="393">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 06:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1321.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos395" msdata:rowOrder="394">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 05:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1318.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos396" msdata:rowOrder="395">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 05:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1315.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos397" msdata:rowOrder="396">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 05:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1312.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos398" msdata:rowOrder="397">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 05:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1309.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos399" msdata:rowOrder="398">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 04:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1306.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos400" msdata:rowOrder="399">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 04:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1304.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos401" msdata:rowOrder="400">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 04:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1301.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos402" msdata:rowOrder="401">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 04:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1299.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos403" msdata:rowOrder="402">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 03:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1297.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos404" msdata:rowOrder="403">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 03:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1295.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos405" msdata:rowOrder="404">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 03:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1294.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos406" msdata:rowOrder="405">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 03:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1293.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos407" msdata:rowOrder="406">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 02:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1287.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos408" msdata:rowOrder="407">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 02:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1288.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos409" msdata:rowOrder="408">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 02:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1289.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos410" msdata:rowOrder="409">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 02:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1291.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos411" msdata:rowOrder="410">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 01:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1293.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos412" msdata:rowOrder="411">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 01:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1294.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos413" msdata:rowOrder="412">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 01:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1296.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos414" msdata:rowOrder="413">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 01:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1297.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos415" msdata:rowOrder="414">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 00:45:00 </DataHora>
+        <Vazao />
+        <Nivel>1299.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos416" msdata:rowOrder="415">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 00:30:00 </DataHora>
+        <Vazao />
+        <Nivel>1301.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos417" msdata:rowOrder="416">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 00:15:00 </DataHora>
+        <Vazao />
+        <Nivel>1302.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+      <DadosHidrometereologicos diffgr:id="DadosHidrometereologicos418" msdata:rowOrder="417">
+        <CodEstacao>86879300</CodEstacao>
+        <DataHora>2024-04-29 00:00:00 </DataHora>
+        <Vazao />
+        <Nivel>1303.00</Nivel>
+        <Chuva>0.00</Chuva>
+      </DadosHidrometereologicos>
+    </DocumentElement>
+  </diffgr:diffgram>
+</DataTable>
