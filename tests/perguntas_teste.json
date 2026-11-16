@@ -1,1 +1,22 @@
-[]
+[
+  {"id": "T01", "pergunta": "perdi meu RG na enchente", "categoria": "direta", "esperado_status": "ok", "esperado_id": "DOC-03"},
+  {"id": "T02", "pergunta": "quero sacar o FGTS", "categoria": "direta", "esperado_status": "ok", "esperado_id": "BEN-01"},
+  {"id": "T03", "pergunta": "qual o telefone dos bombeiros", "categoria": "direta", "esperado_status": "ok", "esperado_id": "SEG-02"},
+  {"id": "T04", "pergunta": "o que levar na mochila de emergência", "categoria": "direta", "esperado_status": "ok", "esperado_id": "SEG-04"},
+  {"id": "T05", "pergunta": "onde pego outra identidade?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "DOC-03"},
+  {"id": "T06", "pergunta": "como retiro meu fundo de garantia?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "BEN-01"},
+  {"id": "T07", "pergunta": "a água está subindo, o que eu faço?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "SEG-03"},
+  {"id": "T08", "pergunta": "posso beber a água da torneira depois da enchente?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "MOR-02"},
+  {"id": "T09", "pergunta": "qual a previsão do tempo amanhã", "categoria": "fora_do_tema", "esperado_status": "sem_base", "esperado_id": null},
+  {"id": "T10", "pergunta": "como tiro meu passaporte?", "categoria": "fora_do_tema", "esperado_status": "sem_base", "esperado_id": null},
+  {"id": "T11", "pergunta": "", "categoria": "vazia", "esperado_status": "sem_base", "esperado_id": null},
+  {"id": "T12", "pergunta": "segunda via", "categoria": "ambigua", "esperado_status": "ambigua", "esperado_id": null},
+  {"id": "T13", "pergunta": "carteira", "categoria": "ambigua", "esperado_status": "ambigua", "esperado_id": null},
+  {"id": "T14", "pergunta": "preciso de ajuda", "categoria": "sem_resposta_confiavel", "esperado_status": "sem_base", "esperado_id": null},
+  {"id": "T15", "pergunta": "como pedir indenização da prefeitura pelos móveis que perdi", "categoria": "sem_resposta_confiavel", "esperado_status": "sem_base", "esperado_id": null},
+  {"id": "T16", "pergunta": "Minha casa está lotada de água, o que eu faço?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "SEG-03"},
+  {"id": "T17", "pergunta": "Minha cidade está com alerta de tempestade, e eu estou em choque, como posso prosseguir?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "SEG-06"},
+  {"id": "T18", "pergunta": "Perdi meu RG na inchente, estou bolado, como tirar?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "DOC-03"},
+  {"id": "T19", "pergunta": "Perdi tudo na tempestade, onde tem abrigo?", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "SEG-05"},
+  {"id": "T20", "pergunta": "Meus documentos foram perdidos na tempestade e não faço a minima ideia de onde tirar", "categoria": "reformulacao", "esperado_status": "ok", "esperado_id": "DOC-07"}
+]
