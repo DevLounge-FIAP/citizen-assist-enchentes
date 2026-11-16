@@ -90,7 +90,9 @@ assert len(r["resultados"]) >= 2
 assert buscar("perdi meu RG na enchente", BASE, {})["status"] == "ok"
 
 SIN_REAL = carregar_sinonimos("data/sinonimos.json")
-assert buscar("perdi meus documentos", BASE, SIN_REAL)["status"] == "sem_base"
+# DOC-07 (visão geral de documentos) cobre as perguntas genéricas sobre documentos
+r = buscar("perdi meus documentos", BASE, SIN_REAL)
+assert r["status"] == "ok" and r["resultados"][0][0]["id"] == "DOC-07"
 
 # regressão: "água" genérica não pode puxar a limpeza pós-enchente
 r = buscar("a água está subindo, o que eu faço?", BASE, SIN_REAL)
@@ -100,7 +102,15 @@ r = buscar("posso beber a água da torneira depois da enchente?", BASE, SIN_REAL
 assert r["resultados"][0][0]["id"] == "MOR-02"
 
 # ---- Bloco 7: casos vagos reais (conferência de 14/11) ----
-assert buscar("meu documento sumiu", BASE, SIN_REAL)["status"] == "sem_base"
+r = buscar("meu documento sumiu", BASE, SIN_REAL)
+assert r["status"] == "ok" and r["resultados"][0][0]["id"] == "DOC-07"
+r = buscar("quais documentos eu preciso?", BASE, SIN_REAL)
+assert r["status"] == "ok" and r["resultados"][0][0]["id"] == "DOC-07"
+# regressões dos ajustes de sinônimos (imovel/enchente/calamidade) e do MOR-01
+r = buscar("minha casa rachou", BASE, SIN_REAL)
+assert r["resultados"][0][0]["id"] == "MOR-01"
+r = buscar("depois da enchente", BASE, SIN_REAL)
+assert r["resultados"][0][0]["id"] == "MOR-02"
 assert buscar("preciso de ajuda", BASE, SIN_REAL)["status"] == "sem_base"
 
 r = buscar("acabou de ocorrer uma inchente aqui, preciso de um abrigo", BASE, SIN_REAL)
@@ -108,4 +118,3 @@ assert r["status"] == "ok"
 assert r["resultados"][0][0]["id"] == "SEG-05"
 
 print("tudo certo")
-
