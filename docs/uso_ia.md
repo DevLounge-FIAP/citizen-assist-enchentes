@@ -35,7 +35,7 @@ padrão do Python e dos módulos do próprio projeto.
 | Integrante | Ferramenta | Uso | Validação |
 | --- | --- | --- | --- |
 | Aelton | Claude Code (Anthropic) | Organização do plano e do cronograma; README a partir do modelo da coordenação; `src/base.py`; `src/sistema.py`; `docs/contratos.md`; `src/respostas.py`; testes do fluxo e comparação dos modelos; seções do README | Ver seção 3 |
-| Bruno | _a preencher_ | _a preencher_ | _a preencher_ |
+| Bruno | Claude (Anthropic), com busca na web | Pesquisa das fontes oficiais e rascunho dos registros novos da `data/base_conhecimento.json` (de 12 para 21, incluindo o `DOC-07`); `data/sinonimos.json`; validação da base e do grafo; campo `titulo`; ajustes pedidos pela bateria de testes; seção do README sobre a origem das fontes | Ver seção 3 |
 | Victor | _a preencher_ | _a preencher_ | _a preencher_ |
 | Michelly | Claude (Anthropic) | Orientação na busca dos dados reais e das cotas (ANA/HidroWeb/SGB), validação dos códigos do monitoramento, seções do README | Ver seção 3 |
 
@@ -103,6 +103,59 @@ final entre os modelos A e B: o Modelo B foi adotado como padrão com base
 na comparação objetiva, e a decisão será confirmada com a bateria de testes
 e o teste de usabilidade do Victor.
 
+### Bruno — base de conhecimento e curadoria das fontes
+
+**Como a IA foi usada.** O Claude trabalhou a partir de pedidos específicos:
+pesquisar na web a página oficial de cada assunto (Caixa, gov.br, TSE, Receita,
+Defesa Civil, ONR), redigir os registros no formato do contrato, montar o
+dicionário de sinônimos, validar a base com o `src/base.py` do grupo e com uma
+verificação de ciclos e de ordem de pré-requisitos no grafo, e redigir a seção
+do README sobre a origem das informações. As decisões de conteúdo (quais temas
+cobrir, a distribuição entre os quatro temas e quais registros dependem de
+quais) foram tomadas por mim. Os 12 primeiros registros 
+(SEG-01 a SEG-06, DOC-01 a DOC-03, BEN-01, MOR-01 e MOR-02) foram escritos por 
+mim a partir de páginas oficiais; a IA foi usada nos registros seguintes.
+
+**O que foi conferido e o que mudou por causa disso:**
+
+- **Contra o arquivo real.** Os arquivos `data/base_conhecimento.json` e
+  `data/sinonimos.json` chegaram a ser enviados ao repositório vazios: o
+  conteúdo tinha sido colado no editor sem salvar. O `git log --stat`
+  mostrou `0 insertions` e a validação com `base.py` respondeu "a base não
+  contém nenhum registro". Os arquivos foram preenchidos, salvos e só então
+  enviados, e o commit passou a mostrar as linhas inseridas.
+- **Contra a fonte.** A IA propôs fontes que depois se mostraram fracas, e elas
+  foram trocadas ou sinalizadas: o `BEN-02` (Auxílio Reconstrução) usava um blog
+  e passou a citar a Agência Gov e a página do programa, com o aviso de que foi
+  um benefício de 2024 exclusivo do Rio Grande do Sul; o `MOR-01` e o `SEG-05`
+  tinham fonte genérica e passaram a citar a Defesa Civil de Santo André; o
+  `SEG-04` usa uma página da Defesa Civil do Paraná, e isso está dito no
+  campo `fonte`.
+- **Limites assumidos.** Não foi possível abrir a página oficial da Prefeitura
+  de Santo André: as informações locais vêm de reportagens sobre a Defesa
+  Civil municipal e estão marcadas para confirmação. Não foi encontrada uma
+  lista pública de abrigos, e por isso a base não inventa locais. Para o
+  `BEN-03` não há página única de consulta, e o registro cita a Caixa. Os
+  materiais da Caixa usados no `DOC-07` eram cópias hospedadas em sites de
+  prefeituras. Conferi o DOC-07 e o BEN-01 na página oficial da Caixa e a 
+  CNH no site do Detran-SP; os valores e as regras batiam com a base.
+- **Contra a bateria de testes (15/11).** Os testes do Victor mostraram que
+  perguntas genéricas como "meu documento sumiu" não encontravam nada. Foi
+  criado o `DOC-07` (visão geral de documentos). Os testes também mostraram
+  sinônimos que puxavam o registro errado (`casa` levava ao `MOR-03`;
+  `agua subindo` e `alagou` levavam "depois da enchente" ao `SEG-03`): esses
+  termos foram retirados, e o `MOR-01` ganhou palavras de rachadura. Duas
+  verificações do `tests/verificar_busca.py` que exigiam "sem base" para essas
+  perguntas foram atualizadas, e a suíte passou a verificar o `DOC-07`.
+- **Contra o grafo.** A base foi verificada para garantir que todo
+  `depende_de` aponta para um `id` existente e que não há ciclos; o `BEN-01`
+  devolve a ordem `DOC-01 → DOC-02 → DOC-03 → BEN-03 → BEN-01`.
+
+**O que não foi delegado à IA:** a decisão de quais assuntos entram na base e a
+responsabilidade pelo que a base afirma. Os registros com
+`requer_confirmacao: true` (13 de 21) existem porque valores, prazos e regras
+mudam e variam por estado ou município, e a resposta avisa o usuário para
+confirmar no órgão.
 ### Michelly — monitoramento e cenário de cheia
 
 **Como a IA foi usada.** O Claude foi usado para auxiliar a encontrar as cotas de alerta/inundação e os dados reais de nível dos rios. 
