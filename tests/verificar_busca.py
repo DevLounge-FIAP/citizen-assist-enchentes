@@ -117,4 +117,9 @@ r = buscar("acabou de ocorrer uma inchente aqui, preciso de um abrigo", BASE, SI
 assert r["status"] == "ok"
 assert r["resultados"][0][0]["id"] == "SEG-05"
 
+r = buscar("carteira", BASE, SIN_REAL)
+assert r["status"] == "ambigua"
+assert {registro["id"] for registro, _ in r["resultados"]} == {"DOC-03", "DOC-04", "DOC-06"}
+
 print("tudo certo")
+

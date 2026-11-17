@@ -1,9 +1,3 @@
-import unicodedata
-import json
-
-LIMIAR = 0.11   # nota mínima do 1º colocado; abaixo disso, não há base confiável
-MARGEM = 0.85   # se nota do 2º / nota do 1º >= MARGEM, os dois estão "colados" -> ambígua
-
 """
 Busca: normalização, sinônimos e pontuação por sobreposição de termos.
 
@@ -13,6 +7,14 @@ Contrato (versão de 11/11):
       {"status": "ok" | "sem_base" | "ambigua",
       "resultados": [(registro, pontuacao), ...]}
 """
+
+import unicodedata
+import json
+
+LIMIAR = 0.11   # nota mínima do 1º colocado; abaixo disso, não há base confiável
+MARGEM = 0.85   # se nota do 2º / nota do 1º >= MARGEM, os dois estão "colados" -> ambígua
+LIMIAR_AMBIGUA = 0.09  # abaixo do LIMIAR, mas com empate: ainda vale perguntar qual assunto
+
 
 #Todo 12/11 normalizar, tokenizar e jaccard
 
@@ -90,11 +92,14 @@ def buscar(pergunta: str, base: list[dict], sinonimos: dict) -> dict:
 
     pontuados.sort(key=lambda par: par[1], reverse=True)
     melhor = pontuados[0][1]
+    empatados = len(pontuados) > 1 and pontuados[1][1] / melhor >= MARGEM
 
     if melhor < LIMIAR:
+        if empatados and melhor >= LIMIAR_AMBIGUA:
+            return {"status": "ambigua", "resultados": pontuados[:3]}
         return {"status": "sem_base", "resultados": []}
 
-    if len(pontuados) > 1 and pontuados[1][1] / melhor >= MARGEM:
+    if empatados:
         return {"status": "ambigua", "resultados": pontuados[:3]}
 
     return {"status": "ok", "resultados": pontuados[:3]}
