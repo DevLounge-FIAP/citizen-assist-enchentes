@@ -466,7 +466,23 @@ Menu principal:
 | 3 | Informar o município (único dado pedido) para ativar o monitoramento |
 | 4 | Ver as orientações prioritárias da fase atual do município |
 | 5 | Trocar o modelo de resposta (A direto ou B estruturado) |
+| 6 | Simular a passagem do tempo no monitoramento (demonstração) |
 | 0 | Sair |
+
+A série de `data/monitoramento.csv` é real (ANA), mas é reproduzida em horas
+simuladas, a partir da primeira leitura. A opção 6 avança esse relógio para
+mostrar o rio subindo e baixando. Roteiro usado na demonstração, com o
+município **Estrela**:
+
+| Passo | Entrada | O que aparece |
+| --- | --- | --- |
+| 1 | Opção 3, `Estrela` | Fase ANTES, nível normal (1303 cm) |
+| 2 | Opção 6, avançar 30 horas; depois opção 4 | Fase DURANTE, nível alerta, bloco de segurança e cerca de 3 h até a cota de inundação |
+| 3 | Opção 6, avançar mais 170 horas; depois opção 4 | Fase DEPOIS, nível atenção, orientações de documentos e benefícios |
+| 4 | Opção 2, pergunta fora do tema | Telefones de emergência e recusa sem inventar resposta |
+
+O roteiro precisa ser executado a partir da raiz do repositório, porque
+`src/monitor.py` lê o CSV por caminho relativo.
 
 Verificações (na raiz do repositório):
 
@@ -474,6 +490,7 @@ Verificações (na raiz do repositório):
 python tests/verificar_sistema.py   # fluxo do menu, entradas inválidas e fases
 python tests/verificar_busca.py
 python tests/verificar_grafo.py
+python tests/verificar_monitor.py
 python tests/comparar_modelos.py    # tabela de comparação dos modelos A e B
 ```
 
