@@ -36,7 +36,7 @@ padrão do Python e dos módulos do próprio projeto.
 | --- | --- | --- | --- |
 | Aelton | Claude Code (Anthropic) | Organização do plano e do cronograma; README a partir do modelo da coordenação; `src/base.py`; `src/sistema.py`; `docs/contratos.md`; `src/respostas.py`; testes do fluxo e comparação dos modelos; seções do README | Ver seção 3 |
 | Bruno | Claude (Anthropic), com busca na web | Pesquisa das fontes oficiais e rascunho dos registros novos da `data/base_conhecimento.json` (de 12 para 21, incluindo o `DOC-07`); `data/sinonimos.json`; validação da base e do grafo; campo `titulo`; ajustes pedidos pela bateria de testes; seção do README sobre a origem das fontes | Ver seção 3 |
-| Victor | _a preencher_ | _a preencher_ | _a preencher_ |
+| Victor | Claude (Anthropic), como mentor de estudo e apoio ao desenvolvimento | Explicação dos conceitos (normalização, similaridade de Jaccard, sinônimos, grafo, ordenação topológica e detecção de ciclos); código de `src/busca.py` e `src/grafo.py` proposto passo a passo; rascunho das perguntas de `tests/perguntas_teste.json`; scripts `tests/verificar_busca.py`, `tests/verificar_grafo.py` e `tests/avaliar_busca.py`; roteiro do teste de usabilidade; seções do README sobre busca e resultados | Ver seção 3 |
 | Michelly | Claude (Anthropic) | Orientação na busca dos dados reais e das cotas (ANA/HidroWeb/SGB), validação dos códigos do monitoramento, seções do README | Ver seção 3 |
 
 <!-- markdownlint-enable MD013 -->
@@ -156,6 +156,7 @@ responsabilidade pelo que a base afirma. Os registros com
 `requer_confirmacao: true` (13 de 21) existem porque valores, prazos e regras
 mudam e variam por estado ou município, e a resposta avisa o usuário para
 confirmar no órgão.
+
 ### Michelly — monitoramento e cenário de cheia
 
 **Como a IA foi usada.** O Claude foi usado para auxiliar a encontrar as cotas de alerta/inundação e os dados reais de nível dos rios. 
@@ -180,6 +181,20 @@ por serem dados concretos e não fictícios. Além disso, o Claude foi usado par
 **O que não foi delegado à IA:** a escolha de usar dados reais em vez de dados criados, a definição das etapas de tratamento dos dados 
 (uma leitura por hora, preenchimento das horas faltantes e junção sem repetição), o workflow de obtenção dos dados (transformar os XMLs em CSV, 
 depois unir os CSVs e trabalhar em cima deles), a estrutura dos CSVs e os níveis de alerta, definidos em contrato com o grupo, e o limite da cota de atenção.
+
+### Victor — busca, grafo e avaliação
+ 
+**Como a IA foi usada.** O Claude atuou como mentor de estudo: cada trecho de código vinha com a explicação do raciocínio antes, e eu digitava, rodava e só avançava depois de entender. Ele propôs a estrutura de `src/busca.py` (normalização, tokenização, Jaccard, sinônimos, limiar e ambiguidade) e de `src/grafo.py` (montagem do grafo, ordem de pré-requisitos, ciclos e `relacionados`), os scripts de verificação e de avaliação e o roteiro do teste de usabilidade. As perguntas T01 a T15 foram rascunhadas pela IA e revisadas por mim; as T16 a T20 eu escrevi do meu jeito, antes de rodar. As decisões de regra (por exemplo, `relacionados` por tema e fase) e o que entra como limitação foram minhas.
+ 
+**O que foi conferido e o que mudou por causa disso:**
+ 
+- **Contra a execução.** Cada função foi conferida com `assert` antes de avançar (`tests/verificar_busca.py` e `tests/verificar_grafo.py`), incluindo casos de borda: texto vazio, acentos, palavra dentro de outra palavra (`cin` em `argentina`), ciclo, auto-dependência e diamante de dependências. Um erro meu (passar os sinônimos para `tokenizar`, que só normaliza) foi corrigido separando as responsabilidades: `expandir` aplica os sinônimos.
+- **Contra a base real.** As perguntas que escrevi do meu jeito mostraram que o grupo `agua` do dicionário puxava qualquer pergunta sobre água para o registro de água potável. Pedi ao Bruno a troca da chave para `agua potavel` e acrescentei um teste de regressão; ao desfazer a correção de propósito, o teste falhou, o que confirmou que ele protege contra o problema.
+- **Contra o uso.** O limiar da busca começou em 0,10 e foi para 0,11 depois que duas perguntas vagas tiraram exatamente 0,10 e receberam resposta com confiança. A pergunta "carteira" mostrou que empates abaixo do limiar deviam virar `ambigua`, e criamos a zona cinza.
+- **Contra a base de testes.** A IA sugeriu um campo de risco em `perguntas_teste.json`; descartei, porque a classificação de risco é testada pela Michelly. O esperado de cada pergunta foi definido a partir da base, e não da saída do sistema, para o teste não ser circular.
+- **Contra os números.** A primeira rodada deu 16 de 20 (80%). Para a T20, o diagnóstico mostrou nota 0,045 (uma palavra em comum, 1/22). Decidi **não** baixar o limiar só para ela, porque isso deixaria as perguntas fora do tema passarem; ela ficou como limitação.
+- **Contra o usuário real.** O teste de usabilidade foi feito com uma participante de verdade; nenhum resultado foi gerado por IA. A IA ajudou a montar o roteiro e a organizar as anotações depois.
+**O que não foi delegado à IA:** as decisões sobre limiares e regras, a escolha do que registrar como limitação, a aplicação do teste de usabilidade e a coleta dos resultados, e os pedidos de mudança nos dados do Bruno, que cuida da base.
 
 ## 4. Comparação dos modelos de resposta
 

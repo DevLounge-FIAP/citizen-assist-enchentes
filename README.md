@@ -174,8 +174,52 @@ errar (por exemplo, *casa* puxava os documentos do imóvel).
 - A base não substitui os canais oficiais: em risco, ligue para a Defesa Civil
   (**199**) ou os Bombeiros (**193**).
 
-_(a preencher — Victor: normalização, sinônimos, pontuação, limiar, ambiguidade
-e grafo de pré-requisitos.)_
+#### Estratégia de busca e grafo de pré-requisitos
+ 
+**Por que sobreposição de termos.** A base tem 21 registros curados e o assistente não pode inventar orientação. Por isso a busca foi feita com um método que é **explicável** (dá para mostrar por que um registro foi escolhido), **determinístico** (a mesma pergunta dá sempre a mesma resposta, o que torna a taxa de acerto reprodutível) e **sem dependências** (só a biblioteca padrão do Python). Um modelo de linguagem ou embeddings exigiriam bibliotecas externas e poderiam gerar texto não verificado, o que contraria a regra de nunca inventar orientação. O custo é que a busca compara **palavras**, não sentido (ver limitações).
+ 
+**Como a busca funciona** (`buscar(pergunta, base, sinonimos)` em `src/busca.py`):
+ 
+| Etapa | O que faz | Exemplo |
+| --- | --- | --- |
+| 1. Normalizar | Minúsculas, sem acentos, pontuação vira espaço, espaços repetidos removidos | `"Perdi meu RG na enchente!"` → `"perdi meu rg na enchente"` |
+| 2. Tokenizar | Divide em palavras e remove as *stopwords* (`como`, `a`, `o`, `do`, `meu`, `de`, `você`) | `"como tirar a segunda via do meu RG"` → `{tirar, segunda, via, rg}` |
+| 3. Expandir por sinônimos | Se um termo de um grupo de `data/sinonimos.json` aparece na pergunta (palavra ou expressão inteira), todos os termos do grupo entram | Um grupo com `rg` e `carteira de identidade` é ativado pelos dois lados; `cin` não dispara dentro de `argentina` |
+| 4. Pontuar | Similaridade de Jaccard entre as palavras da pergunta e todas as palavras-chave de cada registro: `\|A ∩ B\| / \|A ∪ B\|` | `{perdi, rg}` e `{rg, identidade, segunda, via}`: 1 em comum, 5 no total → 0,20 |
+| 5. Decidir | Ordena por nota e aplica as regras abaixo | |
+ 
+A lista de *stopwords* é curta de propósito: "não" e "sem" ficam, porque mudam o sentido. Uma lista maior foi testada e descartada.
+ 
+**Regras de decisão** (a busca devolve até 3 resultados, em ordem decrescente de nota):
+ 
+| Situação | Regra | `status` | O que o sistema faz |
+| --- | --- | --- | --- |
+| Nenhuma palavra em comum, ou melhor nota abaixo de **0,11** (`LIMIAR`) | Sem base confiável | `sem_base` | Diz que não encontrou, não inventa, sugere palavras e repete os telefones de emergência |
+| Nota do 2º colocado ≥ **85%** da nota do 1º (`MARGEM = 0,85`) | Dois assuntos colados | `ambigua` | Mostra os candidatos e pergunta qual o usuário quer |
+| Nota entre **0,09** e 0,11 com empate (zona cinza, `LIMIAR_AMBIGUA`) | Tema entendido, assunto não | `ambigua` | Igual à anterior |
+| Demais casos | Um vencedor claro | `ok` | Usa o primeiro resultado |
+ 
+Os três valores foram calibrados com perguntas reais, não escolhidos de antemão:
+ 
+- O limiar começou em 0,10, mas duas perguntas vagas tiraram exatamente 0,10 e recebiam resposta com confiança. Subiu para 0,11.
+- A zona cinza surgiu porque "carteira" (uma palavra, três documentos empatados abaixo do limiar) saía como `sem_base`. Quando há empate, perguntar qual assunto é melhor do que dizer "não sei".
+- O Jaccard **penaliza perguntas longas**: cada palavra sem correspondência aumenta o denominador. No caso T20, a pergunta tem 13 palavras, o registro tem 10 e só 1 é comum: 1 / 22 = 0,045, abaixo do limiar.
+**Grafo de pré-requisitos** (`src/grafo.py`):
+ 
+- `montar_grafo` lê o campo `depende_de` e monta um dicionário `{id: [ids dos quais depende]}`, ignorando ids que não existem. A seta vai do registro dependente para o pré-requisito.
+- `pre_requisitos(id, base)` faz uma busca em profundidade e só coloca um registro na lista **depois** de todos os seus pré-requisitos. Isso devolve a ordem pronta (é uma ordenação topológica) e cada id aparece uma vez só, mesmo quando dois caminhos chegam ao mesmo pré-requisito. Exemplo real: `BEN-01` → `DOC-01 → DOC-02 → DOC-03 → BEN-03`.
+- **Ciclos:** o algoritmo guarda o caminho em andamento e os registros já concluídos. Se um registro reaparece no caminho em andamento, levanta `ValueError("ciclo de dependências: A -> B -> C -> A")`. Um registro que depende de si mesmo também é ciclo. O `respostas.py` trata esse erro e usa as dependências diretas, então um dado errado não derruba o assistente. A base atual não tem ciclos.
+- `relacionados(id, base)` sugere até 3 assuntos para continuar: primeiro quem depende do registro, depois registros do **mesmo tema e fase**, sem repetir o próprio registro nem seus pré-requisitos. O contrato original previa "mesmo subtema", mas na base real esse critério não agrupava nenhum registro; usar tema e fase considera o momento em que a pessoa está. Exemplo: `DOC-03` → `BEN-01`, `BEN-02`, `BEN-04`.
+
+#### Conselhos para quem for evoluir a busca
+ 
+1. **Cuidado com palavras comuns como chave de um grupo de sinônimos.** Um grupo é ativado por qualquer um dos seus termos; "água" e "casa" puxavam registros errados e foram retirados ou trocados (`agua` virou `agua potavel`). Cada ajuste de sinônimo deve ter um teste de regressão.
+2. **Perguntas longas e informais perdem nota.** O Jaccard divide pelo total de palavras; vale testar com frases como as das pessoas, e não só com palavras-chave.
+3. **Sem stemming, cada forma de uma palavra é uma palavra diferente** ("perdi" ≠ "perdidos", "bombeiro" ≠ "bombeiros"). Os sinônimos cobrem parte disso; a solução geral é reduzir ao radical.
+4. **A busca entende palavras, não intenção.** "Alerta de tempestade" casa com o cadastro nos alertas, e não com a preparação da casa.
+5. **Registros de visão geral resolvem perguntas genéricas.** O `DOC-07` foi criado depois que "meu documento sumiu" não achava nada.
+6. **Em dúvida, perguntar.** Empate vira `ambigua`; sem base, o assistente recusa e mostra os telefones de emergência (193, 199).
+7. **Os limiares (0,11, 0,85 e 0,09) foram calibrados com cerca de 44 perguntas.** Qualquer mudança deve rodar `tests/avaliar_busca.py` e `tests/verificar_busca.py` antes de ser aceita.
 
 ### Regras de resposta, prompts e tratamento das limitações
 
@@ -313,9 +357,73 @@ está subindo e negativa quando está baixando) e quantas horas faltam até a in
 
 ### Plano de testes, indicadores e resultados
 
-_(a preencher — Victor, após a bateria de 17/11: perguntas de teste, taxa de
-acerto, tempo médio, teste de usabilidade, interpretação, melhorias e
-limitações da avaliação.)_
+### Plano de testes, indicadores e resultados
+ 
+**O que foi medido.** Três frentes: a **busca** (20 perguntas, `tests/perguntas_teste.json`), a **classificação de risco do monitoramento** (`tests/verificar_monitor.py`) e a **facilidade de uso** (teste de usabilidade, [`docs/teste_usabilidade.md`](docs/teste_usabilidade.md)).
+ 
+**Bateria de perguntas.** São 20 perguntas em seis categorias. Cada uma traz o status esperado (`ok`, `sem_base` ou `ambigua`) e, quando há resposta certa, o `id` esperado. O esperado foi definido a partir da base, antes de rodar o sistema, e não a partir da saída dele. Uma pergunta **acerta** quando o status obtido é o esperado e, nos casos `ok`, o primeiro resultado é o registro esperado. O tempo é a média de 200 repetições por pergunta, medida com `time.perf_counter()`. Para rodar: `python tests/avaliar_busca.py`.
+ 
+| Categoria | Perguntas | Acertos | Taxa |
+| --- | --- | --- | --- |
+| Direta | 4 | 4 | 100% |
+| Reformulação | 9 | 7 | 78% |
+| Fora do tema | 2 | 2 | 100% |
+| Vazia | 1 | 1 | 100% |
+| Ambígua | 2 | 2 | 100% |
+| Sem resposta confiável | 2 | 1 | 50% |
+| **Total** | **20** | **17** | **85%** |
+ 
+| Indicador | Resultado |
+| --- | --- |
+| Acerto da busca | 17 de 20 (85%) |
+| Tempo médio por busca | cerca de 1 ms (1,9 ms na última execução; entre 1 e 5 ms conforme o computador) |
+| Classificação de risco (`tests/verificar_monitor.py`) | 7 de 7 verificações (100%); os 4 níveis (normal, atenção, alerta e inundação) classificados corretamente |
+| Tarefas do teste de usabilidade concluídas sem ajuda | 4 de 5 |
+| Facilidade de uso (1 a 5) | 4 |
+ 
+**Evolução.** A primeira rodada deu 16 de 20 (80%). A pergunta "carteira" respondia `sem_base` e, com a zona cinza, passou a `ambigua`, chegando a 17 de 20. Antes disso, a bateria já tinha apontado o `DOC-07` (visão geral de documentos) e os sinônimos que puxavam o registro errado, corrigidos junto com o Bruno.
+ 
+**O que ainda falha:**
+ 
+| Pergunta | Esperado → obtido | Causa |
+| --- | --- | --- |
+| T15: "como pedir indenização da prefeitura pelos móveis que perdi" | `sem_base` → `ok` (MOR-04, seguro) | A pergunta tem palavras em comum com o registro de seguro, mas indenização da prefeitura não está na base. É o erro mais sério: responder com confiança algo parecido é pior do que recusar. |
+| T17: "Minha cidade está com alerta de tempestade, e eu estou em choque, como posso prosseguir?" | SEG-06 → SEG-01 | A busca compara palavras, não intenção: "alerta" leva ao cadastro nos alertas. |
+| T20: "Meus documentos foram perdidos na tempestade e não faço a minima ideia de onde tirar" | DOC-07 → `sem_base` | Só "documentos" é comum ao DOC-07 (nota 1/22 = 0,045), porque "perdidos" não é reconhecido como "perdi" (sem stemming) e a pergunta longa dilui o Jaccard. |
+ 
+**Interpretação.** O tempo não é um problema: poucos milissegundos por busca. A precisão é boa nas perguntas diretas, vazias, fora do tema e ambíguas, e cai nas reformulações longas e informais, que é como as pessoas escrevem de verdade. Das três falhas, a T15 é a que mais importa para um assistente que não pode induzir ao erro. Um teste com uma pessoa de fora ainda achou uma falha que a bateria não tinha: "qual o número do bombeiro" não encontra o registro de telefones de emergência (a bateria só tinha "telefone dos bombeiros").
+ 
+**Teste de usabilidade** (uma participante de 20 anos, 13 minutos, 5 tarefas; detalhes em [`docs/teste_usabilidade.md`](docs/teste_usabilidade.md)):
+ 
+| Resultado | Valor |
+| --- | --- |
+| Tarefas concluídas sem ajuda | 4 de 5 |
+| Facilidade geral | 4 de 5 |
+| Confiaria na orientação numa emergência? | Sim ("porque é prático") |
+| Maior dificuldade | O menu |
+ 
+Achados e o que foi feito:
+ 
+| Achado | Situação |
+| --- | --- |
+| O telefone de emergência só aparecia no fim da mensagem "não encontrei" | Corrigido (PR #17): os telefones passaram para o topo |
+| O menu confundiu (tentou a opção 4 antes de informar o município) | Menu reformulado na PR #17 |
+| "Qual o número do bombeiro" não encontra o SEG-02 | Pendente: depende de sinônimos e palavras-chave na base (Bruno) |
+| O município digitado com erro é aceito sem aviso | Pendente (melhoria 3 da seção de conclusões) |
+ 
+**Limitações da avaliação.**
+ 
+- As 20 perguntas foram escritas pela equipe, e os limiares (0,11, 0,85 e 0,09) foram ajustados com perguntas do mesmo tipo. Por isso, os 85% provavelmente são **otimistas**; perguntas de pessoas de fora tendem a render menos.
+- As 7 verificações do monitoramento são casos escritos pela autora do módulo (os quatro níveis, a fase "depois", o fim dos dados e uma cidade sem leituras): a taxa de 100% mostra que as regras funcionam nesses casos, mas a amostra é pequena e não cobre a oscilação de fase perto do pico, já registrada como limitação.
+- O teste de usabilidade teve **uma participante**, de 20 anos, que já usa assistentes de chat e é próxima do desenvolvedor da busca. Tempos por tarefa e número de erros não foram coletados.
+- A preferência entre os modelos A e B não foi medida com respostas reais (ver a seção de regras de resposta).
+**Melhorias.**
+ 
+1. **Reduzir palavras ao radical (stemming) e ponderar termos raros (TF-IDF)**, para acertar plurais e flexões ("perdidos", "bombeiro") e reduzir o peso de palavras comuns.
+2. **Medir a cobertura da pergunta**, e não só o Jaccard, para não punir frases longas; qualquer mudança de limiar só deve valer depois de testar com mais perguntas, porque subir o limiar pode piorar outras categorias.
+3. **Alimentar os sinônimos com perguntas reais** de usuários (como "número do bombeiro") e manter um teste de regressão para cada correção.
+4. **Avaliar com uma amostra maior**: mais perguntas escritas por pessoas de fora da equipe e mais participantes no teste de usabilidade, com tempo por tarefa cronometrado.
+
 
 ### Exemplos de perguntas, respostas com fontes e entradas inválidas
 
