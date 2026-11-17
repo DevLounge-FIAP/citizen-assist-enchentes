@@ -92,16 +92,16 @@ registrou essas decisões no plano.
      ir para o README;
   3. o aviso "monitoramento indisponível" se repetia a cada resposta;
      passou a aparecer uma vez por sessão.
-- **Limites assumidos.** O `monitor.py` ainda não existe; o fluxo foi
-  verificado com um monitor simulado no teste, e o README não afirma nada
-  sobre o monitoramento real.
+- **Limites assumidos.** O fluxo foi verificado com um monitor simulado no
+  teste e, depois da entrada do `monitor.py` real, com o roteiro da
+  demonstração (município Estrela, opção 6 do menu).
 
 **O que não foi delegado à IA:** o conteúdo da base de conhecimento (as
 orientações, fontes e datas de verificação são responsabilidade do Bruno,
 que descreve o seu processo de verificação na subseção dele) e a escolha
 final entre os modelos A e B: o Modelo B foi adotado como padrão com base
-na comparação objetiva, e a decisão será confirmada com a bateria de testes
-e o teste de usabilidade do Victor.
+na comparação objetiva e mantido depois da bateria de testes e do teste de
+usabilidade (ver a seção 4).
 
 ### Bruno — base de conhecimento e curadoria das fontes
 
@@ -189,5 +189,11 @@ limitações", e pode ser refeita com `python tests/comparar_modelos.py`.
 Nenhuma ferramenta de IA participa das respostas comparadas: as duas são
 geradas pelo código a partir da mesma base.
 
-_A completar em 18/11 com a bateria de testes e o teste de usabilidade
-(clareza percebida por quem é de fora da equipe)._
+**Decisão final: Modelo B como padrão.** Os dois modelos cumprem as regras
+de confiabilidade em 100% das 63 respostas; só o B mostra a situação do
+município (42 de 42) e os pré-requisitos em ordem (33 de 33). A bateria de
+perguntas avalia a busca, que é a mesma para os dois modelos, então não
+favorece nenhum deles. No teste de usabilidade, a participante leu apenas
+respostas no Modelo B e as achou claras e acionáveis. Ela não viu respostas
+no Modelo A, então a preferência do usuário entre os dois não foi medida;
+isso está registrado como limitação e melhoria no README.
