@@ -37,7 +37,7 @@ padrão do Python e dos módulos do próprio projeto.
 | Aelton | Claude Code (Anthropic) | Organização do plano e do cronograma; README a partir do modelo da coordenação; `src/base.py`; `src/sistema.py`; `docs/contratos.md`; `src/respostas.py`; testes do fluxo e comparação dos modelos; seções do README | Ver seção 3 |
 | Bruno | Claude (Anthropic), com busca na web | Pesquisa das fontes oficiais e rascunho dos registros novos da `data/base_conhecimento.json` (de 12 para 21, incluindo o `DOC-07`); `data/sinonimos.json`; validação da base e do grafo; campo `titulo`; ajustes pedidos pela bateria de testes; seção do README sobre a origem das fontes | Ver seção 3 |
 | Victor | _a preencher_ | _a preencher_ | _a preencher_ |
-| Michelly | _a preencher_ | _a preencher_ | _a preencher_ |
+| Michelly | Claude (Anthropic) | Orientação na busca dos dados reais e das cotas (ANA/HidroWeb/SGB), validação dos códigos do monitoramento, seções do README | Ver seção 3 |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -156,6 +156,30 @@ responsabilidade pelo que a base afirma. Os registros com
 `requer_confirmacao: true` (13 de 21) existem porque valores, prazos e regras
 mudam e variam por estado ou município, e a resposta avisa o usuário para
 confirmar no órgão.
+### Michelly — monitoramento e cenário de cheia
+
+**Como a IA foi usada.** O Claude foi usado para auxiliar a encontrar as cotas de alerta/inundação e os dados reais de nível dos rios. 
+O portal da HidroWeb não disponibilizava os dados hora a hora, então o Claude apresentou a solução de obter os dados pela telemetria 
+da ANA no formato XML. Os níveis e as cotas são dados oficiais dos períodos de cada cheia e não tiveram influência da IA, justamente 
+por serem dados concretos e não fictícios. Além disso, o Claude foi usado para validar os códigos e em seções do README. 
+
+**O que foi conferido e o que mudou por causa disso:**
+
+- **Contra o contrato.** Comparei o monitor.py com o docs/contratos.md e ajustei: a data não deveria ter os segundos, nível e cotas deveriam
+  ser número inteiro e deveria dar KeyError quando a cidade não tem leitura.
+- **Fonte dos dados.** A opção de Séries Históricas da HidroWeb só tinha dados até 2008. Com o objetivo de pegar dados mais recentes, a telemetria
+  da ANA surgiu como alternativa. Então, para garantir que os dados batiam com os oficiais, comparei os níveis do XML com os boletins do SGB.
+- **Dados repetidos.** Inicialmente não havia checagem para dados repetidos, então foi identificada uma brecha que permitiria dados
+  duplicados no CSV. A partir disso, uma validação de cidade/hora foi inserida. Agora é possível adicionar dados de outras cidades que
+  sigam o mesmo padrão da ANA sem repetição.
+- **Sugestões.** A IA sugeriu salvar as respostas de cada estação pra não perguntar de novo. Não aceitei porque acho que faz
+  mais sentido inserir os dados manualmente, o que simplifica o preparar_dados.py.
+- **Aviso.** Eu tinha mudado o texto do aviso e ele ficou repetindo o aviso que já existe no sistema.py. Voltei pro aviso padrão do plano.
+- **Limitação.** Perto do pico de Uruguaiana o rio fica quase parado, e a fase troca entre "durante" e "depois". Decidi manter a regra do plano e registrar como limitação.
+
+**O que não foi delegado à IA:** a escolha de usar dados reais em vez de dados criados, a definição das etapas de tratamento dos dados 
+(uma leitura por hora, preenchimento das horas faltantes e junção sem repetição), o workflow de obtenção dos dados (transformar os XMLs em CSV, 
+depois unir os CSVs e trabalhar em cima deles), a estrutura dos CSVs e os níveis de alerta, definidos em contrato com o grupo, e o limite da cota de atenção.
 
 ## 4. Comparação dos modelos de resposta
 

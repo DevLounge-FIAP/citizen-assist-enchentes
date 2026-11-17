@@ -234,6 +234,69 @@ resultados.)_
 - **Nunca se apresenta como canal oficial:** o aviso aparece na abertura, em
   cada resposta e na saída.
 
+### Monitoramento do nível dos rios
+
+#### Introdução geral
+
+Os dados de monitoramento são provenientes de cheias reais das cidades escolhidas (Estrela e Uruguaiana). Portanto, eles não são dados em tempo real. 
+Essa escolha foi feita para que fosse possível trabalhar com dados reais, mesmo que não em tempo real. Dessa maneira, as cotas de alerta e inundação 
+também seriam reais e fariam maior sentido físico, já que foram definidas por órgãos competentes especializados no assunto.
+
+No entanto, como só foi possível encontrar dados oficiais para as cotas de alerta e de inundação, foi usado como base um cálculo para estimar a cota de atenção:
+
+`cota de atenção = cota de alerta × 0,9`
+
+Assim, o valor não é baixo demais para gerar alertas excessivos e ainda é menor que a cota de alerta. Além disso, também foi decidido que, para estimar a 
+tendência, são usados os dados das últimas três horas do nível do rio:
+
+`tendência (cm/h) = (nível atual - nível 3h antes) / 3`
+
+#### Fontes
+
+Foi feita a escolha de usar dados de enchentes reais para as simulações. Inicialmente, foi usado o portal HidroWeb, uma ferramenta do Sistema Nacional de 
+Informações sobre Recursos Hídricos (SNIRH) que contém os dados da Rede Hidrometeorológica Nacional (RHN), coordenada pela Agência Nacional de Águas e 
+Saneamento Básico (ANA). Como as séries históricas do HidroWeb só tinham dados até 2008, os dados das cheias foram obtidos pela telemetria da ANA, em formato XML. 
+Dessa maneira, foi possível escolher duas cidades para popular um único CSV com todos os dados de monitoramento, além de uma terceira (Itaqui), deixada como XML extra para teste.
+
+Além disso, os boletins do Serviço Geológico do Brasil (SGB), da Superintendência Regional de Porto Alegre, registram as cotas oficiais de cidades do Rio Grande 
+do Sul. Então, foram escolhidas cidades dessa região, de modo que tanto os dados da simulação quanto as cotas são dados oficiais e concretos, definidos por órgãos competentes.
+
+
+| Cidade | Estação (ANA) | Rio | Cota de alerta | Cota de inundação | Período |
+| --- | --- | --- | --- | --- | --- |
+| Estrela | 86879300 | Rio Taquari | 1700 cm | 1900 cm | 29/04 a 10/05/2024 |
+| Uruguaiana | 77150000 | Rio Uruguai | 750 cm | 850 cm | 15/06 a 15/07/2025 |
+| Itaqui (extra) | 75900000 | Rio Uruguai | 730 cm | 830 cm | 15/06 a 30/06/2025 |
+
+
+- HidroWeb: https://www.snirh.gov.br/hidroweb
+- Telemetria da ANA: https://telemetriaws1.ana.gov.br/ServiceANA.asmx
+- Boletins do SGB (SACE): https://www.sgb.gov.br/sace/
+
+
+#### O que cada script faz
+
+**preparar_dados.py** -> processa os dados da ANA no formato XML. Durante esse processo, pede algumas informações sobre a cidade (nome da estação de monitoramento, nome do rio, 
+município, cota de alerta e cota de inundação) e gera um CSV que segue o padrão de colunas definido no contrato e de nome (Nome da cidade - ano.csv) no diretório ana. Depois, 
+move os XMLs processados para a subpasta processados, dentro de ana. Além disso, junta os dados dos CSVs de diferentes cidades no CSV principal, chamado monitoramento.csv.
+Essa junção faz uma verificação que se baseia no nome da cidade e no horário dos dados, para impedir que uma mesma leitura seja inserida duas vezes.
+
+**monitor.py** -> permite avançar ou zerar o horário da simulação. A partir dos dados do monitoramento.csv e do momento da simulação, devolve a situação do rio no horário simulado, 
+indicando se está normal ou se atingiu a cota de atenção, alerta ou inundação. Além disso, devolve a fase (antes, durante ou depois), a tendência em cm/h (positiva quando o rio 
+está subindo e negativa quando está baixando) e quantas horas faltam até a inundação.
+
+**verificar_monitor.py** -> contém os testes do monitor.py. Faz sete verificações: simulação em nível normal, de atenção, alerta e inundação; baixa do rio, também chamada de 
+"fase depois"; fim dos dados, caso a pessoa avance a simulação para um número de horas maior que o total de horas armazenadas; e cidade sem dados, situação que deve retornar KeyError.
+
+#### Limitações
+
+- O preparar_dados.py só consegue trabalhar com XMLs que venham da ANA, ou seja, se um XML com padrão diferente for adicionado, o script não vai conseguir tratar os dados.
+- Os dados não são de fato em tempo real. Eles são dados reais de cheias passadas.
+- Os XMLs da ANA usados no trabalho vieram com algumas horas faltando. Então, foi feita uma estimativa ligando a leitura anterior à próxima para preencher os períodos vazios.
+  Portanto, algumas partes dos dados não são leituras reais.
+- Caso o rio fique quase parado depois de passar da cota de alerta (como perto do pico de Uruguaiana), a tendência oscila entre subir e baixar um pouco, e a fase pode alternar com
+  frequência entre "durante" e "depois". O nível (alerta ou inundação) continua certo, mas a troca de fase pode acabar causando confusão nos alertas.
+
 ### Plano de testes, indicadores e resultados
 
 _(a preencher — Victor, após a bateria de 17/11: perguntas de teste, taxa de
