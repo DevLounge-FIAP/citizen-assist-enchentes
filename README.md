@@ -357,6 +357,8 @@ está subindo e negativa quando está baixando) e quantas horas faltam até a in
 
 ### Plano de testes, indicadores e resultados
 
+A saída completa da bateria, pergunta por pergunta (esperado, obtido, acerto e tempo), está em [`docs/resultados_busca.txt`](docs/resultados_busca.txt).
+
 ### Plano de testes, indicadores e resultados
  
 **O que foi medido.** Três frentes: a **busca** (20 perguntas, `tests/perguntas_teste.json`), a **classificação de risco do monitoramento** (`tests/verificar_monitor.py`) e a **facilidade de uso** (teste de usabilidade, [`docs/teste_usabilidade.md`](docs/teste_usabilidade.md)).
@@ -611,6 +613,7 @@ python tests/verificar_busca.py
 python tests/verificar_grafo.py
 python tests/verificar_monitor.py
 python tests/comparar_modelos.py    # tabela de comparação dos modelos A e B
+python tests/avaliar_busca.py       # taxa de acerto e tempo da busca (20 perguntas)
 ```
 
 ---

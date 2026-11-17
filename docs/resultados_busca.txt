@@ -1,0 +1,36 @@
+ID   categoria               esperado          obtido            ok?        ms
+T01  direta                  ok DOC-03         ok DOC-03         OK      2.095
+T02  direta                  ok BEN-01         ok BEN-01         OK      2.051
+T03  direta                  ok SEG-02         ok SEG-02         OK      2.201
+T04  direta                  ok SEG-04         ok SEG-04         OK      2.027
+T05  reformulacao            ok DOC-03         ok DOC-03         OK      1.828
+T06  reformulacao            ok BEN-01         ok BEN-01         OK      1.778
+T07  reformulacao            ok SEG-03         ok SEG-03         OK      2.143
+T08  reformulacao            ok MOR-02         ok MOR-02         OK      1.822
+T09  fora_do_tema            sem_base          sem_base          OK      2.778
+T10  fora_do_tema            sem_base          sem_base          OK      2.163
+T11  vazia                   sem_base          sem_base          OK      1.808
+T12  ambigua                 ambigua           ambigua DOC-01    OK      1.965
+T13  ambigua                 ambigua           ambigua DOC-03    OK      1.807
+T14  sem_resposta_confiavel  sem_base          sem_base          OK      1.740
+T15  sem_resposta_confiavel  sem_base          ok MOR-04         ERRO    1.888
+T16  reformulacao            ok SEG-03         ok SEG-03         OK      1.884
+T17  reformulacao            ok SEG-06         ok SEG-01         ERRO    2.666
+T18  reformulacao            ok DOC-03         ok DOC-03         OK      2.009
+T19  reformulacao            ok SEG-05         ok SEG-05         OK      2.077
+T20  reformulacao            ok DOC-07         sem_base          ERRO    1.867
+
+Acerto geral: 17/20 = 85%
+  direta                  4/4 = 100%
+  reformulacao            7/9 = 78%
+  fora_do_tema            2/2 = 100%
+  vazia                   1/1 = 100%
+  ambigua                 2/2 = 100%
+  sem_resposta_confiavel  1/2 = 50%
+
+Tempo médio por busca: 2.030 ms (média de 200 execuções por pergunta)
+
+Perguntas que falharam (material para a seção de limitações do README):
+  T15: "como pedir indenização da prefeitura pelos móveis que perdi" -> esperado [sem_base], obtido [ok MOR-04]
+  T17: "Minha cidade está com alerta de tempestade, e eu estou em choque, como posso prosseguir?" -> esperado [ok SEG-06], obtido [ok SEG-01]
+  T20: "Meus documentos foram perdidos na tempestade e não faço a minima ideia de onde tirar" -> esperado [ok DOC-07], obtido [sem_base]
