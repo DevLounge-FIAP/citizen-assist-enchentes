@@ -43,7 +43,9 @@ def rodar(entradas, monitor=True):
 
     original_input = builtins.input
     original_monitor = sys.modules.get("monitor")
-    if monitor:
+    if isinstance(monitor, types.SimpleNamespace):
+        sys.modules["monitor"] = monitor
+    elif monitor:
         sys.modules["monitor"] = types.SimpleNamespace(estado=estado_teste)
     else:
         sys.modules["monitor"] = types.SimpleNamespace()
@@ -145,6 +147,46 @@ assert "[DOC-03]" in s
 s = rodar(["3", "Rio Durante", "2", "perdi meu rg", "0", "0"], monitor=False)
 assert "Monitoramento ainda não disponível" in s
 assert "[DOC-03]" in s
+
+# Pergunta sem base: telefones de emergência antes de tudo
+s = rodar(["2", "receita de bolo", "0"])
+assert s.index("Bombeiros 193 | Defesa Civil 199") < s.index("Não encontrei")
+
+# Menu: uma opção por linha, município e modelo atuais, requisito da opção 4
+s = rodar(["3", "Rio Antes", "0"])
+assert "  4) O que fazer agora (precisa do município, opção 3)" in s
+assert "(atual: não informado)" in s and "(atual: Rio Antes)" in s
+assert "Modelo de resposta (atual: B)" in s
+
+
+# Simulação do tempo (opção 6): o rio sobe e a fase muda
+def monitor_simulado():
+    relogio = types.SimpleNamespace(horas_simuladas=0)
+
+    def estado(municipio):
+        fase = "durante" if relogio.horas_simuladas >= 24 else "antes"
+        return dict(ESTADOS["Rio " + fase.capitalize()])
+
+    def avancar(horas):
+        relogio.horas_simuladas += horas
+
+    def reiniciar():
+        relogio.horas_simuladas = 0
+
+    relogio.estado = estado
+    relogio.avancar_simulacao = avancar
+    relogio.reiniciar_simulacao = reiniciar
+    return relogio
+
+
+s = rodar(["3", "Rio Antes", "6", "1", "6", "3", "18", "0"], monitor=monitor_simulado())
+assert "Hora simulada: 6" in s and "Hora simulada: 24" in s
+assert "SEGURANÇA EM PRIMEIRO LUGAR" in s and "fase DURANTE" in s
+s = rodar(["6", "2", "6", "4", "0"], monitor=monitor_simulado())
+assert "Hora simulada: 24" in s and "Hora simulada: 0" in s
+assert "Informe o município (opção 3)" in s
+s = rodar(["6", "0"])
+assert "simulação do monitoramento não está disponível" in s
 
 # Fim de entrada (Ctrl+D) encerra sem erro
 s = rodar([])

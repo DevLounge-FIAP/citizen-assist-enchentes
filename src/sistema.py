@@ -178,16 +178,20 @@ def escolher_relacionado(registro, registros_base):
 
 
 def sem_resposta(registros_base):
-    """Ausência de orientação confiável: não inventa, sugere caminhos."""
-    print("\nNão encontrei na base uma orientação confiável para essa pergunta.")
-    print("Não vou inventar instruções. Você pode tentar outras palavras, por exemplo:")
+    """Ausência de orientação confiável: não inventa, sugere caminhos.
+
+    Os telefones de emergência vêm primeiro: no teste de usabilidade, a
+    participante só achou o 193 na última linha de uma mensagem longa.
+    """
+    print("\nEm risco imediato: Bombeiros 193 | Defesa Civil 199.")
+    print("Não encontrei na base uma orientação confiável para essa pergunta.")
+    print("Não vou inventar instruções.")
     exemplos = []
     for tema in base.listar_temas(registros_base):
         primeiro = base.registros_do_tema(registros_base, tema)[0]
-        exemplos.append(f"  - \"{primeiro['palavras_chave'][0]}\" (tema {tema})")
-    print("\n".join(exemplos))
+        exemplos.append(f"\"{primeiro['palavras_chave'][0]}\"")
+    print("Tente outras palavras, como " + ", ".join(exemplos) + ".")
     print("Ou use a opção 1 do menu para navegar pelos temas.")
-    print("Em risco imediato: Bombeiros 193 | Defesa Civil 199.")
 
 
 def escolher_entre(candidatos, prompt):
@@ -297,10 +301,61 @@ def trocar_modelo(contexto):
         print(f"Modelo de resposta: {contexto['modelo']}")
 
 
-MENU = (
-    "\nMenu: 1) Escolher tema  2) Fazer pergunta  3) Informar município\n"
-    "      4) O que fazer agora  5) Modelo de resposta  0) Sair"
-)
+def mostrar_situacao(contexto):
+    """Situação do município no momento simulado, com o bloco de segurança."""
+    estado = preparar_resposta(contexto)
+    if estado:
+        print(respostas.situacao(estado) or "")
+
+
+def simular_tempo(contexto):
+    """Avança o relógio da simulação do monitoramento (roteiro do vídeo).
+
+    A série de data/monitoramento.csv é real (ANA), mas reproduzida em horas
+    simuladas: assim dá para mostrar o rio subindo e baixando na demonstração.
+    """
+    monitor = _modulo("monitor")
+    avancar = _funcao(monitor, "avancar_simulacao")
+    reiniciar = _funcao(monitor, "reiniciar_simulacao")
+    if not avancar or not reiniciar:
+        print("\nA simulação do monitoramento não está disponível nesta versão.")
+        return
+    print("\nSimulação do nível do rio (demonstração, não é leitura em tempo real):")
+    print("  1. Avançar 6 horas")
+    print("  2. Avançar 24 horas")
+    print("  3. Avançar outra quantidade de horas")
+    print("  4. Voltar ao início da série")
+    print("  0. Voltar")
+    escolha = escolher_opcao("Simulação: ", 4)
+    if escolha == 0:
+        return
+    if escolha == 4:
+        reiniciar()
+    else:
+        horas = {1: 6, 2: 24}.get(escolha) or escolher_opcao("Quantas horas (1 a 500)? ", 500)
+        if not horas:
+            return
+        avancar(horas)
+    print(f"Hora simulada: {getattr(monitor, 'horas_simuladas', '?')}")
+    if contexto.get("municipio"):
+        mostrar_situacao(contexto)
+    else:
+        print("Informe o município (opção 3) para ver a situação do rio.")
+
+
+def menu(contexto):
+    """Uma opção por linha, com o município e o modelo atuais à vista."""
+    municipio = contexto.get("municipio") or "não informado"
+    return (
+        "\nMenu:\n"
+        "  1) Escolher tema\n"
+        "  2) Fazer pergunta\n"
+        f"  3) Informar município (atual: {municipio})\n"
+        "  4) O que fazer agora (precisa do município, opção 3)\n"
+        f"  5) Modelo de resposta (atual: {contexto['modelo']})\n"
+        "  6) Simular a passagem do tempo (demonstração do monitoramento)\n"
+        "  0) Sair"
+    )
 
 
 def main(argv=None):
@@ -322,9 +377,10 @@ def main(argv=None):
         3: lambda: pedir_municipio(contexto),
         4: lambda: o_que_fazer_agora(registros, contexto),
         5: lambda: trocar_modelo(contexto),
+        6: lambda: simular_tempo(contexto),
     }
     while True:
-        print(MENU)
+        print(menu(contexto))
         opcao = escolher_opcao("Opção: ", len(acoes))
         if opcao == 0:
             print("Até logo. Em emergência: Defesa Civil 199 | Bombeiros 193.")
