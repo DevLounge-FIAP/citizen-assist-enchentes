@@ -187,9 +187,9 @@ Execução: `python src/sistema.py`
   grafo, fonte e aviso)
 - [x] Documentar os dois modelos: papel do assistente, formato e obrigação de
   citar a fonte
-- [ ] Comparar os modelos A e B e justificar a escolha — comparação objetiva
-  feita (`tests/comparar_modelos.py`, Modelo B como padrão); falta confirmar
-  com a bateria e o teste de usabilidade da Pessoa 3
+- [x] Comparar os modelos A e B e justificar a escolha — Modelo B como
+  padrão, confirmado em 17/11 (`tests/comparar_modelos.py`, bateria e teste
+  de usabilidade)
 - [ ] `docs/uso_ia.md` — rascunho feito; faltam as linhas de Bruno, Victor e
   Michelly e a seção 4
 

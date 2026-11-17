@@ -192,31 +192,45 @@ diferem no formato:
 | **Fonte** | Obrigatória: órgão, link e data de verificação | Igual |
 | **Avisos** | Confirmação quando `requer_confirmacao`; aviso do monitoramento; "não é canal oficial" | Igual |
 
-**Comparação.** O script `tests/comparar_modelos.py` formata os 20 registros
+**Comparação.** O script `tests/comparar_modelos.py` formata os 21 registros
 nos dois modelos em três situações (sem município, fase "durante" e fase
-"depois") e confere se cada regra foi cumprida:
+"depois"), o que dá 63 respostas por modelo, e confere se cada regra foi
+cumprida:
 
 | Critério | Modelo A | Modelo B |
 | --- | --- | --- |
-| Cita a fonte e a data de verificação | 60/60 (100%) | 60/60 (100%) |
-| Aviso de confirmação quando o registro exige | 36/36 (100%) | 36/36 (100%) |
-| Aviso do monitoramento quando há município | 40/40 (100%) | 40/40 (100%) |
-| Situação do município quando há município | 0/40 (0%) | 40/40 (100%) |
+| Cita a fonte e a data de verificação | 63/63 (100%) | 63/63 (100%) |
+| Aviso de confirmação quando o registro exige | 39/39 (100%) | 39/39 (100%) |
+| Aviso do monitoramento quando há município | 42/42 (100%) | 42/42 (100%) |
+| Situação do município quando há município | 0/42 (0%) | 42/42 (100%) |
 | Pré-requisitos quando o registro tem dependências | 0/33 (0%) | 33/33 (100%) |
-| Aviso de que não é canal oficial | 60/60 (100%) | 60/60 (100%) |
-| Linhas por resposta (média) | 19,1 | 26,4 |
-| Tempo de formatação (média) | 0,12 ms | 0,17 ms |
+| Aviso de que não é canal oficial | 63/63 (100%) | 63/63 (100%) |
+| Linhas por resposta (média) | 19,8 | 27,1 |
+| Caracteres por resposta (média) | 1.215 | 1.448 |
+| Tempo de formatação (média) | 0,11 ms | 0,19 ms |
 
 **Escolha: Modelo B como padrão.** Os dois cumprem igualmente as regras de
 confiabilidade (fonte e avisos em 100% das respostas), mas só o Modelo B
 entrega os dois diferenciais do projeto: a ordem dos pré-requisitos (33
 respostas em que o cidadão precisaria descobrir sozinho que deve tirar outro
-documento antes) e a situação do município. O custo é uma resposta cerca de
-38% mais longa, compensado pela divisão em passos numerados, que são mais
-fáceis de seguir do que um parágrafo corrido. O Modelo A continua disponível
-na opção 5 do menu para quem prefere a resposta curta. _(A escolha será
-confirmada com o teste de usabilidade e a bateria de perguntas, na seção de
-resultados.)_
+documento antes) e a situação do município. O custo é uma resposta com
+cerca de 37% mais linhas e 19% mais caracteres, compensado pela divisão em
+passos numerados, que são mais fáceis de seguir do que um parágrafo corrido.
+A diferença de tempo (0,08 ms) é imperceptível. O Modelo A continua disponível
+na opção 5 do menu para quem prefere a resposta curta.
+
+**Confirmação com os testes (17/11).** A escolha foi mantida:
+
+- A bateria de perguntas mede a busca, que é a mesma para os dois modelos:
+  os dois formatam o mesmo registro encontrado. Por isso ela não favorece
+  nenhum dos dois, e a decisão se apoia na tabela acima.
+- No teste de usabilidade, todas as respostas que a participante leu
+  estavam no Modelo B (o padrão). Ela as achou claras e disse que dava para
+  agir com elas, e concluiu sem ajuda a tarefa que dependia de seguir uma
+  resposta até o fim (o kit de emergência).
+- Limite da confirmação: a participante não viu respostas no Modelo A; ela
+  opinou pelas descrições do menu. Não houve um teste A×B com respostas
+  reais, o que fica como melhoria (seção de conclusões).
 
 **Tratamento das limitações:**
 
@@ -364,14 +378,11 @@ Assuntos relacionados:
 **Pergunta fora do tema** — "receita de bolo":
 
 ```text
-Não encontrei na base uma orientação confiável para essa pergunta.
-Não vou inventar instruções. Você pode tentar outras palavras, por exemplo:
-  - "fgts" (tema beneficios)
-  - "certidão" (tema documentacao)
-  - "vistoria" (tema moradia)
-  - "alerta" (tema seguranca)
-Ou use a opção 1 do menu para navegar pelos temas.
 Em risco imediato: Bombeiros 193 | Defesa Civil 199.
+Não encontrei na base uma orientação confiável para essa pergunta.
+Não vou inventar instruções.
+Tente outras palavras, como "fgts", "certidão", "vistoria", "alerta".
+Ou use a opção 1 do menu para navegar pelos temas.
 ```
 
 **Entradas inválidas:**
@@ -380,7 +391,7 @@ Em risco imediato: Bombeiros 193 | Defesa Civil 199.
 Digite sua pergunta: (Enter)
 Pergunta vazia. Escreva sua dúvida ou use o menu de temas.
 Opção: 9
-Opção inexistente: '9'. Escolha entre 0 e 5.
+Opção inexistente: '9'. Escolha entre 0 e 6.
 ```
 
 ### Cuidados: clareza, acessibilidade, privacidade e informação não oficial
@@ -498,7 +509,71 @@ python tests/comparar_modelos.py    # tabela de comparação dos modelos A e B
 
 ## 🏁 Conclusões, limitações e melhorias
 
-_(a preencher ao final do projeto.)_
+### Conclusões
+
+O protótipo cumpre o fluxo completo pedido pelo desafio: recebe a pergunta
+(texto livre ou menu), localiza a orientação na base, responde com a fonte e
+a data de verificação, avisa quando o usuário deve confirmar no órgão e
+recusa o que não sabe, sem inventar resposta.
+
+- **Base verificada:** 21 orientações em 4 temas, todas com órgão, link e
+  data de verificação, ligadas por pré-requisitos (`depende_de`).
+- **Busca:** 17 de 20 perguntas de teste corretas (85%), com 100% nas
+  perguntas diretas, fora do tema, vazias e ambíguas, e 1,17 ms por busca.
+  O tempo não é um problema; a precisão nas reformulações é.
+- **Respostas:** fonte, aviso de confirmação e aviso de "não é canal
+  oficial" em 100% das respostas dos dois modelos. O Modelo B, padrão,
+  acrescenta a ordem dos pré-requisitos e a situação do município.
+- **Monitoramento:** com dados reais de cheias (ANA), o assistente muda o
+  que mostra conforme a fase do rio (antes, durante e depois) e coloca o
+  bloco de segurança na frente de qualquer resposta na fase "durante".
+- **Uso:** no teste de usabilidade, a participante concluiu 4 de 5 tarefas
+  sem ajuda, deu nota 4 de 5 à facilidade e disse que confiaria na
+  orientação numa emergência.
+
+O diferencial que mais pesou foi tratar a enchente como um ciclo: o mesmo
+assistente prepara o cidadão antes, protege durante e o guia na papelada
+depois, na ordem certa.
+
+### Limitações
+
+- **A busca compara palavras, não sentido.** Sem stemming, "número do
+  bombeiro" não encontra o registro de "telefone dos bombeiros", e reformulações longas
+  falharam (T17 e T20).
+- **Um erro é do tipo mais sério:** em T15 (indenização da prefeitura), a
+  busca respondeu com o MOR-04 (seguro), quando o certo era dizer que não há
+  orientação confiável. Responder com confiança uma pergunta parecida é pior
+  do que recusar.
+- **Avaliação pequena:** 20 perguntas escritas pela própria equipe e um
+  teste de usabilidade com uma participante, conduzido pelo desenvolvedor
+  da busca. Os números indicam tendência, não são estatisticamente
+  representativos.
+- **Monitoramento de demonstração:** os dados são de cheias passadas,
+  reproduzidos em horas simuladas, com algumas horas estimadas. Perto do
+  pico, a fase pode alternar entre "durante" e "depois" (ver a seção do
+  monitoramento).
+- **Base estática:** as orientações foram verificadas em novembro de 2026;
+  prazos e valores mudam, e não há rotina de atualização. Por isso 13 dos 21
+  registros pedem confirmação no órgão.
+- **Modelos A e B** não foram comparados por usuários com respostas reais.
+
+### Melhorias
+
+1. **Busca mais robusta:** reduzir as palavras ao radical (stemming) e
+   pesar os termos raros (TF-IDF), para acertar reformulações e plurais.
+   Subir o limiar de confiança também diminuiria casos como o T15.
+2. **Fase do rio mais estável:** calcular a tendência com média móvel e só
+   trocar de fase depois de algumas horas seguidas na mesma direção.
+3. **Validar o município** contra uma lista oficial e perguntar "Você quis
+   dizer...?" quando o nome vier com erro de digitação.
+4. **Priorizar a fase "depois":** hoje a opção 4 lista 15 orientações;
+   mostrar primeiro as 3 ou 4 mais urgentes (documentos de identidade,
+   vistoria e saque do FGTS).
+5. **Avaliação maior:** mais perguntas escritas por pessoas de fora da
+   equipe, mais participantes e um teste A×B com respostas reais nos dois
+   modelos.
+6. **Atualização da base:** revisar as datas de verificação periodicamente
+   e, numa versão futura, ler os níveis dos rios direto da ANA.
 
 ## 📋 Licença
 
