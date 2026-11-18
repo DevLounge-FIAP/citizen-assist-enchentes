@@ -16,10 +16,6 @@ MARGEM = 0.85   # se nota do 2º / nota do 1º >= MARGEM, os dois estão "colado
 LIMIAR_AMBIGUA = 0.09  # abaixo do LIMIAR, mas com empate: ainda vale perguntar qual assunto
 
 
-#Todo 12/11 normalizar, tokenizar e jaccard
-
-#Todo 13/11 sinônimos, limiar (sem_base) e ambiguade (ambigua)
-
 
 def normalizar(texto: str) -> str:
     """Padroniza o texto: minúsculas, sem acento, sem pontuação, espaços limpos."""
