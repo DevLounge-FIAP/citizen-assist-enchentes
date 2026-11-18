@@ -18,14 +18,11 @@
 
 | Integrante | RM | Frente |
 | --- | --- | --- |
-| Aelton | 573694 | Arquitetura, integração, fluxo principal, respostas e prompts |
-| Bruno | 572073 | Base de conhecimento e curadoria das fontes |
-| Victor | 570608 | Busca, grafo e avaliação |
-| Michelly | 573625 | Monitoramento e cenário de cheia |
+| [Aelton](https://github.com/Aelton0) | 573694 | Arquitetura, integração, fluxo principal, respostas e prompts |
+| [Bruno](https://github.com/Bruno-S-Martins) | 572073 | Base de conhecimento e curadoria das fontes |
+| [Victor](https://github.com/VMantovaniKT) | 570608 | Busca, grafo e avaliação |
+| [Michelly](https://github.com/ChellySantos) | 573625 | Monitoramento e cenário de cheia |
 
-
-<!-- TODO: trocar os nomes pelos links de LinkedIn/GitHub, como no modelo:
-- <a href="LINK">Nome</a> -->
 
 ## 👩‍🏫 Professores
 
@@ -514,11 +511,29 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### ODS relacionados
 
-- **ODS 11** — Cidades e comunidades sustentáveis
-- **ODS 13** — Ação contra a mudança global do clima
-- **ODS 10** — Redução das desigualdades
+- **ODS 11 — Cidades e comunidades sustentáveis.** Meta 11.5: "Até 2030,
+  reduzir significativamente o número de mortes e o número de pessoas
+  afetadas por catástrofes [...], incluindo os desastres relacionados à
+  água, com o foco em proteger os pobres e as pessoas em situação de
+  vulnerabilidade." O assistente atua nas três fases da enchente: prepara
+  antes, coloca a segurança em primeiro lugar durante e orienta a
+  recuperação depois.
+- **ODS 13 — Ação contra a mudança global do clima.** Meta 13.1: "Reforçar a
+  resiliência e a capacidade de adaptação a riscos relacionados ao clima e
+  às catástrofes naturais em todos os países." O monitoramento do nível dos
+  rios avisa a mudança de fase e indica o que fazer em cada uma, o que
+  ajuda a população a se adaptar a um risco que tende a ser mais frequente.
+- **ODS 10 — Redução das desigualdades.** Meta 10.2: "Até 2030, empoderar e
+  promover a inclusão social, econômica e política de todos [...]." Quem
+  mais sofre com enchentes costuma ter menos acesso a informação e à
+  burocracia. O assistente explica, em linguagem simples e sem custo, como
+  recuperar documentos e acessar benefícios como o saque-calamidade do FGTS
+  e o Cadastro Único.
 
-<!-- TODO: conferir o texto oficial das metas antes de citar. -->
+Texto das metas: versão das Nações Unidas, conforme as páginas do Ipea sobre
+os ODS ([11](https://www.ipea.gov.br/ods/ods11.html),
+[13](https://www.ipea.gov.br/ods/ods13.html) e
+[10](https://www.ipea.gov.br/ods/ods10.html)).
 
 ## 📁 Estrutura de pastas
 
@@ -570,8 +585,8 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### 📢 Observações Gerais
 
-- **Participação na Competição:** [ X ] Sim, aceitamos participar / [ ] Não vamos
-  participar. _(decisão da equipe pendente)_
+- **Participação na Competição:** [x] Sim, aceitamos participar / [ ] Não
+  vamos participar.
 - Uso de IA documentado em [`docs/uso_ia.md`](docs/uso_ia.md).
 
 ## 🔧 Como executar o código

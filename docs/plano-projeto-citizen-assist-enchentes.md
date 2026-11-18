@@ -71,7 +71,7 @@ conforme essa fase.
 - **ODS 10** — Redução das desigualdades (quem mais sofre com enchentes costuma
   ter menos acesso à informação)
 
-> Conferir o texto oficial das metas antes de citar no README.
+> Texto oficial das metas conferido em 18/11 (páginas do Ipea) e citado no README.
 
 ### Fontes candidatas para o monitoramento (verificar)
 
@@ -179,8 +179,7 @@ Execução: `python src/sistema.py`
 - [x] Integrar os módulos e conduzir as revisões — busca e grafo em 15/11,
   `monitor.py` real em 17/11, com a opção 6 para simular a passagem do tempo
 - [ ] Consolidar o README a partir das seções de cada frente — todas as
-  seções preenchidas em 18/11; faltam o link do vídeo, o tutor, os links dos
-  integrantes e a decisão sobre a competição
+  seções preenchidas em 18/11; falta só o link do vídeo
 - [x] `src/respostas.py` — Modelo A: template direto (orientação + fonte)
 - [x] `src/respostas.py` — Modelo B: estruturado (passos, pré-requisitos do
   grafo, fonte e aviso)
