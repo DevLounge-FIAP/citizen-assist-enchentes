@@ -176,12 +176,11 @@ Execução: `python src/sistema.py`
   campos faltando
 - [x] `src/sistema.py`: menu de temas, pergunta livre, pedido do município
 - [x] Tratar entrada vazia e opção inexistente com mensagens compreensíveis
-- [ ] Integrar os módulos e conduzir as revisões — busca e grafo integrados
-  em 15/11 (`tests/verificar_sistema.py`); falta ligar o `monitor.py` real
-  (o fluxo já chama `monitor.estado` e foi testado com um monitor simulado)
-- [ ] Consolidar o README a partir das seções de cada frente — seções de
-  respostas, exemplos, decisões técnicas e execução preenchidas; faltam as
-  de base/busca, resultados, monitoramento, conclusões e links
+- [x] Integrar os módulos e conduzir as revisões — busca e grafo em 15/11,
+  `monitor.py` real em 17/11, com a opção 6 para simular a passagem do tempo
+- [ ] Consolidar o README a partir das seções de cada frente — todas as
+  seções preenchidas em 18/11; faltam o link do vídeo, o tutor, os links dos
+  integrantes e a decisão sobre a competição
 - [x] `src/respostas.py` — Modelo A: template direto (orientação + fonte)
 - [x] `src/respostas.py` — Modelo B: estruturado (passos, pré-requisitos do
   grafo, fonte e aviso)
@@ -190,53 +189,53 @@ Execução: `python src/sistema.py`
 - [x] Comparar os modelos A e B e justificar a escolha — Modelo B como
   padrão, confirmado em 17/11 (`tests/comparar_modelos.py`, bateria e teste
   de usabilidade)
-- [ ] `docs/uso_ia.md` — rascunho feito; faltam as linhas de Bruno, Victor e
-  Michelly e a seção 4
+- [x] `docs/uso_ia.md` — linhas e validação crítica dos quatro integrantes e
+  a seção 4 (comparação dos modelos)
 
 ### Pessoa 2 — Base de conhecimento e curadoria das fontes
 
-- [ ] **Entregar 3 a 5 registros reais nos primeiros dias** (as Pessoas 1 e 3
+- [x] **Entregar 3 a 5 registros reais nos primeiros dias** (as Pessoas 1 e 3
   dependem disso) — **prazo: 12/11**
-- [ ] Redigir no mínimo 15 registros (meta: 20) distribuídos nos 4 temas
-- [ ] Para cada registro: fonte identificável e data de verificação
-- [ ] Preencher o campo `depende_de` de forma consistente (forma o grafo)
-- [ ] Montar o dicionário de sinônimos para a busca em `data/sinonimos.json`
-- [ ] README: origem das informações e processo de verificação
+- [x] Redigir no mínimo 15 registros (meta: 20) distribuídos nos 4 temas
+- [x] Para cada registro: fonte identificável e data de verificação
+- [x] Preencher o campo `depende_de` de forma consistente (forma o grafo)
+- [x] Montar o dicionário de sinônimos para a busca em `data/sinonimos.json`
+- [x] README: origem das informações e processo de verificação
 
 ### Pessoa 3 — Busca, grafo e avaliação
 
-- [ ] `src/busca.py`: normalização (minúsculas, acentos, stopwords)
-- [ ] Expansão por sinônimos
-- [ ] Pontuação por sobreposição de termos (Jaccard; TF-IDF se der tempo)
-- [ ] Limiar mínimo → `status: sem_base`
-- [ ] Dois melhores resultados muito próximos → `status: ambigua` (perguntar ao
+- [x] `src/busca.py`: normalização (minúsculas, acentos, stopwords)
+- [x] Expansão por sinônimos
+- [x] Pontuação por sobreposição de termos (Jaccard; TF-IDF se der tempo)
+- [x] Limiar mínimo → `status: sem_base`
+- [x] Dois melhores resultados muito próximos → `status: ambigua` (perguntar ao
   usuário)
-- [ ] `src/grafo.py`: montar o grafo a partir de `depende_de`
-- [ ] Ordenação topológica dos pré-requisitos e detecção de ciclos
-- [ ] `grafo.relacionados`: sugestão de assuntos para continuar a navegação
-- [ ] README: estratégia de busca e comportamento com várias correspondências
-- [ ] `tests/perguntas_teste.json` com no mínimo 12 perguntas (meta: 15):
+- [x] `src/grafo.py`: montar o grafo a partir de `depende_de`
+- [x] Ordenação topológica dos pré-requisitos e detecção de ciclos
+- [x] `grafo.relacionados`: sugestão de assuntos para continuar a navegação
+- [x] README: estratégia de busca e comportamento com várias correspondências
+- [x] `tests/perguntas_teste.json` com no mínimo 12 perguntas (meta: 15):
   diretas, reformulações, fora do tema, entrada vazia, consulta ambígua, sem
   resposta confiável
-- [ ] Rodar os testes e registrar: resposta esperada, resposta obtida,
+- [x] Rodar os testes e registrar: resposta esperada, resposta obtida,
   acerto/erro e tempo
-- [ ] Calcular taxa de acerto (busca e classificação de risco, separadas) e
+- [x] Calcular taxa de acerto (busca e classificação de risco, separadas) e
   tempo médio
-- [ ] Teste de usabilidade com pelo menos um usuário de fora da equipe
-- [ ] README: resultados, interpretação, limitações e pelo menos duas melhorias
+- [x] Teste de usabilidade com pelo menos um usuário de fora da equipe
+- [x] README: resultados, interpretação, limitações e pelo menos duas melhorias
 
 ### Pessoa 4 — Monitoramento e cenário de cheia
 
-- [ ] Pesquisar as fontes de referência para justificar níveis e cotas
-- [ ] `data/monitoramento.csv` com pelo menos 2 municípios
-- [ ] Série simulando a subida de um rio (roteiro da demonstração no vídeo)
-- [ ] `src/monitor.py`: classificação por cotas (normal, atenção, alerta,
+- [x] Pesquisar as fontes de referência para justificar níveis e cotas
+- [x] `data/monitoramento.csv` com pelo menos 2 municípios
+- [x] Série simulando a subida de um rio (roteiro da demonstração no vídeo)
+- [x] `src/monitor.py`: classificação por cotas (normal, atenção, alerta,
   inundação)
-- [ ] Cálculo de tendência (cm/h) e estimativa de horas até a cota de inundação
-- [ ] Aviso de limitação em toda saída do monitoramento
-- [ ] Testes de classificação com entradas e saídas esperadas
+- [x] Cálculo de tendência (cm/h) e estimativa de horas até a cota de inundação
+- [x] Aviso de limitação em toda saída do monitoramento
+- [x] Testes de classificação com entradas e saídas esperadas
   (`tests/test_monitor.py`)
-- [ ] README: monitoramento e avisos de limitação
+- [x] README: monitoramento e avisos de limitação
 
 **Aviso padrão do monitoramento:**
 > Dado de referência para demonstração. Siga sempre os alertas oficiais da
@@ -310,12 +309,12 @@ pergunta fora do tema e entrada vazia (tratamento de limitações) → indicador
 - [x] Repositório GitHub público e acessível
 - [ ] Arquivo .TXT na plataforma com os dois links corretos (GitHub e YouTube)
 - [ ] Vídeo no YouTube como "Não Listado"
-- [ ] Código funciona sem erros nas operações demonstradas
-- [ ] Perguntas, respostas com fontes e consultas não previstas documentadas
-- [ ] Estratégia de busca e organização dos temas justificadas
-- [ ] Indicadores de acerto, tempo e facilidade de uso calculados e
+- [x] Código funciona sem erros nas operações demonstradas
+- [x] Perguntas, respostas com fontes e consultas não previstas documentadas
+- [x] Estratégia de busca e organização dos temas justificadas
+- [x] Indicadores de acerto, tempo e facilidade de uso calculados e
   interpretados
-- [ ] Entradas inválidas e ausência de informação confiável tratadas
-- [ ] Avisos de limitação claros (nunca se apresentar como canal oficial)
-- [ ] Uso de IA documentado em `docs/uso_ia.md`
+- [x] Entradas inválidas e ausência de informação confiável tratadas
+- [x] Avisos de limitação claros (nunca se apresentar como canal oficial)
+- [x] Uso de IA documentado em `docs/uso_ia.md`
 - [x] ODS identificados e explicados no README
