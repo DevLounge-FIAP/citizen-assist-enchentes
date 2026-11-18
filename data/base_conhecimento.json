@@ -431,9 +431,9 @@
       "seguro desemprego",
       "emprego"
     ],
-    "orientacao": "A Carteira de Trabalho Digital é gratuita e vale como a de papel. Se a sua carteira física se perdeu ou ficou destruída, você não precisa ir a nenhum posto: baixe o aplicativo Carteira de Trabalho Digital ou acesse pelo site do governo (gov.br), entre com sua conta gov.br (CPF e senha) e consulte seus contratos. Para ver todos os detalhes dos vínculos, a conta gov.br pode precisar de nível prata ou ouro. Contratos mais antigos podem demorar a aparecer completos; nesse caso, procure a empresa onde você trabalhou. Atenção: a carteira digital não serve como documento de identificação civil.",
-    "fonte": "Ministério do Trabalho e Emprego — Carteira de Trabalho Digital, perguntas frequentes — https://www.gov.br/trabalho-e-emprego/pt-br/acesso-a-informacao/acoes-e-programas/proteja/arquivos/ctpsdigital-2.pdf; serviço: https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho",
-    "data_verificacao": "2026-11-11",
+    "orientacao": "A Carteira de Trabalho Digital é gratuita e substitui a de papel para acompanhar e comprovar os vínculos de trabalho. Se a sua carteira física se perdeu ou ficou destruída, você não precisa ir a nenhum posto: baixe o aplicativo Carteira de Trabalho Digital ou acesse pelo site do governo (gov.br), entre com sua conta gov.br (CPF e senha) e consulte seus contratos. Para ver todos os detalhes dos vínculos, como salários, é preciso acertar pelo menos 4 de 5 perguntas de validação ou fazer a validação facial no aplicativo gov.br. Dados de contratos mais antigos podem aparecer com erros; se o erro for em informação posterior a setembro de 2019, avise o empregador para corrigir. Atenção: a carteira digital não serve como documento de identificação civil.",
+    "fonte": "Ministério do Trabalho e Emprego — Perguntas Frequentes: Carteira de Trabalho Digital — https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/carteira-de-trabalho/perguntas-frequentes-carteira-de-trabalho-digital; serviço: https://www.gov.br/pt-br/servicos/obter-a-carteira-de-trabalho",
+    "data_verificacao": "2026-11-18",
     "requer_confirmacao": false,
     "depende_de": [
       "DOC-02"

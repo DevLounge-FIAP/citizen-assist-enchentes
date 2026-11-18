@@ -31,8 +31,8 @@
 
 ### Tutor(a)
 
-- _Andre Tritiack de Farias_
-- LinkdIn: [https://www.linkedin.com/in/andretritiack/](https://www.linkedin.com/in/andretritiack/ "https://www.linkedin.com/in/andretritiack/")
+- <a href="https://www.linkedin.com/in/andretritiack/">Andre Tritiack de Farias</a>
+
 ### Coordenador(a)
 
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
@@ -126,7 +126,8 @@ oficiais, e reescritas em linguagem simples (sem copiar o texto):
 
 1. Cada registro foi escrito a partir da página do órgão responsável.
 2. Todo registro traz órgão, link e `data_verificacao` (11/11/2026; o `DOC-07`
-   é de 15/11/2026).
+   é de 15/11/2026, e o `DOC-04` foi reverificado em 18/11/2026, quando a
+   fonte antiga saiu do ar).
 3. **13 dos 21 registros** têm `requer_confirmacao: true` (`BEN-01` a `BEN-04`,
    `DOC-01`, `DOC-03`, `DOC-06`, `DOC-07`, `MOR-01`, `MOR-03`, `MOR-04`,
    `SEG-04` e `SEG-05`): valor, prazo ou procedimento varia por estado,
