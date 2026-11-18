@@ -84,8 +84,8 @@
       "segunda via rg",
       "documento com foto"
     ],
-    "orientacao": "Para refazer a identidade, solicite a segunda via da Carteira de Identidade Nacional (CIN) no órgão de identificação do seu estado; o agendamento começa em gov.br/identidade e a coleta de dados biométricos é presencial. Leve a certidão de nascimento (solteiros) ou de casamento (casados) e o CPF. Em caso de perda ou roubo, registre antes um boletim de ocorrência. A segunda via costuma ter taxa, e o valor varia por estado; em alguns estados é gratuita em caso de furto ou roubo com boletim de ocorrência. Depois de emitida, a versão digital fica disponível no aplicativo gov.br.",
-    "fonte": "Governo Federal — Carteira de Identidade Nacional — https://www.gov.br/identidade (taxas e regras: órgão de identificação do seu estado)",
+    "orientacao": "Para refazer a identidade, solicite a segunda via da Carteira de Identidade Nacional (CIN) no órgão de identificação do seu estado; a página da CIN no gov.br (link na fonte) indica onde emitir, e a coleta de dados biométricos é presencial. Leve a certidão de nascimento (solteiros) ou de casamento (casados) e o CPF. Em caso de perda ou roubo, registre antes um boletim de ocorrência. A segunda via costuma ter taxa, e o valor varia por estado; em alguns estados é gratuita em caso de furto ou roubo com boletim de ocorrência. Depois de emitida, a versão digital fica disponível no aplicativo gov.br.",
+    "fonte": "Governo Federal — Carteira de Identidade Nacional — https://www.gov.br/governodigital/pt-br/identidade (taxas e regras: órgão de identificação do seu estado)",
     "data_verificacao": "2026-11-11",
     "requer_confirmacao": true,
     "depende_de": [
