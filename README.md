@@ -18,21 +18,18 @@
 
 | Integrante | RM | Frente |
 | --- | --- | --- |
-| Aelton | 573694 | Arquitetura, integração, fluxo principal, respostas e prompts |
-| Bruno | 572073 | Base de conhecimento e curadoria das fontes |
-| Victor | 570608 | Busca, grafo e avaliação |
-| Michelly | 573625 | Monitoramento e cenário de cheia |
+| [Aelton](https://github.com/Aelton0) | 573694 | Arquitetura, integração, fluxo principal, respostas e prompts |
+| [Bruno](https://github.com/Bruno-S-Martins) | 572073 | Base de conhecimento e curadoria das fontes |
+| [Victor](https://github.com/VMantovaniKT) | 570608 | Busca, grafo e avaliação |
+| [Michelly](https://github.com/ChellySantos) | 573625 | Monitoramento e cenário de cheia |
 
-
-<!-- TODO: trocar os nomes pelos links de LinkedIn/GitHub, como no modelo:
-- <a href="LINK">Nome</a> -->
 
 ## 👩‍🏫 Professores
 
 ### Tutor(a)
 
-- _Andre Tritiack de Farias_
-- LinkdIn: [https://www.linkedin.com/in/andretritiack/](https://www.linkedin.com/in/andretritiack/ "https://www.linkedin.com/in/andretritiack/")
+- <a href="https://www.linkedin.com/in/andretritiack/">Andre Tritiack de Farias</a>
+
 ### Coordenador(a)
 
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
@@ -126,7 +123,8 @@ oficiais, e reescritas em linguagem simples (sem copiar o texto):
 
 1. Cada registro foi escrito a partir da página do órgão responsável.
 2. Todo registro traz órgão, link e `data_verificacao` (11/11/2026; o `DOC-07`
-   é de 15/11/2026).
+   é de 15/11/2026, e o `DOC-04` foi reverificado em 18/11/2026, quando a
+   fonte antiga saiu do ar).
 3. **13 dos 21 registros** têm `requer_confirmacao: true` (`BEN-01` a `BEN-04`,
    `DOC-01`, `DOC-03`, `DOC-06`, `DOC-07`, `MOR-01`, `MOR-03`, `MOR-04`,
    `SEG-04` e `SEG-05`): valor, prazo ou procedimento varia por estado,
@@ -513,11 +511,29 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### ODS relacionados
 
-- **ODS 11** — Cidades e comunidades sustentáveis
-- **ODS 13** — Ação contra a mudança global do clima
-- **ODS 10** — Redução das desigualdades
+- **ODS 11 — Cidades e comunidades sustentáveis.** Meta 11.5: "Até 2030,
+  reduzir significativamente o número de mortes e o número de pessoas
+  afetadas por catástrofes [...], incluindo os desastres relacionados à
+  água, com o foco em proteger os pobres e as pessoas em situação de
+  vulnerabilidade." O assistente atua nas três fases da enchente: prepara
+  antes, coloca a segurança em primeiro lugar durante e orienta a
+  recuperação depois.
+- **ODS 13 — Ação contra a mudança global do clima.** Meta 13.1: "Reforçar a
+  resiliência e a capacidade de adaptação a riscos relacionados ao clima e
+  às catástrofes naturais em todos os países." O monitoramento do nível dos
+  rios avisa a mudança de fase e indica o que fazer em cada uma, o que
+  ajuda a população a se adaptar a um risco que tende a ser mais frequente.
+- **ODS 10 — Redução das desigualdades.** Meta 10.2: "Até 2030, empoderar e
+  promover a inclusão social, econômica e política de todos [...]." Quem
+  mais sofre com enchentes costuma ter menos acesso a informação e à
+  burocracia. O assistente explica, em linguagem simples e sem custo, como
+  recuperar documentos e acessar benefícios como o saque-calamidade do FGTS
+  e o Cadastro Único.
 
-<!-- TODO: conferir o texto oficial das metas antes de citar. -->
+Texto das metas: versão das Nações Unidas, conforme as páginas do Ipea sobre
+os ODS ([11](https://www.ipea.gov.br/ods/ods11.html),
+[13](https://www.ipea.gov.br/ods/ods13.html) e
+[10](https://www.ipea.gov.br/ods/ods10.html)).
 
 ## 📁 Estrutura de pastas
 
@@ -544,8 +560,8 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### 🔗 Links do Projeto
 
-- **Vídeo de apresentação no YouTube (Não Listado):** _(link a preencher)_ - _(preencher quando
-  publicado)_.
+- **Repositório no GitHub:** <https://github.com/DevLounge-FIAP/citizen-assist-enchentes>
+- **Vídeo de apresentação no YouTube (Não Listado):** LINK_DO_VIDEO
 
 ### 🧠 Decisões Técnicas
 
@@ -569,8 +585,8 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### 📢 Observações Gerais
 
-- **Participação na Competição:** [ X ] Sim, aceitamos participar / [ ] Não vamos
-  participar. _(decisão da equipe pendente)_
+- **Participação na Competição:** [x] Sim, aceitamos participar / [ ] Não
+  vamos participar.
 - Uso de IA documentado em [`docs/uso_ia.md`](docs/uso_ia.md).
 
 ## 🔧 Como executar o código
