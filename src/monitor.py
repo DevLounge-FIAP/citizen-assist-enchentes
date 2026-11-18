@@ -4,7 +4,10 @@ Monitoramento do nível dos rios durante a cheia.
 Contrato: estado(municipio) -> dict
 """
 
-CAMINHO_CSV = "data/monitoramento.csv"
+import os
+
+# Caminho a partir deste arquivo, para funcionar de qualquer pasta (IDE, terminal fora da raiz)
+CAMINHO_CSV = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "monitoramento.csv")
 
 PORCENTAGEM_ATENCAO = 0.9  # Usada para calcular a cota de atenção com base na cota de alerta
 

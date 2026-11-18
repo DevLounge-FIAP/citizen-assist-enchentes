@@ -120,9 +120,11 @@ Exemplo com a base atual: `pre_requisitos("BEN-01", base)` deve conter
 
 ### `grafo.relacionados(id_registro, base)`
 
-- Ids sugeridos para continuar a navegação (por exemplo: quem depende deste
-  registro e registros do mesmo subtema).
-- Não inclui o próprio `id_registro`. Lista vazia se não houver.
+- Até 3 ids sugeridos para continuar a navegação: primeiro quem depende deste
+  registro, depois registros do mesmo tema e fase. O "mesmo subtema" previsto
+  no início não agrupava nenhum registro na base real e foi trocado.
+- Não inclui o próprio `id_registro` nem os seus pré-requisitos. Lista vazia
+  se não houver.
 
 ### `monitor.estado(municipio)`
 

@@ -31,8 +31,8 @@
 
 ### Tutor(a)
 
-- _(preencher: nome e link do LinkedIn do tutor)_
-
+- _Andre Tritiack de Farias_
+- LinkdIn: [https://www.linkedin.com/in/andretritiack/](https://www.linkedin.com/in/andretritiack/ "https://www.linkedin.com/in/andretritiack/")
 ### Coordenador(a)
 
 - <a href="https://www.linkedin.com/in/andregodoichiovato/">André Godoi Chiovato</a>
@@ -471,7 +471,8 @@ Passo a passo:
   3. Em caso de perda ou roubo, registre antes um boletim de ocorrência.
   [...]
 Fonte: Governo Federal — Carteira de Identidade Nacional —
-https://www.gov.br/identidade (...) (verificado em 2026-11-11)
+https://www.gov.br/governodigital/pt-br/identidade (...) (verificado em
+2026-11-11)
 Atenção: requisitos e prazos podem mudar; confirme no órgão responsável antes
 de ir.
 Orientação de um protótipo educacional, não de um canal oficial.
@@ -568,7 +569,7 @@ Opção inexistente: '9'. Escolha entre 0 e 6.
 
 ### 📢 Observações Gerais
 
-- **Participação na Competição:** [ ] Sim, aceitamos participar / [ ] Não vamos
+- **Participação na Competição:** [ X ] Sim, aceitamos participar / [ ] Não vamos
   participar. _(decisão da equipe pendente)_
 - Uso de IA documentado em [`docs/uso_ia.md`](docs/uso_ia.md).
 
@@ -605,9 +606,6 @@ município **Estrela**:
 | 2 | Opção 6, avançar 30 horas; depois opção 4 | Fase DURANTE, nível alerta, bloco de segurança e cerca de 3 h até a cota de inundação |
 | 3 | Opção 6, avançar mais 170 horas; depois opção 4 | Fase DEPOIS, nível atenção, orientações de documentos e benefícios |
 | 4 | Opção 2, pergunta fora do tema | Telefones de emergência e recusa sem inventar resposta |
-
-O roteiro precisa ser executado a partir da raiz do repositório, porque
-`src/monitor.py` lê o CSV por caminho relativo.
 
 Verificações (na raiz do repositório):
 
