@@ -561,7 +561,7 @@ os ODS ([11](https://www.ipea.gov.br/ods/ods11.html),
 ### 🔗 Links do Projeto
 
 - **Repositório no GitHub:** <https://github.com/DevLounge-FIAP/citizen-assist-enchentes>
-- **Vídeo de apresentação no YouTube (Não Listado):** LINK_DO_VIDEO
+- **Vídeo de apresentação no YouTube (Não Listado):** <https://youtu.be/JT0TZOD5B3U>
 
 ### 🧠 Decisões Técnicas
 
