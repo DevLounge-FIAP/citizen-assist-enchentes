@@ -178,8 +178,8 @@ Execução: `python src/sistema.py`
 - [x] Tratar entrada vazia e opção inexistente com mensagens compreensíveis
 - [x] Integrar os módulos e conduzir as revisões — busca e grafo em 15/11,
   `monitor.py` real em 17/11, com a opção 6 para simular a passagem do tempo
-- [ ] Consolidar o README a partir das seções de cada frente — todas as
-  seções preenchidas em 18/11; falta só o link do vídeo
+- [x] Consolidar o README a partir das seções de cada frente — todas as
+  seções preenchidas e links do repositório e do vídeo incluídos em 19/11
 - [x] `src/respostas.py` — Modelo A: template direto (orientação + fonte)
 - [x] `src/respostas.py` — Modelo B: estruturado (passos, pré-requisitos do
   grafo, fonte e aviso)
